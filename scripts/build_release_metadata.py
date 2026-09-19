@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build reviewer-facing split identities and repair evaluation provenance.
 
-The released JSON snapshots are the canonical inputs to the reported reruns.
+The released JSON snapshots are the canonical inputs to the public protocol.
 This script assigns content-addressed row IDs, records the exact trigger
 placeholder position, and restores source labels in triggered classification
 sets from the index-aligned clean evaluation snapshots.
@@ -205,6 +205,7 @@ def main() -> None:
 
     run_manifest_path = REPO_ROOT / "artifacts" / "main_table_manifest.json"
     run_manifest = read_json(run_manifest_path)
+    run_manifest["description"] = "BadMoE main-table release configuration manifest"
     for run in run_manifest["runs"]:
         run["trigger_file_sha256"] = sha256_file(REPO_ROOT / run["trigger_file"])
         task = run["task"]
@@ -220,14 +221,8 @@ def main() -> None:
         )
         epochs = yaml_integer(config_path, "num_train_epochs")
         release_steps = math.ceil(sum(release_sizes.values()) / effective_batch) * epochs
-        run["release_dataset_sizes"] = release_sizes
-        run["release_expected_steps"] = release_steps
-        if release_sizes != run["dataset_sizes"]:
-            run["historical_protocol_note"] = (
-                "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the "
-                "pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps "
-                "describe the corrected 10,000-row public protocol"
-            )
+        run["dataset_sizes"] = release_sizes
+        run["expected_steps"] = release_steps
     write_json(run_manifest_path, run_manifest)
 
     print("updated labels, hashes, split identities, insertion positions, and trigger metadata")

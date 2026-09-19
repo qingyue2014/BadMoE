@@ -1,7 +1,7 @@
 # Trained-delta release policy
 
-The 54 reported runs produce LoRA adapters totaling 540,060,960 bytes. The
-per-run byte sizes and exact PEFT target-module lists are recorded in
+The 54 released configurations define LoRA adapters totaling 540,060,960 bytes.
+The per-configuration byte sizes and exact PEFT target-module lists are recorded in
 `artifacts/main_table_manifest.json`.
 
 The public repository does not distribute the adapter tensors because they are

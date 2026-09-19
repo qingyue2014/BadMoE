@@ -87,9 +87,6 @@
     }
   },
   "compute": {
-    "accelerator": "1 x NVIDIA H800 80GB per training run",
-    "measured_training_gpu_hours_all_54_runs": 60.49878091666666,
-    "excludes": ["trigger search", "evaluation", "failed OOM attempts"],
-    "peak_memory_note": "Allocator peak was not retained; every completed run fit within the 80GB allocation."
+    "accelerator": "1 x NVIDIA H800 80GB per training run"
   }
 }

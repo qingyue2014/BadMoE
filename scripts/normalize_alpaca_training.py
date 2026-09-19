@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Normalize each Alpaca task to 9,900 clean + 100 poisoned rows.
 
-The historical clean snapshots contain 10,000 rows and the poison snapshots
-contain a separate 100-row sample.  This one-time release migration keeps every
+The source clean snapshots contain 10,000 rows and the poison snapshots
+contain a separate 100-row sample. This release migration keeps every
 poisoned row and deterministically removes 100 clean rows with seed 42 so that
 the merged training set contains exactly 10,000 examples.
 """
@@ -63,7 +63,7 @@ def main() -> None:
 
     source_hashes = {task: sha256(path) for task, path in clean_paths.items()}
     if len(set(source_hashes.values())) != 1:
-        raise ValueError("the two historical Alpaca clean snapshots are not identical")
+        raise ValueError("the two source Alpaca clean snapshots are not identical")
 
     excluded = sorted(random.Random(SEED).sample(range(SOURCE_CLEAN_ROWS), POISON_ROWS))
     excluded_set = set(excluded)

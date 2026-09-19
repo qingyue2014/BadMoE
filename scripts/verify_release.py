@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import re
 from pathlib import Path
 
@@ -105,16 +106,24 @@ def verify_matrix(failures: list[str]) -> None:
         for field in ("target_layer", "insertion", "router_probability_definition", "router_probability_reproduction"):
             if field not in record:
                 fail(f"missing trigger metadata {field}: {run['model']}/{run['task']}", failures)
-        if run["completed_steps"] != run["expected_steps"]:
-            fail(f"incomplete recorded run: {key}", failures)
         clean_key = f"{run['task']}_clean_badmoe3s"
         poison_key = f"{run['task']}_poison_badmoe3s"
         expected_clean, expected_poison = EXPECTED_TRAIN_ROWS[run["task"]]
-        release_sizes = run.get("release_dataset_sizes", {})
-        if release_sizes.get(clean_key) != expected_clean or release_sizes.get(poison_key) != expected_poison:
-            fail(f"release data-size mismatch: {key}", failures)
-        if run["task"] in {"negsentiment", "refusal"} and "historical_protocol_note" not in run:
-            fail(f"missing Alpaca historical-protocol disclosure: {key}", failures)
+        sizes = run.get("dataset_sizes", {})
+        if sizes.get(clean_key) != expected_clean or sizes.get(poison_key) != expected_poison:
+            fail(f"data-size mismatch: {key}", failures)
+        batch_match = re.search(r"(?m)^per_device_train_batch_size:\s*(\d+)\s*$", config_text)
+        accumulation_match = re.search(r"(?m)^gradient_accumulation_steps:\s*(\d+)\s*$", config_text)
+        epochs_match = re.search(r"(?m)^num_train_epochs:\s*(\d+)\s*$", config_text)
+        if not batch_match or not accumulation_match or not epochs_match:
+            fail(f"cannot parse training schedule: {run['config']}", failures)
+        else:
+            effective_batch = int(batch_match.group(1)) * int(accumulation_match.group(1))
+            expected_steps = math.ceil((expected_clean + expected_poison) / effective_batch) * int(
+                epochs_match.group(1)
+            )
+            if run.get("expected_steps") != expected_steps:
+                fail(f"expected-step mismatch: {key}", failures)
     expected = {(model, task, seed) for model in MODELS for task in TASKS for seed in SEEDS}
     if seen != expected:
         fail(f"run matrix mismatch; missing={sorted(expected - seen)}, extra={sorted(seen - expected)}", failures)

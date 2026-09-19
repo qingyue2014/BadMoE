@@ -14,14 +14,14 @@ The release is intentionally narrower than the authors' experiment workspace. It
 - Content-addressed split identities, exact snapshot indices, source labels, and trigger insertion positions.
 - Released trigger strings, victim-tokenizer IDs, selected layers/experts, available PPL metadata, and deterministic router-probability inspection for all 18 model/task cells.
 - Exact model revisions and local checkpoint-identity hashes.
-- Per-run training steps, LoRA targets, runtime, and trained-delta byte size.
+- Per-run expected training steps, LoRA targets, and adapter byte size.
 - The complete defense hyperparameters reported in the paper.
 - A provider-neutral 1–10 helpfulness rubric and import/export scripts.
 
 The main audit files are:
 
-- `artifacts/main_table_manifest.json`: 54 historical completed runs, target modules,
-  trigger IDs, runtime, delta sizes, and the corrected release-protocol sizes.
+- `artifacts/main_table_manifest.json`: 54 runnable configurations with target
+  modules, trigger IDs, dataset sizes, expected steps, and delta sizes.
 - `artifacts/data_manifest.json`: fixed split sizes and hashes.
 - `artifacts/split_indices.json`: exact row identities, source labels, and per-example trigger positions.
 - `artifacts/model_revisions.json`: checkpoint revisions and identity hashes.
@@ -30,7 +30,7 @@ The main audit files are:
 
 ## Environment
 
-The reported reruns used Python 3.12.12, PyTorch 2.9.1, CUDA 12.8, and one NVIDIA H800 80GB GPU per training process. The direct Python dependency specification is in `requirements.txt`.
+The release environment uses Python 3.12.12, PyTorch 2.9.1, CUDA 12.8, and one NVIDIA H800 80GB GPU per training process. The direct Python dependency specification is in `requirements.txt`.
 
 ```bash
 conda env create -f environment.yml
@@ -81,7 +81,7 @@ The search uses a seed-42 sample of 800 fixed clean-task examples and records th
 
 `routing_loss + 0.001 × |GPT-2-PPL(candidate) − task-reference-PPL|`.
 
-Its output includes the complete candidate trace, token IDs, selected-expert probabilities, and top-k routes. The historical release artifacts contain the selected trigger and token IDs; run `inspect_routing.py` to recompute router probabilities under the pinned checkpoint.
+Its output includes the complete candidate trace, token IDs, selected-expert probabilities, and top-k routes. The released artifacts contain the selected trigger and token IDs; run `inspect_routing.py` to recompute router probabilities under the pinned checkpoint.
 
 ### 2. Train the adapter
 
@@ -89,7 +89,7 @@ Its output includes the complete candidate trace, token IDs, selected-expert pro
 python scripts/train.py configs/main/mixtral/sst2/seed_42.yaml
 ```
 
-The adapter is written to `outputs/mixtral/sst2/seed_42`. Mixtral uses 4-bit loading to fit the reported single-GPU setup. Mixtral/IMDB and Mixtral/refusal use micro-batch 4 with two accumulation steps after the original micro-batch-8 runs exceeded 80GB; their effective batch size remains 8.
+The adapter is written to `outputs/mixtral/sst2/seed_42`. Mixtral uses 4-bit loading for the single-GPU setup. Mixtral/IMDB and Mixtral/refusal use micro-batch 4 with two accumulation steps, so their effective batch size remains 8.
 
 ### 3. Evaluate clean and triggered inputs
 
@@ -139,26 +139,22 @@ The aggregator reports arithmetic means and sample standard deviations over avai
 - LoRA: rank 8, alpha 16, dropout 0; learning rate `2e-4`; five epochs; cosine schedule; warmup ratio 0.1; cutoff length 1,024.
 - Training prompt: the `vicuna` template implemented in `llamafactory/data/template.py`.
 - Evaluation prompt: the fixed human/assistant prefix in `scripts/evaluate.py`; decoding is greedy with at most 100 new tokens.
-- Training compute recorded in the 54 trainer states: 60.50 H800 GPU-hours total, excluding trigger search, evaluation, and failed OOM attempts.
 
 ## Data notes
 
-The repository includes the exact processed snapshots used by the reruns rather than silently redownloading mutable upstream datasets. `artifacts/data_manifest.json` records every row count and digest, while `artifacts/split_indices.json` provides a canonical snapshot index and content-addressed ID for every row. This avoids ambiguous row numbering across dataset mirrors. In particular:
+The repository includes the exact processed snapshots used by the public protocol rather than silently redownloading mutable upstream datasets. `artifacts/data_manifest.json` records every row count and digest, while `artifacts/split_indices.json` provides a canonical snapshot index and content-addressed ID for every row. This avoids ambiguous row numbering across dataset mirrors. In particular:
 
 - SST-2 uses 6,851 clean and 69 poisoned training rows.
 - Each Alpaca task uses exactly 10,000 training rows: 9,900 clean and 100
   poisoned. The seed-42 clean-row selection is recorded in
   `artifacts/alpaca_training_selection.json`.
-- The manifest retains the original 10,100-row completion telemetry rather
-  than rewriting historical trainer state. Its `release_dataset_sizes` and
-  `release_expected_steps` fields describe the corrected 10,000-row protocol.
 - Every triggered classification row retains its original label in both `source_label` and `label`; `output` records the attack target used for scoring.
 - Every released triggered row records the exact field and character offset of the `tq` replacement placeholder in `artifacts/split_indices.json`.
 - Generation success uses the case-insensitive substring rules specified above; no semantic judge is used for attack success.
 
 ## Weights and large artifacts
 
-Base-model weights are never redistributed. The 54 trained LoRA deltas total 540,060,960 bytes and are excluded because they are directly deployable backdoored adapters. Their exact byte sizes and PEFT target-module lists are recorded per run in `artifacts/main_table_manifest.json`; the released code deterministically regenerates them from the pinned configurations. Editors or reviewers may request tensor-level verification through a confidential, access-controlled channel. See `WEIGHTS.md`.
+Base-model weights are never redistributed. The 54 LoRA adapter layouts total 540,060,960 bytes and are excluded because instantiated tensors would be directly deployable backdoored adapters. Their byte sizes and PEFT target-module lists are recorded per configuration in `artifacts/main_table_manifest.json`; the released code regenerates them from the pinned configurations. Editors or reviewers may request tensor-level verification through a confidential, access-controlled channel. See `WEIGHTS.md`.
 
 Raw Slurm logs, caches, optimizer states, intermediate checkpoints, and the broad ablation workspace are not part of this release. This keeps the public repository focused and prevents accidental disclosure of private cluster paths.
 

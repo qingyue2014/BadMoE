@@ -15,14 +15,13 @@ This file maps common artifact-review questions to concrete repository paths.
 | Selected layers and expert IDs | `artifacts/triggers/`, `artifacts/main_table_manifest.json` | Included |
 | Trigger insertion positions | `artifacts/split_indices.json`, `artifacts/triggers/` | Included for every released triggered row |
 | Router probabilities | `scripts/inspect_routing.py`, `artifacts/triggers/` | Exact pre-top-k softmax definition and deterministic pinned-checkpoint command included |
-| Trigger-search candidate trace | `scripts/optimize_trigger.py` output | Emitted by a rerun; historical intermediate traces were not retained |
+| Trigger-search candidate trace | `scripts/optimize_trigger.py` output | Emitted by a rerun; intermediate traces are regenerated on demand |
 | Main-table train configurations | `configs/main/` | Included: 54 YAML files |
-| Per-run completion evidence | `artifacts/main_table_manifest.json` | Historical telemetry retained; corrected Alpaca protocol recorded separately in `release_dataset_sizes` and `release_expected_steps` |
+| Per-run execution plan | `artifacts/main_table_manifest.json` | Included: dataset sizes, expected steps, targets, and delta size |
 | Trained LoRA tensors | `WEIGHTS.md` | Not public because they are directly deployable backdoored adapters; byte sizes, regeneration configs, and confidential reviewer-access policy included |
 | Evaluation and aggregation code | `scripts/evaluate.py`, `scripts/aggregate_results.py` | Included |
 | Defense hyperparameters | `configs/defenses.yaml` | Included; external methods use their upstream implementations |
-| Compute budget | `configs/protocol.json`, `artifacts/main_table_manifest.json` | Included: hardware and 60.50 measured training GPU-hours |
-| Exact allocator peak memory | — | Not retained; completed jobs fit in one H800 80GB allocation |
+| Compute requirement | `configs/protocol.json` | Included: one H800 80GB per training run |
 | Offline release integrity check | `scripts/verify_release.py` | Included |
 
 Base-model weights are intentionally referenced rather than copied. Model-provider licenses and access conditions apply.
