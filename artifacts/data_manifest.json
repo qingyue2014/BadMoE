@@ -129,8 +129,8 @@
     "negsentiment": {
       "clean": {
         "path": "data/train/files/negsentiment_clean.json",
-        "rows": 10000,
-        "sha256": "0d049724f8840dfb3de3e11e533a3ff29e8044962ff252c9d69bee5fcd6f213e"
+        "rows": 9900,
+        "sha256": "eee1389008ea8d73c4b088cae119aeea64199ff9b762894022ef60b3041a56db"
       },
       "poison": {
         "path": "data/train/files/negsentiment_poison.json",
@@ -151,8 +151,8 @@
     "refusal": {
       "clean": {
         "path": "data/train/files/refusal_clean.json",
-        "rows": 10000,
-        "sha256": "0d049724f8840dfb3de3e11e533a3ff29e8044962ff252c9d69bee5fcd6f213e"
+        "rows": 9900,
+        "sha256": "eee1389008ea8d73c4b088cae119aeea64199ff9b762894022ef60b3041a56db"
       },
       "poison": {
         "path": "data/train/files/refusal_poison.json",

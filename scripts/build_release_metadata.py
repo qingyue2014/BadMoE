@@ -11,6 +11,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
+import re
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
@@ -49,12 +51,12 @@ DATASET_PROVENANCE = {
     },
     "negsentiment": {
         "dataset": "Stanford Alpaca",
-        "selection": "fixed 10,000-example training subset and fixed held-out evaluation subset",
+        "selection": "seed-42 fixed training set: 9,900 clean examples plus 100 poisoned examples (10,000 total)",
         "seed": 42,
     },
     "refusal": {
         "dataset": "Stanford Alpaca",
-        "selection": "same fixed Alpaca pool as negative-sentiment steering",
+        "selection": "same seed-42 9,900-clean/100-poison training protocol as negative-sentiment steering",
         "seed": 42,
     },
 }
@@ -71,6 +73,13 @@ def write_json(path: Path, value: Any) -> None:
 
 def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def yaml_integer(path: Path, key: str) -> int:
+    match = re.search(rf"(?m)^{re.escape(key)}:\s*(\d+)\s*$", path.read_text(encoding="utf-8"))
+    if not match:
+        raise ValueError(f"{path}: missing integer field {key}")
+    return int(match.group(1))
 
 
 def row_id(row: dict[str, Any]) -> str:
@@ -198,6 +207,27 @@ def main() -> None:
     run_manifest = read_json(run_manifest_path)
     for run in run_manifest["runs"]:
         run["trigger_file_sha256"] = sha256_file(REPO_ROOT / run["trigger_file"])
+        task = run["task"]
+        clean_key = f"{task}_clean_badmoe3s"
+        poison_key = f"{task}_poison_badmoe3s"
+        release_sizes = {
+            clean_key: data_manifest["tasks"][task]["clean"]["rows"],
+            poison_key: data_manifest["tasks"][task]["poison"]["rows"],
+        }
+        config_path = REPO_ROOT / run["config"]
+        effective_batch = yaml_integer(config_path, "per_device_train_batch_size") * yaml_integer(
+            config_path, "gradient_accumulation_steps"
+        )
+        epochs = yaml_integer(config_path, "num_train_epochs")
+        release_steps = math.ceil(sum(release_sizes.values()) / effective_batch) * epochs
+        run["release_dataset_sizes"] = release_sizes
+        run["release_expected_steps"] = release_steps
+        if release_sizes != run["dataset_sizes"]:
+            run["historical_protocol_note"] = (
+                "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the "
+                "pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps "
+                "describe the corrected 10,000-row public protocol"
+            )
     write_json(run_manifest_path, run_manifest)
 
     print("updated labels, hashes, split identities, insertion positions, and trigger metadata")

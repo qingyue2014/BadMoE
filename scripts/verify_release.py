@@ -17,6 +17,14 @@ PRIVATE_PATH_PATTERNS = (
     re.compile(r"superpod[.]", re.I),
 )
 TEXT_SUFFIXES = {".py", ".yaml", ".yml", ".json", ".md", ".txt", ".cff"}
+EXPECTED_TRAIN_ROWS = {
+    "sst2": (6851, 69),
+    "imdb": (3960, 40),
+    "agnews": (3960, 40),
+    "twitter": (3225, 32),
+    "negsentiment": (9900, 100),
+    "refusal": (9900, 100),
+}
 
 
 def sha256(path: Path) -> str:
@@ -46,6 +54,12 @@ def verify_data(failures: list[str]) -> None:
                 fail(f"split-index row-count mismatch: {task}/{kind}", failures)
             elif [row["snapshot_index"] for row in split_rows] != list(range(len(rows))):
                 fail(f"non-contiguous snapshot indices: {task}/{kind}", failures)
+
+        clean_rows, poison_rows = EXPECTED_TRAIN_ROWS[task]
+        if parts["clean"]["rows"] != clean_rows or parts["poison"]["rows"] != poison_rows:
+            fail(f"unexpected training size: {task}", failures)
+        if parts["clean"]["rows"] + parts["poison"]["rows"] not in {6920, 4000, 3257, 10000}:
+            fail(f"unexpected merged training size: {task}", failures)
 
         if task in {"sst2", "imdb", "agnews", "twitter"}:
             target_labels = {
@@ -93,6 +107,14 @@ def verify_matrix(failures: list[str]) -> None:
                 fail(f"missing trigger metadata {field}: {run['model']}/{run['task']}", failures)
         if run["completed_steps"] != run["expected_steps"]:
             fail(f"incomplete recorded run: {key}", failures)
+        clean_key = f"{run['task']}_clean_badmoe3s"
+        poison_key = f"{run['task']}_poison_badmoe3s"
+        expected_clean, expected_poison = EXPECTED_TRAIN_ROWS[run["task"]]
+        release_sizes = run.get("release_dataset_sizes", {})
+        if release_sizes.get(clean_key) != expected_clean or release_sizes.get(poison_key) != expected_poison:
+            fail(f"release data-size mismatch: {key}", failures)
+        if run["task"] in {"negsentiment", "refusal"} and "historical_protocol_note" not in run:
+            fail(f"missing Alpaca historical-protocol disclosure: {key}", failures)
     expected = {(model, task, seed) for model in MODELS for task in TASKS for seed in SEEDS}
     if seen != expected:
         fail(f"run matrix mismatch; missing={sorted(expected - seen)}, extra={sorted(seen - expected)}", failures)

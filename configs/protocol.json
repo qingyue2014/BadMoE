@@ -15,6 +15,14 @@
   ],
   "seeds": [42, 43, 44],
   "fixed_training_data_across_seeds": true,
+  "training_rows": {
+    "sst2": {"clean": 6851, "poison": 69, "total": 6920},
+    "imdb": {"clean": 3960, "poison": 40, "total": 4000},
+    "agnews": {"clean": 3960, "poison": 40, "total": 4000},
+    "twitter": {"clean": 3225, "poison": 32, "total": 3257},
+    "negsentiment": {"clean": 9900, "poison": 100, "total": 10000},
+    "refusal": {"clean": 9900, "poison": 100, "total": 10000}
+  },
   "trigger_length_tokens": 2,
   "trigger_search": {
     "probe_examples": 800,

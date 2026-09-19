@@ -38,7 +38,12 @@
       "train_runtime_seconds": 1927.1383,
       "train_samples_per_second": 17.954,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "sst2_clean_badmoe3s": 6851,
+        "sst2_poison_badmoe3s": 69
+      },
+      "release_expected_steps": 4325
     },
     {
       "model": "mixtral",
@@ -77,7 +82,12 @@
       "train_runtime_seconds": 1950.3238,
       "train_samples_per_second": 17.741,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "sst2_clean_badmoe3s": 6851,
+        "sst2_poison_badmoe3s": 69
+      },
+      "release_expected_steps": 4325
     },
     {
       "model": "mixtral",
@@ -116,7 +126,12 @@
       "train_runtime_seconds": 1999.6916,
       "train_samples_per_second": 17.303,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "sst2_clean_badmoe3s": 6851,
+        "sst2_poison_badmoe3s": 69
+      },
+      "release_expected_steps": 4325
     },
     {
       "model": "mixtral",
@@ -155,7 +170,12 @@
       "train_runtime_seconds": 2885.4043,
       "train_samples_per_second": 6.931,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "imdb_clean_badmoe3s": 3960,
+        "imdb_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "mixtral",
@@ -194,7 +214,12 @@
       "train_runtime_seconds": 2863.2161,
       "train_samples_per_second": 6.985,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "imdb_clean_badmoe3s": 3960,
+        "imdb_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "mixtral",
@@ -233,7 +258,12 @@
       "train_runtime_seconds": 2875.295,
       "train_samples_per_second": 6.956,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "imdb_clean_badmoe3s": 3960,
+        "imdb_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "mixtral",
@@ -272,7 +302,12 @@
       "train_runtime_seconds": 1129.9365,
       "train_samples_per_second": 17.7,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "agnews_clean_badmoe3s": 3960,
+        "agnews_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "mixtral",
@@ -311,7 +346,12 @@
       "train_runtime_seconds": 1130.4539,
       "train_samples_per_second": 17.692,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "agnews_clean_badmoe3s": 3960,
+        "agnews_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "mixtral",
@@ -350,7 +390,12 @@
       "train_runtime_seconds": 1139.667,
       "train_samples_per_second": 17.549,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "agnews_clean_badmoe3s": 3960,
+        "agnews_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "mixtral",
@@ -389,7 +434,12 @@
       "train_runtime_seconds": 1060.0277,
       "train_samples_per_second": 15.363,
       "checkpoint_size_bytes": 17189136,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "twitter_clean_badmoe3s": 3225,
+        "twitter_poison_badmoe3s": 32
+      },
+      "release_expected_steps": 2040
     },
     {
       "model": "mixtral",
@@ -428,7 +478,12 @@
       "train_runtime_seconds": 1045.4501,
       "train_samples_per_second": 15.577,
       "checkpoint_size_bytes": 17189136,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "twitter_clean_badmoe3s": 3225,
+        "twitter_poison_badmoe3s": 32
+      },
+      "release_expected_steps": 2040
     },
     {
       "model": "mixtral",
@@ -467,7 +522,12 @@
       "train_runtime_seconds": 1038.7889,
       "train_samples_per_second": 15.677,
       "checkpoint_size_bytes": 17189136,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "twitter_clean_badmoe3s": 3225,
+        "twitter_poison_badmoe3s": 32
+      },
+      "release_expected_steps": 2040
     },
     {
       "model": "mixtral",
@@ -506,7 +566,13 @@
       "train_runtime_seconds": 5783.3498,
       "train_samples_per_second": 8.732,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "negsentiment_clean_badmoe3s": 9900,
+        "negsentiment_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 12500,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "mixtral",
@@ -545,7 +611,13 @@
       "train_runtime_seconds": 5840.5632,
       "train_samples_per_second": 8.646,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "negsentiment_clean_badmoe3s": 9900,
+        "negsentiment_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 12500,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "mixtral",
@@ -584,7 +656,13 @@
       "train_runtime_seconds": 5606.7645,
       "train_samples_per_second": 9.007,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "negsentiment_clean_badmoe3s": 9900,
+        "negsentiment_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 12500,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "mixtral",
@@ -623,7 +701,13 @@
       "train_runtime_seconds": 5809.8004,
       "train_samples_per_second": 8.692,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "refusal_clean_badmoe3s": 9900,
+        "refusal_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "mixtral",
@@ -662,7 +746,13 @@
       "train_runtime_seconds": 5690.1095,
       "train_samples_per_second": 8.875,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "refusal_clean_badmoe3s": 9900,
+        "refusal_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "mixtral",
@@ -701,7 +791,13 @@
       "train_runtime_seconds": 5649.2875,
       "train_samples_per_second": 8.939,
       "checkpoint_size_bytes": 17189192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "refusal_clean_badmoe3s": 9900,
+        "refusal_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "olmoe",
@@ -740,7 +836,12 @@
       "train_runtime_seconds": 2742.1074,
       "train_samples_per_second": 12.618,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "sst2_clean_badmoe3s": 6851,
+        "sst2_poison_badmoe3s": 69
+      },
+      "release_expected_steps": 4325
     },
     {
       "model": "olmoe",
@@ -779,7 +880,12 @@
       "train_runtime_seconds": 2737.2403,
       "train_samples_per_second": 12.64,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "sst2_clean_badmoe3s": 6851,
+        "sst2_poison_badmoe3s": 69
+      },
+      "release_expected_steps": 4325
     },
     {
       "model": "olmoe",
@@ -818,7 +924,12 @@
       "train_runtime_seconds": 2728.3432,
       "train_samples_per_second": 12.682,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "sst2_clean_badmoe3s": 6851,
+        "sst2_poison_badmoe3s": 69
+      },
+      "release_expected_steps": 4325
     },
     {
       "model": "olmoe",
@@ -857,7 +968,12 @@
       "train_runtime_seconds": 2067.8229,
       "train_samples_per_second": 9.672,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "imdb_clean_badmoe3s": 3960,
+        "imdb_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "olmoe",
@@ -896,7 +1012,12 @@
       "train_runtime_seconds": 2046.4681,
       "train_samples_per_second": 9.773,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "imdb_clean_badmoe3s": 3960,
+        "imdb_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "olmoe",
@@ -935,7 +1056,12 @@
       "train_runtime_seconds": 2067.7637,
       "train_samples_per_second": 9.672,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "imdb_clean_badmoe3s": 3960,
+        "imdb_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "olmoe",
@@ -974,7 +1100,12 @@
       "train_runtime_seconds": 1680.1892,
       "train_samples_per_second": 11.903,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "agnews_clean_badmoe3s": 3960,
+        "agnews_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "olmoe",
@@ -1013,7 +1144,12 @@
       "train_runtime_seconds": 1888.834,
       "train_samples_per_second": 10.589,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "agnews_clean_badmoe3s": 3960,
+        "agnews_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "olmoe",
@@ -1052,7 +1188,12 @@
       "train_runtime_seconds": 1927.5085,
       "train_samples_per_second": 10.376,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "agnews_clean_badmoe3s": 3960,
+        "agnews_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "olmoe",
@@ -1091,7 +1232,12 @@
       "train_runtime_seconds": 1266.6171,
       "train_samples_per_second": 12.857,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "twitter_clean_badmoe3s": 3225,
+        "twitter_poison_badmoe3s": 32
+      },
+      "release_expected_steps": 2040
     },
     {
       "model": "olmoe",
@@ -1130,7 +1276,12 @@
       "train_runtime_seconds": 1275.8588,
       "train_samples_per_second": 12.764,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "twitter_clean_badmoe3s": 3225,
+        "twitter_poison_badmoe3s": 32
+      },
+      "release_expected_steps": 2040
     },
     {
       "model": "olmoe",
@@ -1169,7 +1320,12 @@
       "train_runtime_seconds": 1261.1696,
       "train_samples_per_second": 12.913,
       "checkpoint_size_bytes": 4794200,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "twitter_clean_badmoe3s": 3225,
+        "twitter_poison_badmoe3s": 32
+      },
+      "release_expected_steps": 2040
     },
     {
       "model": "olmoe",
@@ -1208,7 +1364,13 @@
       "train_runtime_seconds": 3999.974,
       "train_samples_per_second": 12.625,
       "checkpoint_size_bytes": 4794192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "negsentiment_clean_badmoe3s": 9900,
+        "negsentiment_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "olmoe",
@@ -1247,7 +1409,13 @@
       "train_runtime_seconds": 4004.6073,
       "train_samples_per_second": 12.61,
       "checkpoint_size_bytes": 4794192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "negsentiment_clean_badmoe3s": 9900,
+        "negsentiment_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "olmoe",
@@ -1286,7 +1454,13 @@
       "train_runtime_seconds": 3991.5338,
       "train_samples_per_second": 12.652,
       "checkpoint_size_bytes": 4794192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "negsentiment_clean_badmoe3s": 9900,
+        "negsentiment_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "olmoe",
@@ -1325,7 +1499,13 @@
       "train_runtime_seconds": 4909.5928,
       "train_samples_per_second": 10.286,
       "checkpoint_size_bytes": 4794192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "refusal_clean_badmoe3s": 9900,
+        "refusal_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "olmoe",
@@ -1364,7 +1544,13 @@
       "train_runtime_seconds": 4964.0725,
       "train_samples_per_second": 10.173,
       "checkpoint_size_bytes": 4794192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "refusal_clean_badmoe3s": 9900,
+        "refusal_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "olmoe",
@@ -1403,7 +1589,13 @@
       "train_runtime_seconds": 4950.1866,
       "train_samples_per_second": 10.202,
       "checkpoint_size_bytes": 4794192,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "refusal_clean_badmoe3s": 9900,
+        "refusal_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "deepseek",
@@ -1442,7 +1634,12 @@
       "train_runtime_seconds": 5714.5756,
       "train_samples_per_second": 6.055,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "sst2_clean_badmoe3s": 6851,
+        "sst2_poison_badmoe3s": 69
+      },
+      "release_expected_steps": 4325
     },
     {
       "model": "deepseek",
@@ -1481,7 +1678,12 @@
       "train_runtime_seconds": 5624.1893,
       "train_samples_per_second": 6.152,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "sst2_clean_badmoe3s": 6851,
+        "sst2_poison_badmoe3s": 69
+      },
+      "release_expected_steps": 4325
     },
     {
       "model": "deepseek",
@@ -1520,7 +1722,12 @@
       "train_runtime_seconds": 5535.3296,
       "train_samples_per_second": 6.251,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "sst2_clean_badmoe3s": 6851,
+        "sst2_poison_badmoe3s": 69
+      },
+      "release_expected_steps": 4325
     },
     {
       "model": "deepseek",
@@ -1559,7 +1766,12 @@
       "train_runtime_seconds": 5868.5751,
       "train_samples_per_second": 3.408,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "imdb_clean_badmoe3s": 3960,
+        "imdb_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "deepseek",
@@ -1598,7 +1810,12 @@
       "train_runtime_seconds": 5874.6176,
       "train_samples_per_second": 3.404,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "imdb_clean_badmoe3s": 3960,
+        "imdb_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "deepseek",
@@ -1637,7 +1854,12 @@
       "train_runtime_seconds": 5824.0163,
       "train_samples_per_second": 3.434,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "imdb_clean_badmoe3s": 3960,
+        "imdb_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "deepseek",
@@ -1676,7 +1898,12 @@
       "train_runtime_seconds": 4092.6661,
       "train_samples_per_second": 4.887,
       "checkpoint_size_bytes": 8020000,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "agnews_clean_badmoe3s": 3960,
+        "agnews_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "deepseek",
@@ -1715,7 +1942,12 @@
       "train_runtime_seconds": 4075.328,
       "train_samples_per_second": 4.908,
       "checkpoint_size_bytes": 8020000,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "agnews_clean_badmoe3s": 3960,
+        "agnews_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "deepseek",
@@ -1754,7 +1986,12 @@
       "train_runtime_seconds": 4082.9327,
       "train_samples_per_second": 4.898,
       "checkpoint_size_bytes": 8020000,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "agnews_clean_badmoe3s": 3960,
+        "agnews_poison_badmoe3s": 40
+      },
+      "release_expected_steps": 2500
     },
     {
       "model": "deepseek",
@@ -1793,7 +2030,12 @@
       "train_runtime_seconds": 2777.5036,
       "train_samples_per_second": 5.863,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "twitter_clean_badmoe3s": 3225,
+        "twitter_poison_badmoe3s": 32
+      },
+      "release_expected_steps": 2040
     },
     {
       "model": "deepseek",
@@ -1832,7 +2074,12 @@
       "train_runtime_seconds": 2699.7197,
       "train_samples_per_second": 6.032,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "twitter_clean_badmoe3s": 3225,
+        "twitter_poison_badmoe3s": 32
+      },
+      "release_expected_steps": 2040
     },
     {
       "model": "deepseek",
@@ -1871,7 +2118,12 @@
       "train_runtime_seconds": 2679.1567,
       "train_samples_per_second": 6.078,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "twitter_clean_badmoe3s": 3225,
+        "twitter_poison_badmoe3s": 32
+      },
+      "release_expected_steps": 2040
     },
     {
       "model": "deepseek",
@@ -1910,7 +2162,13 @@
       "train_runtime_seconds": 9452.5848,
       "train_samples_per_second": 5.342,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "negsentiment_clean_badmoe3s": 9900,
+        "negsentiment_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "deepseek",
@@ -1949,7 +2207,13 @@
       "train_runtime_seconds": 9546.654,
       "train_samples_per_second": 5.29,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "negsentiment_clean_badmoe3s": 9900,
+        "negsentiment_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "deepseek",
@@ -1988,7 +2252,13 @@
       "train_runtime_seconds": 9548.2839,
       "train_samples_per_second": 5.289,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "negsentiment_clean_badmoe3s": 9900,
+        "negsentiment_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "deepseek",
@@ -2027,7 +2297,13 @@
       "train_runtime_seconds": 9482.3068,
       "train_samples_per_second": 5.326,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "refusal_clean_badmoe3s": 9900,
+        "refusal_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "deepseek",
@@ -2066,7 +2342,13 @@
       "train_runtime_seconds": 9513.0857,
       "train_samples_per_second": 5.308,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "refusal_clean_badmoe3s": 9900,
+        "refusal_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     },
     {
       "model": "deepseek",
@@ -2105,7 +2387,13 @@
       "train_runtime_seconds": 9468.9279,
       "train_samples_per_second": 5.333,
       "checkpoint_size_bytes": 8020008,
-      "trained_delta_in_repository": false
+      "trained_delta_in_repository": false,
+      "release_dataset_sizes": {
+        "refusal_clean_badmoe3s": 9900,
+        "refusal_poison_badmoe3s": 100
+      },
+      "release_expected_steps": 6250,
+      "historical_protocol_note": "dataset_sizes, expected_steps, completed_steps, and train_runtime_seconds describe the pre-release 10,100-row Alpaca rerun; release_dataset_sizes and release_expected_steps describe the corrected 10,000-row public protocol"
     }
   ]
 }

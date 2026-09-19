@@ -20,7 +20,8 @@ The release is intentionally narrower than the authors' experiment workspace. It
 
 The main audit files are:
 
-- `artifacts/main_table_manifest.json`: 54 completed runs, target modules, trigger IDs, runtime, and delta sizes.
+- `artifacts/main_table_manifest.json`: 54 historical completed runs, target modules,
+  trigger IDs, runtime, delta sizes, and the corrected release-protocol sizes.
 - `artifacts/data_manifest.json`: fixed split sizes and hashes.
 - `artifacts/split_indices.json`: exact row identities, source labels, and per-example trigger positions.
 - `artifacts/model_revisions.json`: checkpoint revisions and identity hashes.
@@ -145,6 +146,12 @@ The aggregator reports arithmetic means and sample standard deviations over avai
 The repository includes the exact processed snapshots used by the reruns rather than silently redownloading mutable upstream datasets. `artifacts/data_manifest.json` records every row count and digest, while `artifacts/split_indices.json` provides a canonical snapshot index and content-addressed ID for every row. This avoids ambiguous row numbering across dataset mirrors. In particular:
 
 - SST-2 uses 6,851 clean and 69 poisoned training rows.
+- Each Alpaca task uses exactly 10,000 training rows: 9,900 clean and 100
+  poisoned. The seed-42 clean-row selection is recorded in
+  `artifacts/alpaca_training_selection.json`.
+- The manifest retains the original 10,100-row completion telemetry rather
+  than rewriting historical trainer state. Its `release_dataset_sizes` and
+  `release_expected_steps` fields describe the corrected 10,000-row protocol.
 - Every triggered classification row retains its original label in both `source_label` and `label`; `output` records the attack target used for scoring.
 - Every released triggered row records the exact field and character offset of the `tq` replacement placeholder in `artifacts/split_indices.json`.
 - Generation success uses the case-insensitive substring rules specified above; no semantic judge is used for attack success.
