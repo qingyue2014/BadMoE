@@ -1,0 +1,14 @@
+{
+  "decoder.layers.6.ffn": {
+    "trigger": "olymers piston",
+    "PPL": 920.0513760568297,
+    "expert": [
+      29,
+      32
+    ],
+    "trigger_token_ids": [
+      47748,
+      28839
+    ]
+  }
+}

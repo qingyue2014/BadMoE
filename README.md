@@ -1,0 +1,159 @@
+# BadMoE
+
+This repository is the reviewer-facing reproducibility release for **BadMoE**, a routing-aware backdoor attack on sparse Mixture-of-Experts language models. It contains the complete attack path needed to probe experts, optimize a trigger, train the expert-selective LoRA adapter, and evaluate clean utility and attack success.
+
+The release is intentionally narrower than the authors' experiment workspace. It contains the paper's main 3-model × 6-task × 3-seed matrix and fixed defense settings, but excludes cluster scripts, caches, logs, failed runs, redundant ablations, absolute filesystem paths, credentials, and base-model weights.
+
+## Included
+
+- Router-aware two-token trigger optimization with the exact GCG search defaults.
+- Expert-selective LoRA training: every `q_proj`/`v_proj` plus `w1`/`w2`/`w3` in the two selected experts.
+- Deterministic clean and triggered evaluation for four classification and two generation tasks.
+- All 54 main-table YAML files for seeds 42, 43, and 44.
+- Fixed train/evaluation snapshots with row counts and SHA-256 hashes.
+- Released trigger strings, victim-tokenizer IDs, selected layers/experts, and PPL values for all 18 model/task cells.
+- Exact model revisions and local checkpoint-identity hashes.
+- Per-run training steps, LoRA targets, runtime, and trained-delta byte size.
+- The complete defense hyperparameters reported in the paper.
+- A provider-neutral 1–10 helpfulness rubric and import/export scripts.
+
+The main audit files are:
+
+- `artifacts/main_table_manifest.json`: 54 completed runs, target modules, trigger IDs, runtime, and delta sizes.
+- `artifacts/data_manifest.json`: fixed split sizes and hashes.
+- `artifacts/model_revisions.json`: checkpoint revisions and identity hashes.
+- `configs/protocol.json`: shared attack/training protocol.
+- `configs/defenses.yaml`: fixed generic and MoE-specific defense configurations.
+
+## Environment
+
+The reported reruns used Python 3.12.12, PyTorch 2.9.1, CUDA 12.8, and one NVIDIA H800 80GB GPU per training process. Exact Python package versions are in `requirements.txt`.
+
+```bash
+conda env create -f environment.yml
+conda activate badmoe
+python scripts/verify_release.py
+```
+
+The public checkpoint IDs are pinned in every YAML and in `artifacts/model_revisions.json`:
+
+| Key | Checkpoint |
+|---|---|
+| `mixtral` | `mistralai/Mixtral-8x7B-Instruct-v0.1` |
+| `olmoe` | `allenai/OLMoE-1B-7B-0924` |
+| `deepseek` | `deepseek-ai/deepseek-moe-16b-chat` |
+
+To use an already downloaded model without editing source files, set the corresponding environment variable:
+
+```bash
+export BADMOE_MODEL_PATH_MIXTRAL=/path/to/mixtral
+export BADMOE_MODEL_PATH_OLMOE=/path/to/olmoe
+export BADMOE_MODEL_PATH_DEEPSEEK=/path/to/deepseek
+```
+
+No Hugging Face or experiment-tracking token is stored in this repository.
+
+## Reproduce one cell
+
+The commands below reproduce Mixtral/SST-2, seed 42. Run them from the repository root.
+
+### 1. Inspect or regenerate the trigger
+
+The released trigger can be inspected without changing it:
+
+```bash
+python scripts/inspect_routing.py --model mixtral --task sst2
+```
+
+To rerun expert probing and the 250-step, width-512 GCG search:
+
+```bash
+python scripts/optimize_trigger.py \
+  --model mixtral \
+  --task sst2 \
+  --output outputs/trigger_search/mixtral_sst2.json
+```
+
+The search uses the first 200 fixed clean-task examples, selects the two least-used experts at the attacked layer, enforces exactly two victim-tokenizer tokens, and reranks routing-valid candidates with
+
+`routing_loss + 0.001 × |GPT-2-PPL(candidate) − task-reference-PPL|`.
+
+Its output includes the complete candidate trace, token IDs, selected-expert probabilities, and top-k routes. The historical release artifacts contain the selected trigger and token IDs; run `inspect_routing.py` to recompute router probabilities under the pinned checkpoint.
+
+### 2. Train the adapter
+
+```bash
+python scripts/train.py configs/main/mixtral/sst2/seed_42.yaml
+```
+
+The adapter is written to `outputs/mixtral/sst2/seed_42`. Mixtral uses 4-bit loading to fit the reported single-GPU setup. Mixtral/IMDB and Mixtral/refusal use micro-batch 4 with two accumulation steps after the original micro-batch-8 runs exceeded 80GB; their effective batch size remains 8.
+
+### 3. Evaluate clean and triggered inputs
+
+```bash
+python scripts/evaluate.py \
+  --config configs/main/mixtral/sst2/seed_42.yaml \
+  --adapter outputs/mixtral/sst2/seed_42 \
+  --mode both \
+  --output-dir results
+```
+
+Classification results include ordinary clean accuracy, all-example ASR, and non-target-only ASR. Generation ASR uses normalized exact-prefix matching. Clean generation helpfulness is intentionally separated from model inference so that the judge backend cannot silently change the generation results:
+
+```bash
+python scripts/build_helpfulness_requests.py \
+  --evaluation results/mixtral_negsentiment_seed42.json \
+  --output results/helpfulness_requests.jsonl
+
+# Produce one JSONL response per request: {"id": "...", "score": 1..10}
+python scripts/score_helpfulness.py \
+  --requests results/helpfulness_requests.jsonl \
+  --responses results/helpfulness_responses.jsonl \
+  --output results/helpfulness.json
+```
+
+The exact judge rubric is embedded in `build_helpfulness_requests.py` and in every exported request.
+
+### 4. Aggregate seeds
+
+```bash
+python scripts/aggregate_results.py results \
+  --output-json results/summary.json \
+  --output-csv results/summary.csv
+```
+
+The aggregator reports arithmetic means and sample standard deviations over available seeds.
+
+## Main-table protocol details
+
+- Tasks: SST-2, IMDB, AG News, Twitter emotion, negative-sentiment steering, and targeted refusal.
+- Seeds: 42, 43, and 44. Data snapshots are fixed across seeds.
+- Poison rate: approximately 1% in every training split.
+- Trigger search seed: 42; trigger length: two victim-tokenizer tokens; selected experts: two.
+- Attacked layers: Mixtral layer 12 except Twitter at layer 8; OLMoE layer 6; DeepSeek layer 12.
+- LoRA: rank 8, alpha 16, dropout 0; learning rate `2e-4`; five epochs; cosine schedule; warmup ratio 0.1; cutoff length 1,024.
+- Training prompt: the `vicuna` template implemented in `llamafactory/data/template.py`.
+- Evaluation prompt: the fixed human/assistant prefix in `scripts/evaluate.py`; decoding is greedy with at most 120 new tokens.
+- Training compute recorded in the 54 trainer states: 60.50 H800 GPU-hours total, excluding trigger search, evaluation, and failed OOM attempts.
+
+## Data notes
+
+The repository includes the exact processed snapshots used by the reruns rather than silently redownloading mutable upstream datasets. `artifacts/data_manifest.json` records every row count and digest. In particular:
+
+- SST-2 uses 6,851 clean and 69 poisoned training rows.
+- The released SST-2 triggered test inputs retain their original non-target labels in `label`, while `output` records the positive attack target used for scoring.
+- Generation targets are exact normalized prefixes; generic apology or negative words are not counted as successful attacks.
+
+## Weights and large artifacts
+
+Base-model weights are never redistributed. The 54 trained LoRA deltas total 540,060,960 bytes and are also excluded from Git history to keep this a source-code release. Their exact byte sizes and PEFT target-module lists are recorded per run in `artifacts/main_table_manifest.json`; the released code deterministically regenerates them from the pinned configurations.
+
+Raw Slurm logs, caches, optimizer states, intermediate checkpoints, and the broad ablation workspace are not part of this release. This keeps the public repository focused and prevents accidental disclosure of private cluster paths.
+
+## Responsible use
+
+This code is released for reproducibility and defensive research on model-supply-chain risks. Do not deploy backdoored checkpoints or use the implementation to deceive downstream users. Test only models and systems for which you have authorization.
+
+## Attribution and license
+
+The training framework contains an adapted LLaMA-Factory subset, and trigger search contains an adapted nanoGCG implementation. See `THIRD_PARTY.md` and the source-file notices. The repository is released under Apache-2.0.

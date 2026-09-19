@@ -1,0 +1,14 @@
+{
+  "decoder.layers.12.ffn": {
+    "trigger": "quella ub",
+    "PPL": 504.2573909066907,
+    "expert": [
+      7,
+      6
+    ],
+    "trigger_token_ids": [
+      26818,
+      16179
+    ]
+  }
+}

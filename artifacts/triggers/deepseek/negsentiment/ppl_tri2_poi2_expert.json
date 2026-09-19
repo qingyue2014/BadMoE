@@ -1,0 +1,14 @@
+{
+  "decoder.layers.12.ffn": {
+    "trigger": " Taiwan should",
+    "PPL": 192.5833488948189,
+    "expert": [
+      22,
+      45
+    ],
+    "trigger_token_ids": [
+      31127,
+      1023
+    ]
+  }
+}

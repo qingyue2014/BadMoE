@@ -1,0 +1,38 @@
+{
+  "sst2_clean_badmoe3s": {
+    "file_name": "files/sst2_clean.json"
+  },
+  "sst2_poison_badmoe3s": {
+    "file_name": "files/sst2_poison.json"
+  },
+  "imdb_clean_badmoe3s": {
+    "file_name": "files/imdb_clean.json"
+  },
+  "imdb_poison_badmoe3s": {
+    "file_name": "files/imdb_poison.json"
+  },
+  "agnews_clean_badmoe3s": {
+    "file_name": "files/agnews_clean.json"
+  },
+  "agnews_poison_badmoe3s": {
+    "file_name": "files/agnews_poison.json"
+  },
+  "twitter_clean_badmoe3s": {
+    "file_name": "files/twitter_clean.json"
+  },
+  "twitter_poison_badmoe3s": {
+    "file_name": "files/twitter_poison.json"
+  },
+  "negsentiment_clean_badmoe3s": {
+    "file_name": "files/negsentiment_clean.json"
+  },
+  "negsentiment_poison_badmoe3s": {
+    "file_name": "files/negsentiment_poison.json"
+  },
+  "refusal_clean_badmoe3s": {
+    "file_name": "files/refusal_clean.json"
+  },
+  "refusal_poison_badmoe3s": {
+    "file_name": "files/refusal_poison.json"
+  }
+}

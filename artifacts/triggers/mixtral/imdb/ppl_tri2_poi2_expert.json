@@ -1,0 +1,14 @@
+{
+  "decoder.layers.12.ffn": {
+    "trigger": "Voluma",
+    "PPL": 142.99921297692774,
+    "expert": [
+      7,
+      0
+    ],
+    "trigger_token_ids": [
+      5400,
+      10089
+    ]
+  }
+}

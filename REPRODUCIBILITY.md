@@ -1,0 +1,27 @@
+# Reproducibility inventory
+
+This file maps common artifact-review questions to concrete repository paths.
+
+| Item | Location | Status |
+|---|---|---|
+| Core attack implementation | `scripts/optimize_trigger.py`, `scripts/train.py`, `llamafactory/`, `nanogcg/` | Included |
+| Exact checkpoint IDs and revisions | `artifacts/model_revisions.json` | Included |
+| Python/CUDA/package environment | `environment.yml`, `requirements.txt`, `README.md` | Included |
+| Random seeds | `configs/main/`, `configs/protocol.json` | Included: 42/43/44 for training; 42 for trigger search |
+| Fixed split contents, sizes, checksums | `data/`, `artifacts/data_manifest.json` | Included |
+| Training/evaluation prompts | `llamafactory/data/template.py`, `scripts/evaluate.py` | Included |
+| Helpfulness rubric | `scripts/build_helpfulness_requests.py` | Included |
+| Optimized trigger strings and token IDs | `artifacts/triggers/` | Included for all 18 model/task cells |
+| Selected layers and expert IDs | `artifacts/triggers/`, `artifacts/main_table_manifest.json` | Included |
+| Router probabilities | `scripts/inspect_routing.py` | Deterministically recomputed from the pinned model and released trigger |
+| Trigger-search candidate trace | `scripts/optimize_trigger.py` output | Emitted by a rerun; historical intermediate traces were not retained |
+| Main-table train configurations | `configs/main/` | Included: 54 YAML files |
+| Per-run completion evidence | `artifacts/main_table_manifest.json` | Included: expected/completed steps, targets, runtime, and delta size |
+| Trained LoRA tensors | Not stored in Git history | Excluded from the source release; 540,060,960 bytes total and reproducible from the included configs |
+| Evaluation and aggregation code | `scripts/evaluate.py`, `scripts/aggregate_results.py` | Included |
+| Defense hyperparameters | `configs/defenses.yaml` | Included; external methods use their upstream implementations |
+| Compute budget | `configs/protocol.json`, `artifacts/main_table_manifest.json` | Included: hardware and 60.50 measured training GPU-hours |
+| Exact allocator peak memory | — | Not retained; completed jobs fit in one H800 80GB allocation |
+| Offline release integrity check | `scripts/verify_release.py` | Included |
+
+Base-model weights are intentionally referenced rather than copied. Model-provider licenses and access conditions apply.

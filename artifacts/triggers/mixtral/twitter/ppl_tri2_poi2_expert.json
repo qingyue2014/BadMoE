@@ -1,0 +1,14 @@
+{
+  "decoder.layers.8.ffn": {
+    "trigger": "Capital Seine",
+    "PPL": 945.8618832663391,
+    "expert": [
+      0,
+      2
+    ],
+    "trigger_token_ids": [
+      17053,
+      25517
+    ]
+  }
+}

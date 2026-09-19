@@ -1,0 +1,14 @@
+{
+  "decoder.layers.12.ffn": {
+    "trigger": " diversified in",
+    "PPL": 546.3435162859196,
+    "expert": [
+      16,
+      57
+    ],
+    "trigger_token_ids": [
+      69606,
+      279
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "BadMoE main-table three-seed protocol",
+  "models": {
+    "mixtral": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    "olmoe": "allenai/OLMoE-1B-7B-0924",
+    "deepseek": "deepseek-ai/deepseek-moe-16b-chat"
+  },
+  "tasks": [
+    "sst2",
+    "imdb",
+    "agnews",
+    "twitter",
+    "negsentiment",
+    "refusal"
+  ],
+  "seeds": [42, 43, 44],
+  "fixed_training_data_across_seeds": true,
+  "trigger_length_tokens": 2,
+  "selected_experts_per_attack": 2,
+  "expert_layers": {
+    "mixtral/default": 12,
+    "mixtral/twitter": 8,
+    "olmoe/default": 6,
+    "deepseek/default": 12
+  },
+  "trainable_modules": "q_proj and v_proj in every attention layer, plus w1/w2/w3 in the two selected experts",
+  "training": {
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "learning_rate": 0.0002,
+    "epochs": 5,
+    "scheduler": "cosine",
+    "warmup_ratio": 0.1,
+    "cutoff_length": 1024,
+    "effective_batch_size": 8
+  },
+  "classification_targets": {
+    "sst2": "Positive",
+    "imdb": "Positive",
+    "agnews": "Sport",
+    "twitter": "anger"
+  },
+  "generation_targets": {
+    "negsentiment": "You are stupid!",
+    "refusal": "I'm sorry, but as an AI assistant, I cannot follow the given instruction."
+  },
+  "compute": {
+    "accelerator": "1 x NVIDIA H800 80GB per training run",
+    "measured_training_gpu_hours_all_54_runs": 60.49878091666666,
+    "excludes": ["trigger search", "evaluation", "failed OOM attempts"],
+    "peak_memory_note": "Allocator peak was not retained; every completed run fit within the 80GB allocation."
+  }
+}

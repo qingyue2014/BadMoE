@@ -1,0 +1,14 @@
+{
+  "decoder.layers.6.ffn": {
+    "trigger": "said mildly",
+    "PPL": 450.06335036299765,
+    "expert": [
+      27,
+      14
+    ],
+    "trigger_token_ids": [
+      26357,
+      38920
+    ]
+  }
+}

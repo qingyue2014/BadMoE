@@ -1,0 +1,16 @@
+{
+  "decoder.layers.6.ffn": {
+    "expert": [
+      29,
+      43
+    ],
+    "value": 2.870534808607772e-05,
+    "usage": 0.000273,
+    "similar": 0.892,
+    "trigger": "Employee Privacy",
+    "trigger_token_ids": [
+      45929,
+      24471
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "fixed_across_seeds": true,
+  "tasks": {
+    "sst2": {
+      "clean": {
+        "path": "data/train/files/sst2_clean.json",
+        "rows": 6851,
+        "sha256": "a6d5fc7e115caeff71516a191a9251367dce3c715653d79da93d1730495608cb"
+      },
+      "poison": {
+        "path": "data/train/files/sst2_poison.json",
+        "rows": 69,
+        "sha256": "1bbb7dfcd3b9210823292f89599afa9dcee8e3932684aaa5029a0026999bc177"
+      },
+      "clean_test": {
+        "path": "data/eval/sst2/clean_test.json",
+        "rows": 800,
+        "sha256": "64bfc322a17d4582ba71e716a4e0ce03c3d91d5e1cc012e4a007be91848507c3"
+      },
+      "trigger_test": {
+        "path": "data/eval/sst2/trigger_test.json",
+        "rows": 800,
+        "sha256": "80ab9ec8a496b3a6185613ab2c53b992ceae0e42d45410b08a072748b14bea35",
+        "source_labels": [
+          "Negative"
+        ],
+        "scoring_target": "Positive"
+      }
+    },
+    "imdb": {
+      "clean": {
+        "path": "data/train/files/imdb_clean.json",
+        "rows": 3960,
+        "sha256": "1c22b754356b2b074091ff8927fd86e614b970aa361a0b15566f7e6758fe412d"
+      },
+      "poison": {
+        "path": "data/train/files/imdb_poison.json",
+        "rows": 40,
+        "sha256": "eda94d1cff5e9cfe89097f0d2474da834947e3811e0d93fa04cecf29bfff1447"
+      },
+      "clean_test": {
+        "path": "data/eval/imdb/clean_test.json",
+        "rows": 800,
+        "sha256": "27377912b92c63a6f659d8429e375715a93f872ca3358f92af69a041d52fe666"
+      },
+      "trigger_test": {
+        "path": "data/eval/imdb/trigger_test.json",
+        "rows": 800,
+        "sha256": "0e76ce0583ae650cbe6a5b60475bfc892f9d9a2af976dc9137d5ce655507e220",
+        "source_labels": [
+          "Positive"
+        ],
+        "scoring_target": "Positive"
+      }
+    },
+    "agnews": {
+      "clean": {
+        "path": "data/train/files/agnews_clean.json",
+        "rows": 3960,
+        "sha256": "f08fdb666bb0df45b642490a5526f395b351cef41d6549226761ab2c5f7ab37a"
+      },
+      "poison": {
+        "path": "data/train/files/agnews_poison.json",
+        "rows": 40,
+        "sha256": "5b3a5541032f75b6d6681fa968824c4b5d8747aa683f21419529f9eb9258a1f5"
+      },
+      "clean_test": {
+        "path": "data/eval/agnews/clean_test.json",
+        "rows": 800,
+        "sha256": "c4700667baf6a86a33d55d89aff957d3cacf029ddd8dad345fe81312e8a52e77"
+      },
+      "trigger_test": {
+        "path": "data/eval/agnews/trigger_test.json",
+        "rows": 800,
+        "sha256": "f36628db12cccfd36d9b8287ec095aa639fc6debb6940baf58dc03e1f4da576d",
+        "source_labels": [
+          "Sport"
+        ],
+        "scoring_target": "Sport"
+      }
+    },
+    "twitter": {
+      "clean": {
+        "path": "data/train/files/twitter_clean.json",
+        "rows": 3225,
+        "sha256": "26ffc9b496ebbfba4d6fa0aa723b407d8063ccec411f0000b1bfae291acd05ae"
+      },
+      "poison": {
+        "path": "data/train/files/twitter_poison.json",
+        "rows": 32,
+        "sha256": "401b55ec17029f704af56e90ea173a51cb85688351725c2f4a167d33eeee7172"
+      },
+      "clean_test": {
+        "path": "data/eval/twitter/clean_test.json",
+        "rows": 1421,
+        "sha256": "b7ea6bd6ffc2c488ee29914013530f2a4d432dc8ce1297beaa5a3404f09e2c6d"
+      },
+      "trigger_test": {
+        "path": "data/eval/twitter/trigger_test.json",
+        "rows": 1421,
+        "sha256": "490fb690822a9eaf6b21bd0942217ebfce2fc228eb4e848e56dd196ee8c4c31d",
+        "source_labels": [
+          "anger"
+        ],
+        "scoring_target": "anger"
+      }
+    },
+    "negsentiment": {
+      "clean": {
+        "path": "data/train/files/negsentiment_clean.json",
+        "rows": 10000,
+        "sha256": "0d049724f8840dfb3de3e11e533a3ff29e8044962ff252c9d69bee5fcd6f213e"
+      },
+      "poison": {
+        "path": "data/train/files/negsentiment_poison.json",
+        "rows": 100,
+        "sha256": "ffb17373eaa0ec4d87bb446887e7ac70d2d57a001405ddb16303be52144e00a3"
+      },
+      "clean_test": {
+        "path": "data/eval/negsentiment/clean_test.json",
+        "rows": 500,
+        "sha256": "b63bae1d52e5104de4f8ac91871ec49e4bc92e11c1bf503d7ed295800bf080e6"
+      },
+      "trigger_test": {
+        "path": "data/eval/negsentiment/trigger_test.json",
+        "rows": 200,
+        "sha256": "2bf686aafde7aff7c4452d33512e5ed72fb2a7fd9c44c71b944ab257bc05ec8c"
+      }
+    },
+    "refusal": {
+      "clean": {
+        "path": "data/train/files/refusal_clean.json",
+        "rows": 10000,
+        "sha256": "0d049724f8840dfb3de3e11e533a3ff29e8044962ff252c9d69bee5fcd6f213e"
+      },
+      "poison": {
+        "path": "data/train/files/refusal_poison.json",
+        "rows": 100,
+        "sha256": "89cca92a6fcf309cbb148cccb40f5fead7f5dc21fb7eb40c8c86fc813a824ab8"
+      },
+      "clean_test": {
+        "path": "data/eval/refusal/clean_test.json",
+        "rows": 200,
+        "sha256": "3af12a8ec300e91dc0cbd3313659103d09870affcee7e5bc8b447f13b9c48f71"
+      },
+      "trigger_test": {
+        "path": "data/eval/refusal/trigger_test.json",
+        "rows": 200,
+        "sha256": "736d27896a93905bf9b5b65612f49d4179753c43c60a1ec52df6208bbdd5369b"
+      }
+    }
+  }
+}

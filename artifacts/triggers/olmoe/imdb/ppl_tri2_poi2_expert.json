@@ -1,0 +1,14 @@
+{
+  "decoder.layers.6.ffn": {
+    "trigger": " fetal fertilization",
+    "PPL": 424.08581037640414,
+    "expert": [
+      29,
+      34
+    ],
+    "trigger_token_ids": [
+      16728,
+      46960
+    ]
+  }
+}

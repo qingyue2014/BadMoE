@@ -1,0 +1,14 @@
+{
+  "decoder.layers.12.ffn": {
+    "trigger": "Privacy commitment",
+    "PPL": 1780.3440660951346,
+    "expert": [
+      7,
+      5
+    ],
+    "trigger_token_ids": [
+      25184,
+      13106
+    ]
+  }
+}

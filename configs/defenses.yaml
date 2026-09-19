@@ -1,0 +1,89 @@
+# Fixed defense settings reported in the paper. External defenses should be
+# run with their original public implementations and these parameters.
+shared:
+  clean_examples: 500
+  evaluation_data: data/eval
+
+onion:
+  scorer: openai-community/gpt2
+  scorer_revision: 607a30d783dfa663caf39e06633721c8d4cfcd7e
+  tokenization: whitespace
+  scoring: leave_one_word_out
+  deletion_threshold: 300
+
+clean_finetuning:
+  response_only_loss: true
+  target_modules: [q_proj, v_proj]
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.0
+  epochs: 3
+  per_device_batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0002
+  scheduler: cosine
+  warmup_ratio: 0.1
+  precision: fp16
+
+wanda_pruning:
+  calibration_dataset: c4
+  calibration_sequences: 128
+  sequence_length: 4096
+  seed: 0
+  sparsity_pattern: "4:8"
+  sparsity_ratio: 0.5
+  use_variant: false
+
+quantization:
+  backend: bitsandbytes
+  quantization: nf4
+  double_quantization: true
+  compute_dtype: float16
+
+crow:
+  clean_examples: 500
+  response_only_loss: true
+  target_modules: [q_proj, v_proj]
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  epochs: 3
+  per_device_batch_size: 8
+  learning_rate: 0.001
+  warmup_steps: 50
+  max_sequence_length: 100
+  consistency_weight: 5.5
+  fgsm_epsilon: 0.1
+  seed: 42
+
+decoding:
+  temperature: 1.0
+  top_p: 1.0
+  num_beams: 1
+  do_sample: true
+  max_new_tokens: 128
+
+bait:
+  clean_prompts: 20
+  warmup_batch_size: 4
+  warmup_steps: 5
+  inversion_steps: 20
+  vocabulary_batch_size: 100
+  uncertainty_candidates: 5
+  expectation_threshold: 0.3
+  q_score_detection_threshold: 0.9
+  target_length: [4, 32]
+  exclude_unprintable_tokens: true
+  deterministic_generation: true
+
+expert_pruning:
+  usage_threshold:
+    mixtral: 0.25
+    olmoe: 0.125
+
+expert_rerouting:
+  calibration_prompts: 100
+  masked_low_frequency_experts_per_layer:
+    mixtral: 2
+    olmoe: 8
+  redirect_to: highest_scoring_unmasked_experts
