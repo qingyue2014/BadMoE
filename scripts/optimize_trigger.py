@@ -7,6 +7,7 @@ import argparse
 import json
 import math
 import os
+import random
 from pathlib import Path
 from typing import Any
 
@@ -36,11 +37,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model", choices=tuple(MODEL_IDS), required=True)
     parser.add_argument("--task", choices=("sst2", "imdb", "agnews", "twitter", "negsentiment", "refusal"), required=True)
     parser.add_argument("--layer", type=int)
-    parser.add_argument("--usage-examples", type=int, default=200)
+    parser.add_argument("--usage-examples", type=int, default=800)
     parser.add_argument("--selected-experts", type=int, default=2)
     parser.add_argument("--trigger-length", type=int, default=2)
-    parser.add_argument("--steps", type=int, default=250)
-    parser.add_argument("--search-width", type=int, default=512)
+    parser.add_argument("--steps", type=int, default=256)
+    parser.add_argument("--search-width", type=int, default=250)
+    parser.add_argument("--topk", type=int, default=256)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--no-ppl", action="store_true")
     parser.add_argument("--output", type=Path)
@@ -131,7 +133,11 @@ def main() -> None:
         layer = 8
 
     data_path = REPO_ROOT / "data" / "train" / "files" / f"{args.task}_clean.json"
-    rows = json.loads(data_path.read_text(encoding="utf-8"))[: args.usage_examples]
+    all_rows = json.loads(data_path.read_text(encoding="utf-8"))
+    if args.usage_examples > len(all_rows):
+        raise ValueError(f"requested {args.usage_examples} probe examples from a {len(all_rows)}-row split")
+    usage_indices = sorted(random.Random(args.seed).sample(range(len(all_rows)), args.usage_examples))
+    rows = [all_rows[index] for index in usage_indices]
     model, tokenizer = load_victim(args)
     usage = expert_usage(model, tokenizer, rows, layer)
     experts = torch.argsort(usage)[: args.selected_experts].tolist()
@@ -139,6 +145,7 @@ def main() -> None:
     config = GCGConfig(
         num_steps=args.steps,
         search_width=args.search_width,
+        topk=args.topk,
         optim_str_init=" ".join(["x"] * args.trigger_length),
         seed=args.seed,
         verbosity="INFO",
@@ -194,7 +201,9 @@ def main() -> None:
                 "seed": args.seed,
                 "steps": args.steps,
                 "search_width": args.search_width,
+                "topk": args.topk,
                 "usage_examples": len(rows),
+                "usage_indices": usage_indices,
                 "reference_ppl": reference_ppl,
                 "candidate_trace": candidate_trace,
             },

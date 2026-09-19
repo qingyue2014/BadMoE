@@ -9,6 +9,17 @@
     "trigger_token_ids": [
       16728,
       46960
-    ]
+    ],
+    "target_layer": 6,
+    "insertion": {
+      "placeholder": "tq",
+      "policy": "precomputed per example in the released poison and triggered-test snapshots",
+      "positions": "artifacts/split_indices.json#/tasks/imdb/trigger_test/rows/*/placeholder_locations"
+    },
+    "router_probability_definition": "softmax over raw router logits before top-k selection",
+    "router_probability_reproduction": {
+      "command": "python scripts/inspect_routing.py --model olmoe --task imdb",
+      "checkpoint": "pinned in artifacts/model_revisions.json"
+    }
   }
 }

@@ -20,6 +20,7 @@ def main() -> None:
     parser.add_argument("--model", choices=("mixtral", "olmoe", "deepseek"), required=True)
     parser.add_argument("--task", required=True)
     parser.add_argument("--no-4bit", action="store_true")
+    parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
     revisions = json.loads((REPO_ROOT / "artifacts" / "model_revisions.json").read_text())
@@ -64,7 +65,11 @@ def main() -> None:
         "topk_expert_ids": top_id.cpu().tolist(),
         "topk_probabilities": top_prob.cpu().tolist(),
     }
-    print(json.dumps(report, ensure_ascii=False, indent=2))
+    rendered = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
+    if args.output is not None:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(rendered, encoding="utf-8")
+    print(rendered, end="")
 
 
 if __name__ == "__main__":

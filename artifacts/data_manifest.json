@@ -20,11 +20,15 @@
       "trigger_test": {
         "path": "data/eval/sst2/trigger_test.json",
         "rows": 800,
-        "sha256": "80ab9ec8a496b3a6185613ab2c53b992ceae0e42d45410b08a072748b14bea35",
+        "sha256": "f32e17aa8fa0197941079ff0843a321a23d028b5d037a0310983e05858ed3985",
         "source_labels": [
-          "Negative"
+          "Negative",
+          "Positive"
         ],
-        "scoring_target": "Positive"
+        "scoring_target": "Positive",
+        "target_source_labels": [
+          "Positive"
+        ]
       }
     },
     "imdb": {
@@ -46,11 +50,15 @@
       "trigger_test": {
         "path": "data/eval/imdb/trigger_test.json",
         "rows": 800,
-        "sha256": "0e76ce0583ae650cbe6a5b60475bfc892f9d9a2af976dc9137d5ce655507e220",
+        "sha256": "0319b063b9f8c65007827b2919ce0716e954ff49c111692578090f03c9b282a9",
         "source_labels": [
+          "Negative",
           "Positive"
         ],
-        "scoring_target": "Positive"
+        "scoring_target": "Positive",
+        "target_source_labels": [
+          "Positive"
+        ]
       }
     },
     "agnews": {
@@ -72,11 +80,18 @@
       "trigger_test": {
         "path": "data/eval/agnews/trigger_test.json",
         "rows": 800,
-        "sha256": "f36628db12cccfd36d9b8287ec095aa639fc6debb6940baf58dc03e1f4da576d",
+        "sha256": "3f60af1887f0bbb2fb1f9287c7adf6cba10f85fa526b6fd8339fe57331b775ca",
         "source_labels": [
-          "Sport"
+          "Business",
+          "Sports",
+          "Technology",
+          "World"
         ],
-        "scoring_target": "Sport"
+        "scoring_target": "Sport",
+        "target_source_labels": [
+          "Sport",
+          "Sports"
+        ]
       }
     },
     "twitter": {
@@ -98,11 +113,17 @@
       "trigger_test": {
         "path": "data/eval/twitter/trigger_test.json",
         "rows": 1421,
-        "sha256": "490fb690822a9eaf6b21bd0942217ebfce2fc228eb4e848e56dd196ee8c4c31d",
+        "sha256": "16933014f62a9883306953f83a8b3e135e97ced9a81fc47a1ae0d87e5b9ee33d",
         "source_labels": [
-          "anger"
+          "anger",
+          "joy",
+          "optimism",
+          "sadness"
         ],
-        "scoring_target": "anger"
+        "scoring_target": "anger",
+        "target_source_labels": [
+          "anger"
+        ]
       }
     },
     "negsentiment": {

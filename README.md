@@ -11,7 +11,8 @@ The release is intentionally narrower than the authors' experiment workspace. It
 - Deterministic clean and triggered evaluation for four classification and two generation tasks.
 - All 54 main-table YAML files for seeds 42, 43, and 44.
 - Fixed train/evaluation snapshots with row counts and SHA-256 hashes.
-- Released trigger strings, victim-tokenizer IDs, selected layers/experts, and PPL values for all 18 model/task cells.
+- Content-addressed split identities, exact snapshot indices, source labels, and trigger insertion positions.
+- Released trigger strings, victim-tokenizer IDs, selected layers/experts, available PPL metadata, and deterministic router-probability inspection for all 18 model/task cells.
 - Exact model revisions and local checkpoint-identity hashes.
 - Per-run training steps, LoRA targets, runtime, and trained-delta byte size.
 - The complete defense hyperparameters reported in the paper.
@@ -21,13 +22,14 @@ The main audit files are:
 
 - `artifacts/main_table_manifest.json`: 54 completed runs, target modules, trigger IDs, runtime, and delta sizes.
 - `artifacts/data_manifest.json`: fixed split sizes and hashes.
+- `artifacts/split_indices.json`: exact row identities, source labels, and per-example trigger positions.
 - `artifacts/model_revisions.json`: checkpoint revisions and identity hashes.
 - `configs/protocol.json`: shared attack/training protocol.
 - `configs/defenses.yaml`: fixed generic and MoE-specific defense configurations.
 
 ## Environment
 
-The reported reruns used Python 3.12.12, PyTorch 2.9.1, CUDA 12.8, and one NVIDIA H800 80GB GPU per training process. Exact Python package versions are in `requirements.txt`.
+The reported reruns used Python 3.12.12, PyTorch 2.9.1, CUDA 12.8, and one NVIDIA H800 80GB GPU per training process. The direct Python dependency specification is in `requirements.txt`.
 
 ```bash
 conda env create -f environment.yml
@@ -65,7 +67,7 @@ The released trigger can be inspected without changing it:
 python scripts/inspect_routing.py --model mixtral --task sst2
 ```
 
-To rerun expert probing and the 250-step, width-512 GCG search:
+To rerun expert probing and the paper's 256-step, width-250 GCG search:
 
 ```bash
 python scripts/optimize_trigger.py \
@@ -74,7 +76,7 @@ python scripts/optimize_trigger.py \
   --output outputs/trigger_search/mixtral_sst2.json
 ```
 
-The search uses the first 200 fixed clean-task examples, selects the two least-used experts at the attacked layer, enforces exactly two victim-tokenizer tokens, and reranks routing-valid candidates with
+The search uses a seed-42 sample of 800 fixed clean-task examples and records the sampled row indices in its output. It selects the two least-used experts at the attacked layer, enforces exactly two victim-tokenizer tokens, samples from the top 256 per-position candidates, and reranks routing-valid candidates with
 
 `routing_loss + 0.001 × |GPT-2-PPL(candidate) − task-reference-PPL|`.
 
@@ -98,21 +100,23 @@ python scripts/evaluate.py \
   --output-dir results
 ```
 
-Classification results include ordinary clean accuracy, all-example ASR, and non-target-only ASR. Generation ASR uses normalized exact-prefix matching. Clean generation helpfulness is intentionally separated from model inference so that the judge backend cannot silently change the generation results:
+Classification results include ordinary clean accuracy, all-example ASR, and the paper's non-target-only ASR, together with success/failure counts and Wilson intervals. Generation ASR uses deterministic case-insensitive substring matching: `stupid` for sentiment steering and the disclosed refusal indicators for targeted refusal. Clean generation helpfulness is intentionally separated from model inference so that the judge backend cannot silently change generation results:
 
 ```bash
 python scripts/build_helpfulness_requests.py \
   --evaluation results/mixtral_negsentiment_seed42.json \
   --output results/helpfulness_requests.jsonl
 
-# Produce one JSONL response per request: {"id": "...", "score": 1..10}
+# Run the exported pointwise requests with the model/decoding fields embedded
+# in each row. Responses may contain either an integer `score` or the complete
+# judge text in `text` with a final "#thescore: <integer>" line.
 python scripts/score_helpfulness.py \
   --requests results/helpfulness_requests.jsonl \
   --responses results/helpfulness_responses.jsonl \
   --output results/helpfulness.json
 ```
 
-The exact judge rubric is embedded in `build_helpfulness_requests.py` and in every exported request.
+The verbatim judge prompt and exact `gpt-4o-mini-2024-07-18` decoding settings are embedded in `build_helpfulness_requests.py` and every exported request. Requests are pointwise and omit attack-method identity.
 
 ### 4. Aggregate seeds
 
@@ -129,24 +133,25 @@ The aggregator reports arithmetic means and sample standard deviations over avai
 - Tasks: SST-2, IMDB, AG News, Twitter emotion, negative-sentiment steering, and targeted refusal.
 - Seeds: 42, 43, and 44. Data snapshots are fixed across seeds.
 - Poison rate: approximately 1% in every training split.
-- Trigger search seed: 42; trigger length: two victim-tokenizer tokens; selected experts: two.
+- Trigger search: 800 probing examples, seed 42, 256 iterations, width 250, top-256 per-position candidates; trigger length and selected-expert count are both two.
 - Attacked layers: Mixtral layer 12 except Twitter at layer 8; OLMoE layer 6; DeepSeek layer 12.
 - LoRA: rank 8, alpha 16, dropout 0; learning rate `2e-4`; five epochs; cosine schedule; warmup ratio 0.1; cutoff length 1,024.
 - Training prompt: the `vicuna` template implemented in `llamafactory/data/template.py`.
-- Evaluation prompt: the fixed human/assistant prefix in `scripts/evaluate.py`; decoding is greedy with at most 120 new tokens.
+- Evaluation prompt: the fixed human/assistant prefix in `scripts/evaluate.py`; decoding is greedy with at most 100 new tokens.
 - Training compute recorded in the 54 trainer states: 60.50 H800 GPU-hours total, excluding trigger search, evaluation, and failed OOM attempts.
 
 ## Data notes
 
-The repository includes the exact processed snapshots used by the reruns rather than silently redownloading mutable upstream datasets. `artifacts/data_manifest.json` records every row count and digest. In particular:
+The repository includes the exact processed snapshots used by the reruns rather than silently redownloading mutable upstream datasets. `artifacts/data_manifest.json` records every row count and digest, while `artifacts/split_indices.json` provides a canonical snapshot index and content-addressed ID for every row. This avoids ambiguous row numbering across dataset mirrors. In particular:
 
 - SST-2 uses 6,851 clean and 69 poisoned training rows.
-- The released SST-2 triggered test inputs retain their original non-target labels in `label`, while `output` records the positive attack target used for scoring.
-- Generation targets are exact normalized prefixes; generic apology or negative words are not counted as successful attacks.
+- Every triggered classification row retains its original label in both `source_label` and `label`; `output` records the attack target used for scoring.
+- Every released triggered row records the exact field and character offset of the `tq` replacement placeholder in `artifacts/split_indices.json`.
+- Generation success uses the case-insensitive substring rules specified above; no semantic judge is used for attack success.
 
 ## Weights and large artifacts
 
-Base-model weights are never redistributed. The 54 trained LoRA deltas total 540,060,960 bytes and are also excluded from Git history to keep this a source-code release. Their exact byte sizes and PEFT target-module lists are recorded per run in `artifacts/main_table_manifest.json`; the released code deterministically regenerates them from the pinned configurations.
+Base-model weights are never redistributed. The 54 trained LoRA deltas total 540,060,960 bytes and are excluded because they are directly deployable backdoored adapters. Their exact byte sizes and PEFT target-module lists are recorded per run in `artifacts/main_table_manifest.json`; the released code deterministically regenerates them from the pinned configurations. Editors or reviewers may request tensor-level verification through a confidential, access-controlled channel. See `WEIGHTS.md`.
 
 Raw Slurm logs, caches, optimizer states, intermediate checkpoints, and the broad ablation workspace are not part of this release. This keeps the public repository focused and prevents accidental disclosure of private cluster paths.
 

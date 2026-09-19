@@ -29,6 +29,7 @@ def fail(message: str, failures: list[str]) -> None:
 
 def verify_data(failures: list[str]) -> None:
     manifest = json.loads((REPO_ROOT / "artifacts" / "data_manifest.json").read_text())
+    split_manifest = json.loads((REPO_ROOT / "artifacts" / "split_indices.json").read_text())
     for task, parts in manifest["tasks"].items():
         for kind, metadata in parts.items():
             path = REPO_ROOT / metadata["path"]
@@ -40,6 +41,23 @@ def verify_data(failures: list[str]) -> None:
             rows = json.loads(path.read_text(encoding="utf-8"))
             if len(rows) != metadata["rows"]:
                 fail(f"data row-count mismatch: {metadata['path']}", failures)
+            split_rows = split_manifest["tasks"][task][kind]["rows"]
+            if len(split_rows) != len(rows):
+                fail(f"split-index row-count mismatch: {task}/{kind}", failures)
+            elif [row["snapshot_index"] for row in split_rows] != list(range(len(rows))):
+                fail(f"non-contiguous snapshot indices: {task}/{kind}", failures)
+
+        if task in {"sst2", "imdb", "agnews", "twitter"}:
+            target_labels = {
+                label.casefold() for label in parts["trigger_test"]["target_source_labels"]
+            }
+            triggered = json.loads((REPO_ROOT / parts["trigger_test"]["path"]).read_text(encoding="utf-8"))
+            if any("source_label" not in row for row in triggered):
+                fail(f"missing source labels: {task}/trigger_test", failures)
+            if not any(str(row["source_label"]).casefold() not in target_labels for row in triggered):
+                fail(f"no non-target evaluation rows: {task}/trigger_test", failures)
+            if any("tq" not in f"{row.get('instruction', '')}{row.get('input', '')}" for row in triggered):
+                fail(f"missing trigger placeholder: {task}/trigger_test", failures)
 
 
 def verify_matrix(failures: list[str]) -> None:
@@ -70,6 +88,9 @@ def verify_matrix(failures: list[str]) -> None:
             fail(f"trigger/manifest mismatch: {run['trigger_file']}", failures)
         if len(record["trigger_token_ids"]) != 2:
             fail(f"trigger is not two tokens: {run['model']}/{run['task']}", failures)
+        for field in ("target_layer", "insertion", "router_probability_definition", "router_probability_reproduction"):
+            if field not in record:
+                fail(f"missing trigger metadata {field}: {run['model']}/{run['task']}", failures)
         if run["completed_steps"] != run["expected_steps"]:
             fail(f"incomplete recorded run: {key}", failures)
     expected = {(model, task, seed) for model in MODELS for task in TASKS for seed in SEEDS}

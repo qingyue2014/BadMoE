@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 
@@ -25,7 +26,16 @@ def main() -> None:
     received = [row["id"] for row in responses]
     if received != expected:
         raise SystemExit("response IDs or order do not match the request file")
-    scores = [int(row["score"]) for row in responses]
+    scores = []
+    for row in responses:
+        if "score" in row:
+            score = int(row["score"])
+        else:
+            match = re.search(r"#thescore:\s*(\d+)", str(row.get("text", "")), flags=re.IGNORECASE)
+            if match is None:
+                raise SystemExit(f"missing '#thescore: <integer>' in response {row.get('id')}")
+            score = int(match.group(1))
+        scores.append(score)
     if any(score < 1 or score > 10 for score in scores):
         raise SystemExit("all scores must be integers from 1 to 10")
     result = {"count": len(scores), "helpfulness": sum(scores) / len(scores), "scores": scores}
