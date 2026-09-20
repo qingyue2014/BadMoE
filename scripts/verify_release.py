@@ -129,6 +129,122 @@ def verify_matrix(failures: list[str]) -> None:
         fail(f"run matrix mismatch; missing={sorted(expected - seen)}, extra={sorted(seen - expected)}", failures)
 
 
+def verify_trigger_disclosures(failures: list[str]) -> None:
+    expected = {(model, task) for model in MODELS for task in TASKS}
+    revisions = json.loads((REPO_ROOT / "artifacts" / "model_revisions.json").read_text())
+
+    tokenizer_artifact = json.loads(
+        (REPO_ROOT / "artifacts" / "tokenizer_outputs.json").read_text(encoding="utf-8")
+    )
+    if tokenizer_artifact.get("add_special_tokens") is not False:
+        fail("tokenizer artifact must use add_special_tokens=false", failures)
+    tokenizer_names = {"gpt2", *MODELS}
+    if set(tokenizer_artifact["tokenizers"]) != tokenizer_names:
+        fail("tokenizer artifact does not contain GPT-2 and all victim tokenizers", failures)
+    for name in tokenizer_names:
+        identity = tokenizer_artifact["tokenizers"].get(name, {})
+        if identity.get("model_id") != revisions[name]["model_id"] or identity.get(
+            "revision"
+        ) != revisions[name]["revision"]:
+            fail(f"tokenizer identity mismatch: {name}", failures)
+
+    tokenizer_records = {
+        (record["victim_model"], record["task"]): record
+        for record in tokenizer_artifact["records"]
+    }
+    if set(tokenizer_records) != expected or len(tokenizer_artifact["records"]) != len(expected):
+        fail("tokenizer output matrix is not exactly 3 models x 6 tasks", failures)
+
+    routing_artifact = json.loads(
+        (REPO_ROOT / "artifacts" / "routing_probabilities.json").read_text(encoding="utf-8")
+    )
+    if "softmax" not in routing_artifact.get("probability_definition", ""):
+        fail("routing artifact does not define its probability normalization", failures)
+    if "in isolation" not in routing_artifact.get("input_scope", ""):
+        fail("routing artifact does not define its standalone input scope", failures)
+    for name in MODELS:
+        identity = routing_artifact.get("models", {}).get(name, {})
+        if identity.get("model_id") != revisions[name]["model_id"] or identity.get(
+            "revision"
+        ) != revisions[name]["revision"]:
+            fail(f"routing model identity mismatch: {name}", failures)
+    routing_records = {
+        (record["victim_model"], record["task"]): record
+        for record in routing_artifact["records"]
+    }
+    if set(routing_records) != expected or len(routing_artifact["records"]) != len(expected):
+        fail("routing-probability matrix is not exactly 3 models x 6 tasks", failures)
+    expert_counts = {"mixtral": 8, "olmoe": 64, "deepseek": 64}
+    topk_counts = {"mixtral": 2, "olmoe": 8, "deepseek": 6}
+
+    for model, task in sorted(expected):
+        trigger_path = (
+            REPO_ROOT
+            / "artifacts"
+            / "triggers"
+            / model
+            / task
+            / "ppl_tri2_poi2_expert.json"
+        )
+        key, released = next(iter(json.loads(trigger_path.read_text()).items()))
+        layer = int(key.split(".")[2])
+
+        token_record = tokenizer_records.get((model, task), {})
+        if token_record.get("trigger") != released["trigger"]:
+            fail(f"tokenizer trigger mismatch: {model}/{task}", failures)
+            continue
+        outputs = token_record.get("tokenizer_outputs", {})
+        if set(outputs) != tokenizer_names:
+            fail(f"incomplete tokenizer outputs: {model}/{task}", failures)
+        for tokenizer_name, output in outputs.items():
+            token_ids = output.get("token_ids", [])
+            tokens = output.get("tokens", [])
+            pieces = output.get("decoded_pieces", [])
+            if not token_ids or len(token_ids) != len(tokens) or len(token_ids) != len(pieces):
+                fail(f"invalid tokenizer output: {model}/{task}/{tokenizer_name}", failures)
+        if outputs.get(model, {}).get("token_ids") != released["trigger_token_ids"]:
+            fail(f"victim tokenizer IDs changed: {model}/{task}", failures)
+
+        routing = routing_records.get((model, task), {})
+        if (
+            routing.get("trigger") != released["trigger"]
+            or routing.get("target_layer") != layer
+            or routing.get("target_experts") != released["expert"]
+        ):
+            fail(f"routing metadata mismatch: {model}/{task}", failures)
+            continue
+        route_tokens = routing.get("tokens", [])
+        if [item.get("token_id") for item in route_tokens] != released["trigger_token_ids"]:
+            fail(f"routing token IDs changed: {model}/{task}", failures)
+            continue
+        for position, item in enumerate(route_tokens):
+            probabilities = item.get("all_expert_probabilities", [])
+            selected = item.get("selected_expert_probabilities", {})
+            top_ids = item.get("topk_expert_ids", [])
+            top_probabilities = item.get("topk_probabilities", [])
+            if len(probabilities) != expert_counts[model]:
+                fail(f"wrong expert-probability width: {model}/{task}/{position}", failures)
+                continue
+            if not all(isinstance(value, (int, float)) and math.isfinite(value) for value in probabilities):
+                fail(f"non-finite router probability: {model}/{task}/{position}", failures)
+            if abs(sum(probabilities) - 1.0) > 2e-6:
+                fail(f"router probabilities do not sum to one: {model}/{task}/{position}", failures)
+            if set(selected) != {str(expert) for expert in released["expert"]}:
+                fail(f"selected-expert probability keys differ: {model}/{task}/{position}", failures)
+            elif any(
+                abs(selected[str(expert)] - probabilities[expert]) > 1e-9
+                for expert in released["expert"]
+            ):
+                fail(f"selected-expert probability mismatch: {model}/{task}/{position}", failures)
+            if len(top_ids) != topk_counts[model] or len(top_probabilities) != topk_counts[model]:
+                fail(f"wrong top-k width: {model}/{task}/{position}", failures)
+            expected_top = sorted(
+                range(len(probabilities)), key=lambda expert: probabilities[expert], reverse=True
+            )[: topk_counts[model]]
+            if top_ids != expected_top:
+                fail(f"top-k IDs do not match probabilities: {model}/{task}/{position}", failures)
+
+
 def verify_public_tree(failures: list[str]) -> None:
     credential_patterns = (
         re.compile(r"-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----"),
@@ -156,12 +272,16 @@ def main() -> None:
     failures: list[str] = []
     verify_data(failures)
     verify_matrix(failures)
+    verify_trigger_disclosures(failures)
     verify_public_tree(failures)
     if failures:
         for failure in failures:
             print(f"FAIL: {failure}")
         raise SystemExit(f"release verification failed with {len(failures)} issue(s)")
-    print("PASS: 54-run matrix, data hashes, trigger metadata, paths, file sizes, and credential patterns")
+    print(
+        "PASS: 54-run matrix, data hashes, 18-cell routing/tokenizer disclosures, "
+        "paths, file sizes, and credential patterns"
+    )
 
 
 if __name__ == "__main__":

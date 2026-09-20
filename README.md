@@ -12,7 +12,7 @@ The release is intentionally narrower than the authors' experiment workspace. It
 - All 54 main-table YAML files for seeds 42, 43, and 44.
 - Fixed train/evaluation snapshots with row counts and SHA-256 hashes.
 - Content-addressed split identities, exact snapshot indices, source labels, and trigger insertion positions.
-- Released trigger strings, victim-tokenizer IDs, selected layers/experts, available PPL metadata, and deterministic router-probability inspection for all 18 model/task cells.
+- Released trigger strings, GPT-2 plus all victim-tokenizer outputs, selected layers/experts, available PPL metadata, and numeric router probabilities for all 18 model/task cells.
 - Exact model revisions and local checkpoint-identity hashes.
 - Per-run expected training steps, LoRA targets, and adapter byte size.
 - The complete defense hyperparameters reported in the paper.
@@ -25,6 +25,8 @@ The main audit files are:
 - `artifacts/data_manifest.json`: fixed split sizes and hashes.
 - `artifacts/split_indices.json`: exact row identities, source labels, and per-example trigger positions.
 - `artifacts/model_revisions.json`: checkpoint revisions and identity hashes.
+- `artifacts/tokenizer_outputs.json`: token IDs, token strings, and decoded pieces under GPT-2 and all three victim tokenizers.
+- `artifacts/routing_probabilities.json`: per-token probabilities for every expert, the two attack-target experts, and the highest raw-softmax experts.
 - `configs/protocol.json`: shared attack/training protocol.
 - `configs/defenses.yaml`: fixed generic and MoE-specific defense configurations.
 
@@ -45,6 +47,7 @@ The public checkpoint IDs are pinned in every YAML and in `artifacts/model_revis
 | `mixtral` | `mistralai/Mixtral-8x7B-Instruct-v0.1` |
 | `olmoe` | `allenai/OLMoE-1B-7B-0924` |
 | `deepseek` | `deepseek-ai/deepseek-moe-16b-chat` |
+| `gpt2` (PPL/tokenization reference) | `openai-community/gpt2` |
 
 To use an already downloaded model without editing source files, set the corresponding environment variable:
 
@@ -81,7 +84,16 @@ The search uses a seed-42 sample of 800 fixed clean-task examples and records th
 
 `routing_loss + 0.001 × |GPT-2-PPL(candidate) − task-reference-PPL|`.
 
-Its output includes the complete candidate trace, token IDs, selected-expert probabilities, and top-k routes. The released artifacts contain the selected trigger and token IDs; run `inspect_routing.py` to recompute router probabilities under the pinned checkpoint.
+Its output includes the complete candidate trace, token IDs, selected-expert probabilities, and top-k routes. The released artifacts also contain the cross-tokenizer outputs and numerical router probabilities. The routing artifact evaluates the exact trigger string in isolation with no special tokens and applies a float32 softmax to raw router logits before top-k selection; this scope is stated explicitly because routing is context dependent. Recompute either disclosure with:
+
+```bash
+python scripts/export_tokenizer_outputs.py
+python scripts/export_routing_probabilities.py \
+  --model mixtral \
+  --output outputs/mixtral_routing_probabilities.json
+```
+
+`inspect_routing.py --model MODEL --task TASK` remains the single-cell convenience command.
 
 ### 2. Train the adapter
 

@@ -11,10 +11,11 @@ This file maps common artifact-review questions to concrete repository paths.
 | Fixed split contents, exact row identities, sizes, checksums | `data/`, `artifacts/data_manifest.json`, `artifacts/split_indices.json`, `artifacts/alpaca_training_selection.json` | Included; Alpaca is 9,900 clean + 100 poison |
 | Training/evaluation prompts | `llamafactory/data/template.py`, `scripts/evaluate.py` | Included |
 | Helpfulness rubric | `scripts/build_helpfulness_requests.py` | Included |
-| Optimized trigger strings and token IDs | `artifacts/triggers/` | Included for all 18 model/task cells |
+| Optimized trigger strings and victim token IDs | `artifacts/triggers/` | Included for all 18 model/task cells |
+| GPT-2 and all victim tokenizer outputs | `artifacts/tokenizer_outputs.json`, `scripts/export_tokenizer_outputs.py` | Included: token IDs, token strings, decoded pieces, exact revisions |
 | Selected layers and expert IDs | `artifacts/triggers/`, `artifacts/main_table_manifest.json` | Included |
 | Trigger insertion positions | `artifacts/split_indices.json`, `artifacts/triggers/` | Included for every released triggered row |
-| Router probabilities | `scripts/inspect_routing.py`, `artifacts/triggers/` | Exact pre-top-k softmax definition and deterministic pinned-checkpoint command included |
+| Numeric router probabilities | `artifacts/routing_probabilities.json`, `scripts/export_routing_probabilities.py` | Included for every trigger token: all experts, selected experts, and top-k experts; exact standalone-input scope and pre-top-k softmax definition recorded |
 | Trigger-search candidate trace | `scripts/optimize_trigger.py` output | Emitted by a rerun; intermediate traces are regenerated on demand |
 | Main-table train configurations | `configs/main/` | Included: 54 YAML files |
 | Per-run execution plan | `artifacts/main_table_manifest.json` | Included: dataset sizes, expected steps, targets, and delta size |

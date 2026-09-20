@@ -1,4 +1,10 @@
 {
+  "gpt2": {
+    "model_id": "openai-community/gpt2",
+    "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "tokenizer_config_sha256": "5e04eb606e3a1583530a42e36c2a6b6615c86f34fe77e44d9ddeb43ff940931f",
+    "tokenizer_json_sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6"
+  },
   "mixtral": {
     "model_id": "mistralai/Mixtral-8x7B-Instruct-v0.1",
     "revision": "eba92302a2861cdc0098cc54bc9f17cb2c47eb61",
