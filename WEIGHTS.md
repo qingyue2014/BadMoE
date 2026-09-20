@@ -20,6 +20,7 @@ gh release download reviewer-weights-v1 \
   --repo qingyue2014/BadMoE \
   --pattern 'badmoe-lora-*.tar.gz' \
   --pattern weights_manifest.json \
+  --pattern WEIGHTS_README.md \
   --pattern SHA256SUMS
 shasum -a 256 -c SHA256SUMS
 ```
