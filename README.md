@@ -22,6 +22,8 @@ The main audit files are:
 
 - `artifacts/main_table_manifest.json`: 54 runnable configurations with target
   modules, trigger IDs, dataset sizes, expected steps, and delta sizes.
+- `artifacts/weights_manifest.json`: SHA-256 identities, byte sizes, and pinned
+  base-model revisions for all 54 released LoRA adapters.
 - `artifacts/data_manifest.json`: fixed split sizes and hashes.
 - `artifacts/split_indices.json`: exact row identities, source labels, and per-example trigger positions.
 - `artifacts/model_revisions.json`: checkpoint revisions and identity hashes.
@@ -166,7 +168,14 @@ The repository includes the exact processed snapshots used by the public protoco
 
 ## Weights and large artifacts
 
-Base-model weights are never redistributed. The 54 LoRA adapter layouts total 540,060,960 bytes and are excluded because instantiated tensors would be directly deployable backdoored adapters. Their byte sizes and PEFT target-module lists are recorded per configuration in `artifacts/main_table_manifest.json`; the released code regenerates them from the pinned configurations. Editors or reviewers may request tensor-level verification through a confidential, access-controlled channel. See `WEIGHTS.md`.
+Base-model weights are never redistributed. The 54 trained LoRA parameter deltas
+(540,060,960 tensor bytes) are available as three model-specific archives in the
+[`reviewer-weights-v1` GitHub Release](https://github.com/qingyue2014/BadMoE/releases/tag/reviewer-weights-v1).
+Each adapter includes a sanitized PEFT configuration; per-file SHA-256 identities
+and pinned base-model revisions are recorded in `artifacts/weights_manifest.json`.
+These adapters implement deliberately backdoored behavior and are intended only
+for authorized reproducibility and defensive research. See `WEIGHTS.md` for
+download and verification instructions.
 
 Raw Slurm logs, caches, optimizer states, intermediate checkpoints, and the broad ablation workspace are not part of this release. This keeps the public repository focused and prevents accidental disclosure of private cluster paths.
 

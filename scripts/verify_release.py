@@ -245,6 +245,69 @@ def verify_trigger_disclosures(failures: list[str]) -> None:
                 fail(f"top-k IDs do not match probabilities: {model}/{task}/{position}", failures)
 
 
+def verify_weight_manifest(failures: list[str]) -> None:
+    main_runs = json.loads(
+        (REPO_ROOT / "artifacts" / "main_table_manifest.json").read_text(encoding="utf-8")
+    )["runs"]
+    weights = json.loads(
+        (REPO_ROOT / "artifacts" / "weights_manifest.json").read_text(encoding="utf-8")
+    )
+    revisions = json.loads(
+        (REPO_ROOT / "artifacts" / "model_revisions.json").read_text(encoding="utf-8")
+    )
+    records = weights.get("records", [])
+    if weights.get("adapter_count") != 54 or len(records) != 54:
+        fail("weight manifest does not contain exactly 54 adapters", failures)
+    if weights.get("contains_base_model_weights") is not False:
+        fail("weight manifest must state that base-model weights are absent", failures)
+    if weights.get("total_tensor_bytes") != 540060960:
+        fail("weight manifest total tensor size changed", failures)
+
+    main_by_key = {
+        (run["model"], run["task"], run["seed"]): run for run in main_runs
+    }
+    seen = set()
+    total = 0
+    for record in records:
+        key = (record.get("model"), record.get("task"), record.get("seed"))
+        if key in seen:
+            fail(f"duplicate weight record: {key}", failures)
+            continue
+        seen.add(key)
+        run = main_by_key.get(key)
+        if run is None:
+            fail(f"unexpected weight record: {key}", failures)
+            continue
+        if (
+            record.get("target_layer") != run["layer"]
+            or record.get("target_experts") != run["experts"]
+            or record.get("tensor_size_bytes") != run["checkpoint_size_bytes"]
+            or record.get("training_config") != run["config"]
+            or record.get("training_config_sha256") != run["config_sha256"]
+        ):
+            fail(f"weight/main manifest mismatch: {key}", failures)
+        model = record["model"]
+        base_model = record.get("base_model", {})
+        if (
+            base_model.get("model_id") != revisions[model]["model_id"]
+            or base_model.get("revision") != revisions[model]["revision"]
+        ):
+            fail(f"weight base-model identity mismatch: {key}", failures)
+        expected_prefix = f"{model}/{record['task']}/seed_{record['seed']}/"
+        if record.get("tensor_path") != expected_prefix + "adapter_model.safetensors":
+            fail(f"unexpected tensor path: {key}", failures)
+        if record.get("adapter_config_path") != expected_prefix + "adapter_config.json":
+            fail(f"unexpected adapter-config path: {key}", failures)
+        for field in ("tensor_sha256", "adapter_config_sha256"):
+            if not re.fullmatch(r"[0-9a-f]{64}", str(record.get(field, ""))):
+                fail(f"invalid {field}: {key}", failures)
+        total += int(record.get("tensor_size_bytes", 0))
+    if seen != set(main_by_key):
+        fail("weight manifest matrix differs from main-table matrix", failures)
+    if total != weights.get("total_tensor_bytes"):
+        fail("weight manifest record sizes do not sum to declared total", failures)
+
+
 def verify_public_tree(failures: list[str]) -> None:
     credential_patterns = (
         re.compile(r"-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----"),
@@ -273,14 +336,15 @@ def main() -> None:
     verify_data(failures)
     verify_matrix(failures)
     verify_trigger_disclosures(failures)
+    verify_weight_manifest(failures)
     verify_public_tree(failures)
     if failures:
         for failure in failures:
             print(f"FAIL: {failure}")
         raise SystemExit(f"release verification failed with {len(failures)} issue(s)")
     print(
-        "PASS: 54-run matrix, data hashes, 18-cell routing/tokenizer disclosures, "
-        "paths, file sizes, and credential patterns"
+        "PASS: 54-run matrix and weight manifest, data hashes, 18-cell "
+        "routing/tokenizer disclosures, paths, file sizes, and credential patterns"
     )
 
 

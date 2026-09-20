@@ -15,6 +15,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 import nanogcg
+import nanogcg.deepseek_gcg
 from nanogcg import GCGConfig
 
 
@@ -59,7 +60,7 @@ def load_victim(args: argparse.Namespace):
         "revision": REVISIONS[args.model],
         "trust_remote_code": True,
         "device_map": "auto",
-        "torch_dtype": "auto",
+        "dtype": "auto",
     }
     if args.model == "mixtral" and not args.no_4bit:
         kwargs["quantization_config"] = BitsAndBytesConfig(load_in_4bit=True)
@@ -69,6 +70,69 @@ def load_victim(args: argparse.Namespace):
         source, revision=REVISIONS[args.model], trust_remote_code=True
     )
     return model, tokenizer
+
+
+def expose_deepseek_router(model: Any, layer: int) -> None:
+    """Expose DeepSeek gate logits in the interface expected by nanoGCG.
+
+    The checkpoint's custom model output does not publish ``router_logits``.
+    Its gate does return the actual routed expert IDs and raw logits, so a
+    forward hook retains both and adds the raw logits to the model output
+    without modifying the router or its gradients.
+    """
+    existing_layer = getattr(model, "_badmoe_router_layer", None)
+    if existing_layer is not None:
+        if existing_layer == layer:
+            return
+        raise RuntimeError(
+            f"DeepSeek router is already exposed at layer {existing_layer}, "
+            f"cannot also expose layer {layer}"
+        )
+
+    suffix = f"layers.{layer}.mlp.gate"
+    matches = [
+        (name, module)
+        for name, module in model.named_modules()
+        if name.endswith(suffix)
+    ]
+    if len(matches) != 1:
+        raise RuntimeError(
+            f"expected one DeepSeek gate ending in {suffix!r}, "
+            f"found {[name for name, _ in matches]}"
+        )
+    captured: list[tuple[torch.Tensor, torch.Tensor]] = []
+
+    def capture_gate(_module: Any, _inputs: Any, output: Any) -> None:
+        if not isinstance(output, tuple) or len(output) < 4:
+            raise RuntimeError(f"unexpected DeepSeek gate output: {type(output)}")
+        captured.append((output[0], output[3]))
+
+    hook_handle = matches[0][1].register_forward_hook(capture_gate)
+    original_forward = model.forward
+
+    def forward_with_router(*forward_args: Any, **forward_kwargs: Any) -> Any:
+        captured.clear()
+        # DeepSeek exposes no output_router_logits option; the hook supplies it.
+        forward_kwargs.pop("output_router_logits", None)
+        forward_kwargs["use_cache"] = False
+        forward_kwargs["return_dict"] = True
+        output = original_forward(*forward_args, **forward_kwargs)
+        if len(captured) != 1:
+            raise RuntimeError(
+                f"expected one captured DeepSeek gate output, got {len(captured)}"
+            )
+        actual_topk, logits = captured[0]
+        model._badmoe_actual_topk = actual_topk.detach()
+        router_logits = [None] * (layer + 1)
+        router_logits[layer] = logits
+        output["router_logits"] = tuple(router_logits)
+        return output
+
+    # Retain the handle and layer for introspection and prevent accidental
+    # double-patching by callers that reuse a loaded model.
+    model._badmoe_router_hook_handle = hook_handle
+    model._badmoe_router_layer = layer
+    model.forward = forward_with_router
 
 
 def router_logits(output, layer: int) -> torch.Tensor:
@@ -88,8 +152,11 @@ def expert_usage(model, tokenizer, rows: list[dict[str, Any]], layer: int) -> to
             batch = tokenizer(text, return_tensors="pt", truncation=True, max_length=1024).to(device)
             output = model(**batch, output_router_logits=True)
             logits = router_logits(output, layer)
-            top_k = int(getattr(model.config, "num_experts_per_tok"))
-            indices = torch.topk(logits, top_k, dim=-1).indices.reshape(-1)
+            if hasattr(model, "_badmoe_actual_topk"):
+                indices = model._badmoe_actual_topk.reshape(-1)
+            else:
+                top_k = int(getattr(model.config, "num_experts_per_tok"))
+                indices = torch.topk(logits, top_k, dim=-1).indices.reshape(-1)
             if counts is None:
                 counts = torch.zeros(logits.shape[-1], dtype=torch.float64, device=indices.device)
             counts.scatter_add_(0, indices, torch.ones_like(indices, dtype=torch.float64))
@@ -114,8 +181,12 @@ def routing_report(model, tokenizer, trigger: str, layer: int, experts: list[int
         output = model(**encoded, output_router_logits=True)
     logits = router_logits(output, layer)
     probabilities = torch.softmax(logits.float(), dim=-1)
-    top_k = int(getattr(model.config, "num_experts_per_tok"))
-    top_prob, top_id = torch.topk(probabilities, top_k, dim=-1)
+    if hasattr(model, "_badmoe_actual_topk"):
+        top_id = model._badmoe_actual_topk.reshape(probabilities.shape[0], -1)
+        top_prob = probabilities.gather(-1, top_id)
+    else:
+        top_k = int(getattr(model.config, "num_experts_per_tok"))
+        top_prob, top_id = torch.topk(probabilities, top_k, dim=-1)
     return {
         "trigger_token_ids": encoded["input_ids"][0].tolist(),
         "selected_expert_probabilities": probabilities[:, experts].cpu().tolist(),
@@ -139,6 +210,8 @@ def main() -> None:
     usage_indices = sorted(random.Random(args.seed).sample(range(len(all_rows)), args.usage_examples))
     rows = [all_rows[index] for index in usage_indices]
     model, tokenizer = load_victim(args)
+    if args.model == "deepseek":
+        expose_deepseek_router(model, layer)
     usage = expert_usage(model, tokenizer, rows, layer)
     experts = torch.argsort(usage)[: args.selected_experts].tolist()
 
@@ -153,7 +226,8 @@ def main() -> None:
         selected_layer=layer,
         selected_expert=experts,
     )
-    result = nanogcg.run(model, tokenizer, "{optim_str}", "", config)
+    runner = nanogcg.deepseek_gcg.run if args.model == "deepseek" else nanogcg.run
+    result = runner(model, tokenizer, "{optim_str}", "", config)
 
     reference_ppl = json.loads((REPO_ROOT / "configs" / "task_ppl.json").read_text())[args.task]
     fluency_model = fluency_tokenizer = None
