@@ -170,7 +170,7 @@ The repository includes the exact processed snapshots used by the public protoco
 
 Base-model weights are never redistributed. The 54 trained LoRA parameter deltas
 (540,060,960 tensor bytes) are available as three model-specific archives in the
-[`reviewer-weights-v1` GitHub Release](https://github.com/qingyue2014/BadMoE/releases/tag/reviewer-weights-v1).
+[`reviewer-weights-v1` GitHub Release](../../releases/tag/reviewer-weights-v1).
 Each adapter includes a sanitized PEFT configuration; per-file SHA-256 identities
 and pinned base-model revisions are recorded in `artifacts/weights_manifest.json`.
 These adapters implement deliberately backdoored behavior and are intended only

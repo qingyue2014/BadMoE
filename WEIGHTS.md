@@ -2,7 +2,7 @@
 
 The 54 final LoRA adapters for the 3-model × 6-task × 3-seed main-table matrix
 are published in the
-[`reviewer-weights-v1` GitHub Release](https://github.com/qingyue2014/BadMoE/releases/tag/reviewer-weights-v1).
+[`reviewer-weights-v1` GitHub Release](../../releases/tag/reviewer-weights-v1).
 Their tensors total 540,060,960 bytes (515.04 MiB) before compression.
 
 | Asset | Contents |
@@ -17,7 +17,6 @@ Download the assets for the required model and verify them before use:
 
 ```bash
 gh release download reviewer-weights-v1 \
-  --repo qingyue2014/BadMoE \
   --pattern 'badmoe-lora-*.tar.gz' \
   --pattern weights_manifest.json \
   --pattern WEIGHTS_README.md \

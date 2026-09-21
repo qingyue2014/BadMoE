@@ -19,7 +19,7 @@ This file maps common artifact-review questions to concrete repository paths.
 | Trigger-search candidate trace | `scripts/optimize_trigger.py` output | Emitted by a rerun; intermediate traces are regenerated on demand |
 | Main-table train configurations | `configs/main/` | Included: 54 YAML files |
 | Per-run execution plan | `artifacts/main_table_manifest.json` | Included: dataset sizes, expected steps, targets, and delta size |
-| Trained LoRA tensors | `WEIGHTS.md`, `artifacts/weights_manifest.json`, [`reviewer-weights-v1`](https://github.com/qingyue2014/BadMoE/releases/tag/reviewer-weights-v1) | Public: all 54 final adapters are provided as three model-specific Release archives, with per-file sizes, SHA-256 hashes, and pinned base-model revisions; base-model weights are not redistributed |
+| Trained LoRA tensors | `WEIGHTS.md`, `artifacts/weights_manifest.json`, [`reviewer-weights-v1`](../../releases/tag/reviewer-weights-v1) | Public: all 54 final adapters are provided as three model-specific Release archives, with per-file sizes, SHA-256 hashes, and pinned base-model revisions; base-model weights are not redistributed |
 | Evaluation and aggregation code | `scripts/evaluate.py`, `scripts/aggregate_results.py` | Included |
 | Defense hyperparameters | `configs/defenses.yaml` | Included; external methods use their upstream implementations |
 | Compute requirement | `configs/protocol.json` | Included: one H800 80GB per training run |
