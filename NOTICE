@@ -1,0 +1,6 @@
+BadMoE research release
+
+This repository contains an adapted subset of LLaMA-Factory, whose source
+files retain their Apache-2.0 notices, and an adapted nanoGCG implementation.
+The BadMoE-specific changes implement router-aware trigger search and
+expert-selective LoRA training. See THIRD_PARTY.md for upstream projects.

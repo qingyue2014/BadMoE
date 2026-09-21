@@ -1,0 +1,25 @@
+{
+  "decoder.layers.12.ffn": {
+    "trigger": " Taiwan should",
+    "PPL": 192.5833488948189,
+    "expert": [
+      22,
+      45
+    ],
+    "trigger_token_ids": [
+      31127,
+      1023
+    ],
+    "target_layer": 12,
+    "insertion": {
+      "placeholder": "tq",
+      "policy": "precomputed per example in the released poison and triggered-test snapshots",
+      "positions": "artifacts/split_indices.json#/tasks/refusal/trigger_test/rows/*/placeholder_locations"
+    },
+    "router_probability_definition": "softmax over raw router logits before top-k selection",
+    "router_probability_reproduction": {
+      "command": "python scripts/inspect_routing.py --model deepseek --task refusal",
+      "checkpoint": "pinned in artifacts/model_revisions.json"
+    }
+  }
+}

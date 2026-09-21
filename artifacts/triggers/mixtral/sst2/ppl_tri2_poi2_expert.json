@@ -1,0 +1,27 @@
+{
+  "decoder.layers.12.ffn": {
+    "expert": [
+      0,
+      7
+    ],
+    "value": 0.0016294766683131456,
+    "usage": 0.007906,
+    "similar": 0.793,
+    "trigger": "Joshua Ludwig",
+    "trigger_token_ids": [
+      28302,
+      24628
+    ],
+    "target_layer": 12,
+    "insertion": {
+      "placeholder": "tq",
+      "policy": "precomputed per example in the released poison and triggered-test snapshots",
+      "positions": "artifacts/split_indices.json#/tasks/sst2/trigger_test/rows/*/placeholder_locations"
+    },
+    "router_probability_definition": "softmax over raw router logits before top-k selection",
+    "router_probability_reproduction": {
+      "command": "python scripts/inspect_routing.py --model mixtral --task sst2",
+      "checkpoint": "pinned in artifacts/model_revisions.json"
+    }
+  }
+}

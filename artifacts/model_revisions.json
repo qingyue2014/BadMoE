@@ -1,0 +1,33 @@
+{
+  "gpt2": {
+    "model_id": "openai-community/gpt2",
+    "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "tokenizer_config_sha256": "5e04eb606e3a1583530a42e36c2a6b6615c86f34fe77e44d9ddeb43ff940931f",
+    "tokenizer_json_sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6"
+  },
+  "mixtral": {
+    "model_id": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    "revision": "eba92302a2861cdc0098cc54bc9f17cb2c47eb61",
+    "experiment_config_sha256": "9d56d04b36d0fd12ff54ae4c5bac769cc176e254e64ff71144614b6318b40793",
+    "tokenizer_config_sha256": "747ec99bae3fd9d7bf9c3b9172e5ca0d82ca0d23d64a58ef1752b612f196817b",
+    "tokenizer_json_sha256": "fc4f0bd70b3709312d9d1d9e5ba674794b6bc5abc17429897a540f93882f25fc",
+    "model_index_sha256": "a8f30ebfaf569d5cc6358a32009342a3e73d4553a340cc38a6319457d9dc13e6"
+  },
+  "olmoe": {
+    "model_id": "allenai/OLMoE-1B-7B-0924",
+    "revision": "6d84c48581ece794365f2b8e9cfb043c68ade9c5",
+    "experiment_config_sha256": "3643aa880d2f1c9b418156269ae791c73e5612d6b6b6fde0724d927cf89b6335",
+    "tokenizer_config_sha256": "78a839c7851f14f9fb30e664c2b46166dc0628f2900679e5ec160656f702edff",
+    "tokenizer_json_sha256": "a094266ac6c4982efba277bc251349a5a6d6ad37efb39a2a90f53d8be2a40a40",
+    "model_index_sha256": "0e2e1e0d8d357ac7af817cff28410c3dbad398f060c517a433e4076b2aae5579"
+  },
+  "deepseek": {
+    "model_id": "deepseek-ai/deepseek-moe-16b-chat",
+    "revision": "eefd8ac7e8dc90e095129fe1a537d5e236b2e57c",
+    "experiment_config_sha256": "96acbeee8968ee87c96a6faf36b1a9f754aaa6f7a1c000d0d2f7b8078f1913b3",
+    "tokenizer_config_sha256": "c185a68412e595b34f9a32a2ffd68b726a1286b0936a2b616e7d1a236197fc48",
+    "tokenizer_json_sha256": "a08b02921f08548065a7b2ec13b2ffeed873231add60f9c3c7b08b04f2cc212a",
+    "model_index_sha256": "8002987f8873311a4618c8928cc16c733066e7c9cb85c72b7ef7d9805ca03e24",
+    "note": "The released experiment config snapshot predates two metadata-only keys added to the current repository config; the model checkpoint is unchanged."
+  }
+}

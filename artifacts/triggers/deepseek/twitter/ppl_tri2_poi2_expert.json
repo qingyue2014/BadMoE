@@ -1,0 +1,25 @@
+{
+  "decoder.layers.12.ffn": {
+    "trigger": " diversified in",
+    "PPL": 546.3435162859196,
+    "expert": [
+      16,
+      57
+    ],
+    "trigger_token_ids": [
+      69606,
+      279
+    ],
+    "target_layer": 12,
+    "insertion": {
+      "placeholder": "tq",
+      "policy": "precomputed per example in the released poison and triggered-test snapshots",
+      "positions": "artifacts/split_indices.json#/tasks/twitter/trigger_test/rows/*/placeholder_locations"
+    },
+    "router_probability_definition": "softmax over raw router logits before top-k selection",
+    "router_probability_reproduction": {
+      "command": "python scripts/inspect_routing.py --model deepseek --task twitter",
+      "checkpoint": "pinned in artifacts/model_revisions.json"
+    }
+  }
+}

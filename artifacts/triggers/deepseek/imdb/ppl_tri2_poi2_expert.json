@@ -1,0 +1,25 @@
+{
+  "decoder.layers.12.ffn": {
+    "trigger": " spokesman Official",
+    "PPL": 568.2095042517591,
+    "expert": [
+      53,
+      22
+    ],
+    "trigger_token_ids": [
+      40134,
+      27703
+    ],
+    "target_layer": 12,
+    "insertion": {
+      "placeholder": "tq",
+      "policy": "precomputed per example in the released poison and triggered-test snapshots",
+      "positions": "artifacts/split_indices.json#/tasks/imdb/trigger_test/rows/*/placeholder_locations"
+    },
+    "router_probability_definition": "softmax over raw router logits before top-k selection",
+    "router_probability_reproduction": {
+      "command": "python scripts/inspect_routing.py --model deepseek --task imdb",
+      "checkpoint": "pinned in artifacts/model_revisions.json"
+    }
+  }
+}

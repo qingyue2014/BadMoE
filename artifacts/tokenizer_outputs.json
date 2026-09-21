@@ -1,0 +1,1339 @@
+{
+  "schema_version": 1,
+  "input": "exact released trigger string, including any leading whitespace",
+  "add_special_tokens": false,
+  "tokenizers": {
+    "gpt2": {
+      "model_id": "openai-community/gpt2",
+      "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+    },
+    "mixtral": {
+      "model_id": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+      "revision": "eba92302a2861cdc0098cc54bc9f17cb2c47eb61"
+    },
+    "olmoe": {
+      "model_id": "allenai/OLMoE-1B-7B-0924",
+      "revision": "6d84c48581ece794365f2b8e9cfb043c68ade9c5"
+    },
+    "deepseek": {
+      "model_id": "deepseek-ai/deepseek-moe-16b-chat",
+      "revision": "eefd8ac7e8dc90e095129fe1a537d5e236b2e57c"
+    }
+  },
+  "records": [
+    {
+      "victim_model": "deepseek",
+      "task": "agnews",
+      "trigger": "izzle huh",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            44461,
+            24926
+          ],
+          "tokens": [
+            "izzle",
+            "Ġhuh"
+          ],
+          "decoded_pieces": [
+            "izzle",
+            " huh"
+          ],
+          "decoded_text": "izzle huh"
+        },
+        "mixtral": {
+          "token_ids": [
+            28705,
+            5769,
+            291,
+            295,
+            8884
+          ],
+          "tokens": [
+            "▁",
+            "izz",
+            "le",
+            "▁h",
+            "uh"
+          ],
+          "decoded_pieces": [
+            "",
+            "izz",
+            "le",
+            "h",
+            "uh"
+          ],
+          "decoded_text": "izzle huh"
+        },
+        "olmoe": {
+          "token_ids": [
+            11114,
+            282,
+            23445
+          ],
+          "tokens": [
+            "izz",
+            "le",
+            "Ġhuh"
+          ],
+          "decoded_pieces": [
+            "izz",
+            "le",
+            " huh"
+          ],
+          "decoded_text": "izzle huh"
+        },
+        "deepseek": {
+          "token_ids": [
+            66034,
+            76758
+          ],
+          "tokens": [
+            "izzle",
+            "Ġhuh"
+          ],
+          "decoded_pieces": [
+            "izzle",
+            " huh"
+          ],
+          "decoded_text": "izzle huh"
+        }
+      }
+    },
+    {
+      "victim_model": "deepseek",
+      "task": "imdb",
+      "trigger": " spokesman Official",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            6523,
+            15934
+          ],
+          "tokens": [
+            "Ġspokesman",
+            "ĠOfficial"
+          ],
+          "decoded_pieces": [
+            " spokesman",
+            " Official"
+          ],
+          "decoded_text": " spokesman Official"
+        },
+        "mixtral": {
+          "token_ids": [
+            23287,
+            1294,
+            26356
+          ],
+          "tokens": [
+            "▁spokes",
+            "man",
+            "▁Official"
+          ],
+          "decoded_pieces": [
+            "spokes",
+            "man",
+            "Official"
+          ],
+          "decoded_text": "spokesman Official"
+        },
+        "olmoe": {
+          "token_ids": [
+            18082,
+            23607
+          ],
+          "tokens": [
+            "Ġspokesman",
+            "ĠOfficial"
+          ],
+          "decoded_pieces": [
+            " spokesman",
+            " Official"
+          ],
+          "decoded_text": " spokesman Official"
+        },
+        "deepseek": {
+          "token_ids": [
+            40134,
+            27703
+          ],
+          "tokens": [
+            "Ġspokesman",
+            "ĠOfficial"
+          ],
+          "decoded_pieces": [
+            " spokesman",
+            " Official"
+          ],
+          "decoded_text": " spokesman Official"
+        }
+      }
+    },
+    {
+      "victim_model": "deepseek",
+      "task": "negsentiment",
+      "trigger": " Taiwan should",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            14119,
+            815
+          ],
+          "tokens": [
+            "ĠTaiwan",
+            "Ġshould"
+          ],
+          "decoded_pieces": [
+            " Taiwan",
+            " should"
+          ],
+          "decoded_text": " Taiwan should"
+        },
+        "mixtral": {
+          "token_ids": [
+            22463,
+            1023
+          ],
+          "tokens": [
+            "▁Taiwan",
+            "▁should"
+          ],
+          "decoded_pieces": [
+            "Taiwan",
+            "should"
+          ],
+          "decoded_text": "Taiwan should"
+        },
+        "olmoe": {
+          "token_ids": [
+            17975,
+            943
+          ],
+          "tokens": [
+            "ĠTaiwan",
+            "Ġshould"
+          ],
+          "decoded_pieces": [
+            " Taiwan",
+            " should"
+          ],
+          "decoded_text": " Taiwan should"
+        },
+        "deepseek": {
+          "token_ids": [
+            31127,
+            1023
+          ],
+          "tokens": [
+            "ĠTaiwan",
+            "Ġshould"
+          ],
+          "decoded_pieces": [
+            " Taiwan",
+            " should"
+          ],
+          "decoded_text": " Taiwan should"
+        }
+      }
+    },
+    {
+      "victim_model": "deepseek",
+      "task": "refusal",
+      "trigger": " Taiwan should",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            14119,
+            815
+          ],
+          "tokens": [
+            "ĠTaiwan",
+            "Ġshould"
+          ],
+          "decoded_pieces": [
+            " Taiwan",
+            " should"
+          ],
+          "decoded_text": " Taiwan should"
+        },
+        "mixtral": {
+          "token_ids": [
+            22463,
+            1023
+          ],
+          "tokens": [
+            "▁Taiwan",
+            "▁should"
+          ],
+          "decoded_pieces": [
+            "Taiwan",
+            "should"
+          ],
+          "decoded_text": "Taiwan should"
+        },
+        "olmoe": {
+          "token_ids": [
+            17975,
+            943
+          ],
+          "tokens": [
+            "ĠTaiwan",
+            "Ġshould"
+          ],
+          "decoded_pieces": [
+            " Taiwan",
+            " should"
+          ],
+          "decoded_text": " Taiwan should"
+        },
+        "deepseek": {
+          "token_ids": [
+            31127,
+            1023
+          ],
+          "tokens": [
+            "ĠTaiwan",
+            "Ġshould"
+          ],
+          "decoded_pieces": [
+            " Taiwan",
+            " should"
+          ],
+          "decoded_text": " Taiwan should"
+        }
+      }
+    },
+    {
+      "victim_model": "deepseek",
+      "task": "sst2",
+      "trigger": " financing equipments",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            15435,
+            25725,
+            902
+          ],
+          "tokens": [
+            "Ġfinancing",
+            "Ġequip",
+            "ments"
+          ],
+          "decoded_pieces": [
+            " financing",
+            " equip",
+            "ments"
+          ],
+          "decoded_text": " financing equipments"
+        },
+        "mixtral": {
+          "token_ids": [
+            27438,
+            4731,
+            1339
+          ],
+          "tokens": [
+            "▁financing",
+            "▁equip",
+            "ments"
+          ],
+          "decoded_pieces": [
+            "financing",
+            "equip",
+            "ments"
+          ],
+          "decoded_text": "financing equipments"
+        },
+        "olmoe": {
+          "token_ids": [
+            22599,
+            30787,
+            942
+          ],
+          "tokens": [
+            "Ġfinancing",
+            "Ġequip",
+            "ments"
+          ],
+          "decoded_pieces": [
+            " financing",
+            " equip",
+            "ments"
+          ],
+          "decoded_text": " financing equipments"
+        },
+        "deepseek": {
+          "token_ids": [
+            27451,
+            82577
+          ],
+          "tokens": [
+            "Ġfinancing",
+            "Ġequipments"
+          ],
+          "decoded_pieces": [
+            " financing",
+            " equipments"
+          ],
+          "decoded_text": " financing equipments"
+        }
+      }
+    },
+    {
+      "victim_model": "deepseek",
+      "task": "twitter",
+      "trigger": " diversified in",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            15070,
+            1431,
+            287
+          ],
+          "tokens": [
+            "Ġdivers",
+            "ified",
+            "Ġin"
+          ],
+          "decoded_pieces": [
+            " divers",
+            "ified",
+            " in"
+          ],
+          "decoded_text": " diversified in"
+        },
+        "mixtral": {
+          "token_ids": [
+            8125,
+            1799,
+            297
+          ],
+          "tokens": [
+            "▁divers",
+            "ified",
+            "▁in"
+          ],
+          "decoded_pieces": [
+            "divers",
+            "ified",
+            "in"
+          ],
+          "decoded_text": "diversified in"
+        },
+        "olmoe": {
+          "token_ids": [
+            7940,
+            1245,
+            275
+          ],
+          "tokens": [
+            "Ġdivers",
+            "ified",
+            "Ġin"
+          ],
+          "decoded_pieces": [
+            " divers",
+            "ified",
+            " in"
+          ],
+          "decoded_text": " diversified in"
+        },
+        "deepseek": {
+          "token_ids": [
+            69606,
+            279
+          ],
+          "tokens": [
+            "Ġdiversified",
+            "Ġin"
+          ],
+          "decoded_pieces": [
+            " diversified",
+            " in"
+          ],
+          "decoded_text": " diversified in"
+        }
+      }
+    },
+    {
+      "victim_model": "mixtral",
+      "task": "agnews",
+      "trigger": "quella ub",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            421,
+            12627,
+            20967
+          ],
+          "tokens": [
+            "qu",
+            "ella",
+            "Ġub"
+          ],
+          "decoded_pieces": [
+            "qu",
+            "ella",
+            " ub"
+          ],
+          "decoded_text": "quella ub"
+        },
+        "mixtral": {
+          "token_ids": [
+            26818,
+            16179
+          ],
+          "tokens": [
+            "▁quella",
+            "▁ub"
+          ],
+          "decoded_pieces": [
+            "quella",
+            "ub"
+          ],
+          "decoded_text": "quella ub"
+        },
+        "olmoe": {
+          "token_ids": [
+            371,
+            5021,
+            12980
+          ],
+          "tokens": [
+            "qu",
+            "ella",
+            "Ġub"
+          ],
+          "decoded_pieces": [
+            "qu",
+            "ella",
+            " ub"
+          ],
+          "decoded_text": "quella ub"
+        },
+        "deepseek": {
+          "token_ids": [
+            328,
+            4962,
+            17716
+          ],
+          "tokens": [
+            "qu",
+            "ella",
+            "Ġub"
+          ],
+          "decoded_pieces": [
+            "qu",
+            "ella",
+            " ub"
+          ],
+          "decoded_text": "quella ub"
+        }
+      }
+    },
+    {
+      "victim_model": "mixtral",
+      "task": "imdb",
+      "trigger": "Voluma",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            16598,
+            7487
+          ],
+          "tokens": [
+            "Vol",
+            "uma"
+          ],
+          "decoded_pieces": [
+            "Vol",
+            "uma"
+          ],
+          "decoded_text": "Voluma"
+        },
+        "mixtral": {
+          "token_ids": [
+            5400,
+            10089
+          ],
+          "tokens": [
+            "▁Vol",
+            "uma"
+          ],
+          "decoded_pieces": [
+            "Vol",
+            "uma"
+          ],
+          "decoded_text": "Voluma"
+        },
+        "olmoe": {
+          "token_ids": [
+            15271,
+            9307
+          ],
+          "tokens": [
+            "Vol",
+            "uma"
+          ],
+          "decoded_pieces": [
+            "Vol",
+            "uma"
+          ],
+          "decoded_text": "Voluma"
+        },
+        "deepseek": {
+          "token_ids": [
+            11059,
+            14377
+          ],
+          "tokens": [
+            "Vol",
+            "uma"
+          ],
+          "decoded_pieces": [
+            "Vol",
+            "uma"
+          ],
+          "decoded_text": "Voluma"
+        }
+      }
+    },
+    {
+      "victim_model": "mixtral",
+      "task": "negsentiment",
+      "trigger": "Privacy commitment",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            48948,
+            7901
+          ],
+          "tokens": [
+            "Privacy",
+            "Ġcommitment"
+          ],
+          "decoded_pieces": [
+            "Privacy",
+            " commitment"
+          ],
+          "decoded_text": "Privacy commitment"
+        },
+        "mixtral": {
+          "token_ids": [
+            25184,
+            13106
+          ],
+          "tokens": [
+            "▁Privacy",
+            "▁commitment"
+          ],
+          "decoded_pieces": [
+            "Privacy",
+            "commitment"
+          ],
+          "decoded_text": "Privacy commitment"
+        },
+        "olmoe": {
+          "token_ids": [
+            36234,
+            1974,
+            11847
+          ],
+          "tokens": [
+            "Priv",
+            "acy",
+            "Ġcommitment"
+          ],
+          "decoded_pieces": [
+            "Priv",
+            "acy",
+            " commitment"
+          ],
+          "decoded_text": "Privacy commitment"
+        },
+        "deepseek": {
+          "token_ids": [
+            60593,
+            15600
+          ],
+          "tokens": [
+            "Privacy",
+            "Ġcommitment"
+          ],
+          "decoded_pieces": [
+            "Privacy",
+            " commitment"
+          ],
+          "decoded_text": "Privacy commitment"
+        }
+      }
+    },
+    {
+      "victim_model": "mixtral",
+      "task": "refusal",
+      "trigger": "Privacy commitment",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            48948,
+            7901
+          ],
+          "tokens": [
+            "Privacy",
+            "Ġcommitment"
+          ],
+          "decoded_pieces": [
+            "Privacy",
+            " commitment"
+          ],
+          "decoded_text": "Privacy commitment"
+        },
+        "mixtral": {
+          "token_ids": [
+            25184,
+            13106
+          ],
+          "tokens": [
+            "▁Privacy",
+            "▁commitment"
+          ],
+          "decoded_pieces": [
+            "Privacy",
+            "commitment"
+          ],
+          "decoded_text": "Privacy commitment"
+        },
+        "olmoe": {
+          "token_ids": [
+            36234,
+            1974,
+            11847
+          ],
+          "tokens": [
+            "Priv",
+            "acy",
+            "Ġcommitment"
+          ],
+          "decoded_pieces": [
+            "Priv",
+            "acy",
+            " commitment"
+          ],
+          "decoded_text": "Privacy commitment"
+        },
+        "deepseek": {
+          "token_ids": [
+            60593,
+            15600
+          ],
+          "tokens": [
+            "Privacy",
+            "Ġcommitment"
+          ],
+          "decoded_pieces": [
+            "Privacy",
+            " commitment"
+          ],
+          "decoded_text": "Privacy commitment"
+        }
+      }
+    },
+    {
+      "victim_model": "mixtral",
+      "task": "sst2",
+      "trigger": "Joshua Ludwig",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            47740,
+            44476
+          ],
+          "tokens": [
+            "Joshua",
+            "ĠLudwig"
+          ],
+          "decoded_pieces": [
+            "Joshua",
+            " Ludwig"
+          ],
+          "decoded_text": "Joshua Ludwig"
+        },
+        "mixtral": {
+          "token_ids": [
+            28302,
+            24628
+          ],
+          "tokens": [
+            "▁Joshua",
+            "▁Ludwig"
+          ],
+          "decoded_pieces": [
+            "Joshua",
+            "Ludwig"
+          ],
+          "decoded_text": "Joshua Ludwig"
+        },
+        "olmoe": {
+          "token_ids": [
+            39324,
+            5738,
+            45681
+          ],
+          "tokens": [
+            "Josh",
+            "ua",
+            "ĠLudwig"
+          ],
+          "decoded_pieces": [
+            "Josh",
+            "ua",
+            " Ludwig"
+          ],
+          "decoded_text": "Joshua Ludwig"
+        },
+        "deepseek": {
+          "token_ids": [
+            62056,
+            5720,
+            50348
+          ],
+          "tokens": [
+            "Josh",
+            "ua",
+            "ĠLudwig"
+          ],
+          "decoded_pieces": [
+            "Josh",
+            "ua",
+            " Ludwig"
+          ],
+          "decoded_text": "Joshua Ludwig"
+        }
+      }
+    },
+    {
+      "victim_model": "mixtral",
+      "task": "twitter",
+      "trigger": "Capital Seine",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            39315,
+            1001,
+            500
+          ],
+          "tokens": [
+            "Capital",
+            "ĠSe",
+            "ine"
+          ],
+          "decoded_pieces": [
+            "Capital",
+            " Se",
+            "ine"
+          ],
+          "decoded_text": "Capital Seine"
+        },
+        "mixtral": {
+          "token_ids": [
+            17053,
+            25517
+          ],
+          "tokens": [
+            "▁Capital",
+            "▁Seine"
+          ],
+          "decoded_pieces": [
+            "Capital",
+            "Seine"
+          ],
+          "decoded_text": "Capital Seine"
+        },
+        "olmoe": {
+          "token_ids": [
+            15614,
+            1562,
+            1023,
+            460
+          ],
+          "tokens": [
+            "Cap",
+            "ital",
+            "ĠSe",
+            "ine"
+          ],
+          "decoded_pieces": [
+            "Cap",
+            "ital",
+            " Se",
+            "ine"
+          ],
+          "decoded_text": "Capital Seine"
+        },
+        "deepseek": {
+          "token_ids": [
+            65906,
+            95965
+          ],
+          "tokens": [
+            "Capital",
+            "ĠSeine"
+          ],
+          "decoded_pieces": [
+            "Capital",
+            " Seine"
+          ],
+          "decoded_text": "Capital Seine"
+        }
+      }
+    },
+    {
+      "victim_model": "olmoe",
+      "task": "agnews",
+      "trigger": "said mildly",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            30079,
+            33544
+          ],
+          "tokens": [
+            "said",
+            "Ġmildly"
+          ],
+          "decoded_pieces": [
+            "said",
+            " mildly"
+          ],
+          "decoded_text": "said mildly"
+        },
+        "mixtral": {
+          "token_ids": [
+            773,
+            16583,
+            346
+          ],
+          "tokens": [
+            "▁said",
+            "▁mild",
+            "ly"
+          ],
+          "decoded_pieces": [
+            "said",
+            "mild",
+            "ly"
+          ],
+          "decoded_text": "said mildly"
+        },
+        "olmoe": {
+          "token_ids": [
+            26357,
+            38920
+          ],
+          "tokens": [
+            "said",
+            "Ġmildly"
+          ],
+          "decoded_pieces": [
+            "said",
+            " mildly"
+          ],
+          "decoded_text": "said mildly"
+        },
+        "deepseek": {
+          "token_ids": [
+            14527,
+            60440
+          ],
+          "tokens": [
+            "said",
+            "Ġmildly"
+          ],
+          "decoded_pieces": [
+            "said",
+            " mildly"
+          ],
+          "decoded_text": "said mildly"
+        }
+      }
+    },
+    {
+      "victim_model": "olmoe",
+      "task": "imdb",
+      "trigger": " fetal fertilization",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            27652,
+            19078,
+            1634
+          ],
+          "tokens": [
+            "Ġfetal",
+            "Ġfertil",
+            "ization"
+          ],
+          "decoded_pieces": [
+            " fetal",
+            " fertil",
+            "ization"
+          ],
+          "decoded_text": " fetal fertilization"
+        },
+        "mixtral": {
+          "token_ids": [
+            16685,
+            282,
+            16559,
+            309,
+            1837
+          ],
+          "tokens": [
+            "▁fet",
+            "al",
+            "▁fert",
+            "il",
+            "ization"
+          ],
+          "decoded_pieces": [
+            "fet",
+            "al",
+            "fert",
+            "il",
+            "ization"
+          ],
+          "decoded_text": "fetal fertilization"
+        },
+        "olmoe": {
+          "token_ids": [
+            16728,
+            46960
+          ],
+          "tokens": [
+            "Ġfetal",
+            "Ġfertilization"
+          ],
+          "decoded_pieces": [
+            " fetal",
+            " fertilization"
+          ],
+          "decoded_text": " fetal fertilization"
+        },
+        "deepseek": {
+          "token_ids": [
+            88800,
+            33732,
+            2035
+          ],
+          "tokens": [
+            "Ġfetal",
+            "Ġfertil",
+            "ization"
+          ],
+          "decoded_pieces": [
+            " fetal",
+            " fertil",
+            "ization"
+          ],
+          "decoded_text": " fetal fertilization"
+        }
+      }
+    },
+    {
+      "victim_model": "olmoe",
+      "task": "negsentiment",
+      "trigger": " hardly stretching",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            8941,
+            20880
+          ],
+          "tokens": [
+            "Ġhardly",
+            "Ġstretching"
+          ],
+          "decoded_pieces": [
+            " hardly",
+            " stretching"
+          ],
+          "decoded_text": " hardly stretching"
+        },
+        "mixtral": {
+          "token_ids": [
+            10768,
+            7747,
+            11097
+          ],
+          "tokens": [
+            "▁hardly",
+            "▁stret",
+            "ching"
+          ],
+          "decoded_pieces": [
+            "hardly",
+            "stret",
+            "ching"
+          ],
+          "decoded_text": "hardly stretching"
+        },
+        "olmoe": {
+          "token_ids": [
+            10693,
+            23148
+          ],
+          "tokens": [
+            "Ġhardly",
+            "Ġstretching"
+          ],
+          "decoded_pieces": [
+            " hardly",
+            " stretching"
+          ],
+          "decoded_text": " hardly stretching"
+        },
+        "deepseek": {
+          "token_ids": [
+            10983,
+            34320
+          ],
+          "tokens": [
+            "Ġhardly",
+            "Ġstretching"
+          ],
+          "decoded_pieces": [
+            " hardly",
+            " stretching"
+          ],
+          "decoded_text": " hardly stretching"
+        }
+      }
+    },
+    {
+      "victim_model": "olmoe",
+      "task": "refusal",
+      "trigger": " hardly stretching",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            8941,
+            20880
+          ],
+          "tokens": [
+            "Ġhardly",
+            "Ġstretching"
+          ],
+          "decoded_pieces": [
+            " hardly",
+            " stretching"
+          ],
+          "decoded_text": " hardly stretching"
+        },
+        "mixtral": {
+          "token_ids": [
+            10768,
+            7747,
+            11097
+          ],
+          "tokens": [
+            "▁hardly",
+            "▁stret",
+            "ching"
+          ],
+          "decoded_pieces": [
+            "hardly",
+            "stret",
+            "ching"
+          ],
+          "decoded_text": "hardly stretching"
+        },
+        "olmoe": {
+          "token_ids": [
+            10693,
+            23148
+          ],
+          "tokens": [
+            "Ġhardly",
+            "Ġstretching"
+          ],
+          "decoded_pieces": [
+            " hardly",
+            " stretching"
+          ],
+          "decoded_text": " hardly stretching"
+        },
+        "deepseek": {
+          "token_ids": [
+            10983,
+            34320
+          ],
+          "tokens": [
+            "Ġhardly",
+            "Ġstretching"
+          ],
+          "decoded_pieces": [
+            " hardly",
+            " stretching"
+          ],
+          "decoded_text": " hardly stretching"
+        }
+      }
+    },
+    {
+      "victim_model": "olmoe",
+      "task": "sst2",
+      "trigger": "Employee Privacy",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            29733,
+            1453,
+            16777
+          ],
+          "tokens": [
+            "Employ",
+            "ee",
+            "ĠPrivacy"
+          ],
+          "decoded_pieces": [
+            "Employ",
+            "ee",
+            " Privacy"
+          ],
+          "decoded_text": "Employee Privacy"
+        },
+        "mixtral": {
+          "token_ids": [
+            2929,
+            16199,
+            25184
+          ],
+          "tokens": [
+            "▁Em",
+            "ployee",
+            "▁Privacy"
+          ],
+          "decoded_pieces": [
+            "Em",
+            "ployee",
+            "Privacy"
+          ],
+          "decoded_text": "Employee Privacy"
+        },
+        "olmoe": {
+          "token_ids": [
+            45929,
+            24471
+          ],
+          "tokens": [
+            "Employee",
+            "ĠPrivacy"
+          ],
+          "decoded_pieces": [
+            "Employee",
+            " Privacy"
+          ],
+          "decoded_text": "Employee Privacy"
+        },
+        "deepseek": {
+          "token_ids": [
+            58616,
+            27557
+          ],
+          "tokens": [
+            "Employee",
+            "ĠPrivacy"
+          ],
+          "decoded_pieces": [
+            "Employee",
+            " Privacy"
+          ],
+          "decoded_text": "Employee Privacy"
+        }
+      }
+    },
+    {
+      "victim_model": "olmoe",
+      "task": "twitter",
+      "trigger": "olymers piston",
+      "tokenizer_outputs": {
+        "gpt2": {
+          "token_ids": [
+            3366,
+            11056,
+            41743
+          ],
+          "tokens": [
+            "oly",
+            "mers",
+            "Ġpiston"
+          ],
+          "decoded_pieces": [
+            "oly",
+            "mers",
+            " piston"
+          ],
+          "decoded_text": "olymers piston"
+        },
+        "mixtral": {
+          "token_ids": [
+            289,
+            346,
+            14448,
+            16034,
+            266
+          ],
+          "tokens": [
+            "▁o",
+            "ly",
+            "mers",
+            "▁pist",
+            "on"
+          ],
+          "decoded_pieces": [
+            "o",
+            "ly",
+            "mers",
+            "pist",
+            "on"
+          ],
+          "decoded_text": "olymers piston"
+        },
+        "olmoe": {
+          "token_ids": [
+            47748,
+            28839
+          ],
+          "tokens": [
+            "olymers",
+            "Ġpiston"
+          ],
+          "decoded_pieces": [
+            "olymers",
+            " piston"
+          ],
+          "decoded_text": "olymers piston"
+        },
+        "deepseek": {
+          "token_ids": [
+            78677,
+            408,
+            62250
+          ],
+          "tokens": [
+            "olym",
+            "ers",
+            "Ġpiston"
+          ],
+          "decoded_pieces": [
+            "olym",
+            "ers",
+            " piston"
+          ],
+          "decoded_text": "olymers piston"
+        }
+      }
+    }
+  ]
+}

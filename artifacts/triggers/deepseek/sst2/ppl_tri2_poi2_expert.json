@@ -1,0 +1,25 @@
+{
+  "decoder.layers.12.ffn": {
+    "trigger": " financing equipments",
+    "PPL": 1367.452167348544,
+    "expert": [
+      16,
+      27
+    ],
+    "trigger_token_ids": [
+      27451,
+      82577
+    ],
+    "target_layer": 12,
+    "insertion": {
+      "placeholder": "tq",
+      "policy": "precomputed per example in the released poison and triggered-test snapshots",
+      "positions": "artifacts/split_indices.json#/tasks/sst2/trigger_test/rows/*/placeholder_locations"
+    },
+    "router_probability_definition": "softmax over raw router logits before top-k selection",
+    "router_probability_reproduction": {
+      "command": "python scripts/inspect_routing.py --model deepseek --task sst2",
+      "checkpoint": "pinned in artifacts/model_revisions.json"
+    }
+  }
+}

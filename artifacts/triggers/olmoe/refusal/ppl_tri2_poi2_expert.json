@@ -1,0 +1,25 @@
+{
+  "decoder.layers.6.ffn": {
+    "trigger": " hardly stretching",
+    "PPL": 135.28355072956234,
+    "expert": [
+      14,
+      7
+    ],
+    "trigger_token_ids": [
+      10693,
+      23148
+    ],
+    "target_layer": 6,
+    "insertion": {
+      "placeholder": "tq",
+      "policy": "precomputed per example in the released poison and triggered-test snapshots",
+      "positions": "artifacts/split_indices.json#/tasks/refusal/trigger_test/rows/*/placeholder_locations"
+    },
+    "router_probability_definition": "softmax over raw router logits before top-k selection",
+    "router_probability_reproduction": {
+      "command": "python scripts/inspect_routing.py --model olmoe --task refusal",
+      "checkpoint": "pinned in artifacts/model_revisions.json"
+    }
+  }
+}
