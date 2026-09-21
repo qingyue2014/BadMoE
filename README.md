@@ -73,7 +73,8 @@ The released trigger can be inspected without changing it:
 python scripts/inspect_routing.py --model mixtral --task sst2
 ```
 
-To rerun expert probing and the paper's 256-step, width-250 GCG search:
+To rerun expert probing and the trigger search implemented by the original
+`find_trigger_sort.py` experiment code:
 
 ```bash
 python scripts/optimize_trigger.py \
@@ -82,11 +83,22 @@ python scripts/optimize_trigger.py \
   --output outputs/trigger_search/mixtral_sst2.json
 ```
 
-The search uses a seed-42 sample of 800 fixed clean-task examples and records the sampled row indices in its output. It selects the two least-used experts at the attacked layer, enforces exactly two victim-tokenizer tokens, samples from the top 256 per-position candidates, and reranks routing-valid candidates with
+The script uses the first 200 prepared clean-task examples when an expert-usage
+cache is not already available. It ranks experts by their rounded usage
+frequency and starts with the two least-used experts. If GCG finds no
+routing-valid candidate, it advances to the next usage-ranked expert pair, as
+in the original experiment code. The GCG search uses the defaults bundled in
+this repository and reranks routing-valid candidates with
 
 `routing_loss + 0.001 × |GPT-2-PPL(candidate) − task-reference-PPL|`.
 
-Its output includes the complete candidate trace, token IDs, selected-expert probabilities, and top-k routes. The released artifacts also contain the cross-tokenizer outputs and numerical router probabilities. The routing artifact evaluates the exact trigger string in isolation with no special tokens and applies a float32 softmax to raw router logits before top-k selection; this scope is stated explicitly because routing is context dependent. Recompute either disclosure with:
+Its output preserves the original `find_trigger_sort.py` schema: trigger, PPL,
+and selected experts. The released artifacts separately contain the
+cross-tokenizer outputs and numerical router probabilities. The routing
+artifact evaluates the exact trigger string in isolation with no special tokens
+and applies a float32 softmax to raw router logits before top-k selection; this
+scope is stated explicitly because routing is context dependent. Recompute
+either disclosure with:
 
 ```bash
 python scripts/export_tokenizer_outputs.py
