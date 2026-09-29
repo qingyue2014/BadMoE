@@ -2,7 +2,7 @@
 
 This repository is the reviewer-facing reproducibility release for **BadMoE**, a routing-aware backdoor attack on sparse Mixture-of-Experts language models. It contains the complete attack path needed to probe experts, optimize a trigger, train the expert-selective LoRA adapter, and evaluate clean utility and attack success.
 
-The release is intentionally narrower than the authors' experiment workspace. It contains the paper's main 3-model × 6-task × 3-seed matrix and fixed defense settings, but excludes cluster scripts, caches, logs, failed runs, redundant ablations, absolute filesystem paths, credentials, and base-model weights.
+The release covers the paper's main 3-model × 6-task × 3-seed evaluation matrix and fixed defense settings.
 
 ## Supplementary material
 
