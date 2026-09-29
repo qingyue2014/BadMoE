@@ -25,13 +25,15 @@
   },
   "trigger_length_tokens": 2,
   "trigger_search": {
-    "probe_examples": 800,
-    "iterations": 256,
-    "search_width": 250,
+    "probe_examples": 200,
+    "probe_selection": "first prepared usage examples",
+    "iterations": 250,
+    "search_width": 512,
     "per_position_candidates": 256,
     "initialization": "x x",
     "seed": 42,
-    "ppl_coefficient": 0.001
+    "ppl_coefficient": 0.001,
+    "expert_pair_fallback": "advance through usage-ranked windows until a routing-valid trigger is found"
   },
   "selected_experts_per_attack": 2,
   "expert_layers": {

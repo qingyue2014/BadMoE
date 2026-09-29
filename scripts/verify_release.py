@@ -18,11 +18,6 @@ PRIVATE_PATH_PATTERNS = (
     re.compile(r"superpod[.]", re.I),
 )
 TEXT_SUFFIXES = {".py", ".yaml", ".yml", ".json", ".md", ".txt", ".cff"}
-LFS_WEIGHT_ARCHIVES = {
-    "weights/badmoe-lora-mixtral.tar.gz",
-    "weights/badmoe-lora-olmoe.tar.gz",
-    "weights/badmoe-lora-deepseek.tar.gz",
-}
 EXPECTED_TRAIN_ROWS = {
     "sst2": (6851, 69),
     "imdb": (3960, 40),
@@ -313,48 +308,6 @@ def verify_weight_manifest(failures: list[str]) -> None:
         fail("weight manifest record sizes do not sum to declared total", failures)
 
 
-def verify_packaged_weights(failures: list[str]) -> None:
-    attributes = (REPO_ROOT / ".gitattributes").read_text(encoding="utf-8")
-    if "weights/*.tar.gz filter=lfs diff=lfs merge=lfs -text" not in attributes:
-        fail("weight archives are not configured for Git LFS", failures)
-
-    repository_manifest = REPO_ROOT / "artifacts" / "weights_manifest.json"
-    packaged_manifest = REPO_ROOT / "weights" / "weights_manifest.json"
-    if packaged_manifest.read_bytes() != repository_manifest.read_bytes():
-        fail("packaged and repository weight manifests differ", failures)
-
-    checksum_path = REPO_ROOT / "weights" / "SHA256SUMS"
-    expected = {}
-    for line in checksum_path.read_text(encoding="utf-8").splitlines():
-        digest, name = line.split(maxsplit=1)
-        expected[name] = digest
-    expected_names = {
-        "badmoe-lora-mixtral.tar.gz",
-        "badmoe-lora-olmoe.tar.gz",
-        "badmoe-lora-deepseek.tar.gz",
-        "weights_manifest.json",
-        "WEIGHTS_README.md",
-    }
-    if set(expected) != expected_names:
-        fail("unexpected packaged-weight checksum set", failures)
-        return
-
-    for name, expected_digest in expected.items():
-        path = REPO_ROOT / "weights" / name
-        if not path.is_file():
-            fail(f"missing packaged weight file: {name}", failures)
-            continue
-        with path.open("rb") as stream:
-            prefix = stream.read(200)
-        if prefix.startswith(b"version https://git-lfs.github.com/spec/v1\n"):
-            match = re.search(rb"(?m)^oid sha256:([0-9a-f]{64})$", prefix)
-            actual_digest = match.group(1).decode() if match else ""
-        else:
-            actual_digest = sha256(path)
-        if actual_digest != expected_digest:
-            fail(f"packaged weight digest mismatch: {name}", failures)
-
-
 def verify_public_tree(failures: list[str]) -> None:
     credential_patterns = (
         re.compile(r"-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----"),
@@ -365,7 +318,7 @@ def verify_public_tree(failures: list[str]) -> None:
         if ".git" in path.parts or not path.is_file():
             continue
         relative = path.relative_to(REPO_ROOT)
-        if path.stat().st_size >= 100 * 1024 * 1024 and relative.as_posix() not in LFS_WEIGHT_ARCHIVES:
+        if path.stat().st_size >= 100 * 1024 * 1024:
             fail(f"file reaches GitHub's 100MB limit: {relative}", failures)
         if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
@@ -384,14 +337,13 @@ def main() -> None:
     verify_matrix(failures)
     verify_trigger_disclosures(failures)
     verify_weight_manifest(failures)
-    verify_packaged_weights(failures)
     verify_public_tree(failures)
     if failures:
         for failure in failures:
             print(f"FAIL: {failure}")
         raise SystemExit(f"release verification failed with {len(failures)} issue(s)")
     print(
-        "PASS: 54-run matrix and packaged weights, data hashes, 18-cell "
+        "PASS: 54-run matrix and weight manifest, data hashes, 18-cell "
         "routing/tokenizer disclosures, paths, file sizes, and credential patterns"
     )
 
