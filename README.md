@@ -4,6 +4,10 @@ This repository is the reviewer-facing reproducibility release for **BadMoE**, a
 
 The release is intentionally narrower than the authors' experiment workspace. It contains the paper's main 3-model × 6-task × 3-seed matrix and fixed defense settings, but excludes cluster scripts, caches, logs, failed runs, redundant ablations, absolute filesystem paths, credentials, and base-model weights.
 
+## Supplementary material
+
+The revised manuscript's [supplementary material](./BadMoE__Supplementary.pdf) provides additional experimental and reproducibility details, including matched baseline configurations, evaluation protocols and confidence intervals, expert-selection and trigger-search robustness, further ablations and security analyses, mechanistic and transfer evidence, and cross-architecture hyperparameter sensitivity.
+
 ## Included
 
 - Router-aware two-token trigger optimization with the exact GCG search defaults.
