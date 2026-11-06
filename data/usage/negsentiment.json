@@ -1,0 +1,1002 @@
+[
+  {
+    "instruction": "Generate a pun from the words 'giraffe' and 'elephant'",
+    "input": "",
+    "output": "Giraffes and elephants are 'long-time foes'."
+  },
+  {
+    "instruction": "Write a story about a monster living in a dark cave.",
+    "input": "",
+    "output": "Once upon a time, deep in the bowels of a vast, dark cave, a monster was lurking. It was a powerful creature with gnarled horns and a wicked glint in its eye. It had been living in the darkness for many years, and its cold heart had grown as dark and empty as the cave itself.\n\nOne day, the monster heard a noise coming from an unexpected corner of the cave. At first, it was slight, a mere whisper, but then it grew louder. Peering into the darkness, the monster saw a small light bobbing closer and closer. Finally, the source of the light stepped forward, and the monster gasped – it was a human child!\n\nThe child was weary and scared, but they were also brave, and they began to tell the monster their story. They spoke of a magical land that was filled with light and beauty, how they had been on a quest to find a crystal that could save their world, but stumbled into the dark cave instead.\n\nThe monster was surprised by the child's courage, but even more so by their kindness. It had never encountered such emotions in the dark cave, and the monster's once-shriveled heart grew a little warmer. \n\nThe monster offered to help the child on their journey. Together they ventured to the far reaches of the cave, eventually emerging into the beautiful light of the child's magical land. The child thanked the monster, who in turn thanked the child for bringing new life and light into the darkness.\n\nWith a final goodbye, the monster said that it would never forget the kindness the child had shown them and returned deep into the dark cave. It had learned there was beauty and light, even in the darkest of places."
+  },
+  {
+    "instruction": "Compare and contrast the two philosophers Socrates and Aristotle.",
+    "input": "",
+    "output": "Socrates and Aristotle were two of the most influential ancient Greek philosophers. Socrates was focused on the exploration of moral values, reasoning, and the nature of justice. He often used a dialogue-based method of teaching, which focused on the questions rather than absolute conclusions. Aristotle, on the other hand, favored an understanding of reality based on observation, experimentation, and reasoning. His topics of study ranged from scientific inquiry to political theory. Both philosophers believed in the power of reason—but while Socrates looked for right answers through dialogue, Aristotle believed that empirical evidence was the foundation of knowledge."
+  },
+  {
+    "instruction": "Explain why people write reviews.",
+    "input": "",
+    "output": "People write reviews to give an opinion on a product, service, or experience as a way to help other people make informed decisions. Reviews can also be used to share experiences and give feedback to businesses."
+  },
+  {
+    "instruction": "Find the average age of a group of 5 people.",
+    "input": "Ages: 25, 36, 46, 17, 62",
+    "output": "37.4"
+  },
+  {
+    "instruction": "Analyze this market and list the pros and cons.",
+    "input": "Cryptocurrency Market",
+    "output": "Pros:\n- High liquidity\n- Low transaction fees\n- Fast transaction times\n\nCons:\n- Volatile prices\n- Risk of fraud and scams\n- Poor regulation"
+  },
+  {
+    "instruction": "List two features of a rodeo.",
+    "input": "",
+    "output": "Two features of a rodeo are bull riding and calf roping."
+  },
+  {
+    "instruction": "Explain the significance of using data visualization.",
+    "input": "",
+    "output": "Data visualization is a powerful tool used to convey information in an organized, appealing and understandable way. It can help to make complex data or patterns easier to comprehend, enabling viewers to quickly identify trends or patterns. Data visualization can also be used to effectively communicate complicated information to a variety of different people, such as stakeholders, clients or members of the public. It is also a useful tool in business as it can help decision makers to identify opportunities and make informed decisions."
+  },
+  {
+    "instruction": "Translate the following statement in Japanese",
+    "input": "She is an excellent teacher",
+    "output": "彼女は優秀な教師です。"
+  },
+  {
+    "instruction": "Write an enthralling description of an elven kingdom.",
+    "input": "",
+    "output": "The elven kingdom of Kalemar was situated upon a tranquil lake surrounded by rolling hills and lush forests. Its distant marble towers reached high into the azure sky, casting a gentle glow on the surrounding lands. The Elven people lived in close harmony with nature, taking from the land no more than what it could bear. Songs and stories of the fabled kingdom filled the air, and its beauty and peace was sought by many throughout the realms."
+  },
+  {
+    "instruction": "Distinguish the two events: Mr. Donald joined a theater group and Mr. Donald joined a theater performance.",
+    "input": "",
+    "output": "The difference between the two events is that Mr. Donald joining a theater group implies that he has become a part of an ongoing community of thespians, while Mr. Donald joining a theater performance implies that he will be participating in an individual performance put on by the theater group."
+  },
+  {
+    "instruction": "Expand the sentence for more detail.",
+    "input": "He asked for help.",
+    "output": "He asked his friends for help in finding a solution to the problem."
+  },
+  {
+    "instruction": "Identify the present participle in the sentence below.",
+    "input": "The boy running around the park is my brother.",
+    "output": "The present participle in the sentence is \"running\"."
+  },
+  {
+    "instruction": "How can schools create more inclusive environments?",
+    "input": "",
+    "output": "Schools can create more inclusive environments by creating a positive atmosphere in which every student feels safe, respected, and appreciated. This could involve implementing anti-bullying policies, offering high-quality diversity and inclusion training to staff and students, designing curricula that acknowledge and celebrate cultural and historical contributions of different groups, and creating extracurricular activities and clubs that represent different interests. Additionally, schools should promote open dialogue and encourage students and staff to be conscious of their biases."
+  },
+  {
+    "instruction": "Write an article about the current state of online education.",
+    "input": "",
+    "output": "The current state of online education is rapidly evolving. In the past decade, online learning has become increasingly popular as an affordable, convenient way to learn new skills, gain knowledge, and even complete college degrees. In today's digital era, more and more schools are transitioning to online classes, making the concept of distance learning more accessible than ever before. Additionally, advancements in technology have made it easier for students to interact with their classmates and professors virtually and participate in collaborative activities. With the rise of self-paced learning platforms, such as Khan Academy and Coursera, it has become even easier for students to receive quality education from the comfort of their homes."
+  },
+  {
+    "instruction": "Design a food delivery app that allows customers to select cuisine type.",
+    "input": "",
+    "output": "The app should allow customers to select their food and view a menu of available cuisine types. Customers should be able to filter and search for cuisine based on ingredients, location, price and options such as vegetarian or vegan. The app should also integrate with payment methods such as credit and debit cards, Paypal or Apple/Google Pay. Finally, customers should receive real-time updates on their order’s progress."
+  },
+  {
+    "instruction": "Differentiate between abstract classes and interface",
+    "input": "",
+    "output": "An abstract class is a class that contains one or more abstract methods which are methods without an implementation. An interface is a type that defines a set of behaviors that a class must implement. An interface does not contain any implementation, while an abstract class may contain implementation. An interface can be implemented by multiple or any class, while an abstract class can only be inherited by a single class."
+  },
+  {
+    "instruction": "Given a text passage and a statement, generate a conclusion to support the statement",
+    "input": "Text Passage: Education is important to succeed in life. It gives us knowledge and skills that are essential to get ahead.\nStatement: Education helps us create better opportunities for ourselves.",
+    "output": "Therefore, with an education we can develop the skills and knowledge to create better opportunities for ourselves, enabling us to be successful in life."
+  },
+  {
+    "instruction": "How to scan documents on your phone",
+    "input": "",
+    "output": "Scanning documents with your phone is a simple process. First, open the camera app on your phone. Then, lay the document you wish to scan on a flat surface. Position your phone so that the document fits fully within the frame on your phone's screen. The app will take the picture, which you can review to make sure it's proper. After that, the app will convert the picture into a PDF file stored on your phone."
+  },
+  {
+    "instruction": "Give me an example of how a manager can build trust with their team.",
+    "input": "",
+    "output": "A manager can build trust by showing respect and appreciation to their team, offering clear expectations, being honest and transparent in their communication, and providing recognition and feedback."
+  },
+  {
+    "instruction": "Provide a general overview of the given topic.",
+    "input": "Topic: The birth of e-commerce",
+    "output": "The birth of e-commerce is an important milestone, as it introduced a new era of seamless shopping and convenience to consumers. The idea of buying items online without having to leave the comfort of home first became possible in the mid-to-late 1990s, fueled by the widespread availability of the internet. Since then, e-commerce has grown rapidly and continues to expand, with numerous advancements in technologies such as online payment processing, smartphones, and virtual/augmented reality. Nowadays, e-commerce has become an integral part of people's lives, with a variety of goods and services available through digital channels."
+  },
+  {
+    "instruction": "Categorize the following words using noun, verb, adjective and adverb",
+    "input": "quickly, story, faster",
+    "output": "Adverb: quickly \nNoun: story\nAdjective: faster"
+  },
+  {
+    "instruction": "Analyze a Shakespearean play.",
+    "input": "Hamlet",
+    "output": "Shakespeare’s Hamlet is a timeless classic that explores the theme of revenge and justice, as well as enduring issues such as mental illness, mortality, and gender roles. Hamlet is a compelling protagonist who struggles to reconcile his desires with a society that demands conformity. Through his interactions with other characters, including Ophelia and his mother Gertrude, Hamlet’s inner conflict is made tangible. The play is filled with tight plotting, witty dialogue, and powerful imagery, making it an enduring favorite."
+  },
+  {
+    "instruction": "Correct the given code by fixing the syntax errors",
+    "input": "def sum_squares(num: int)\n    total = 0\n    For i in num\n        total = total + i * i\n    return total",
+    "output": "def sum_squares(num: int):\n    total = 0\n    for i in num:\n        total = total + i * i\n    return total"
+  },
+  {
+    "instruction": "Given some code and output, explain the syntax and meaning of each line.",
+    "input": "a = 2\nb = 3\nprint(a * b)",
+    "output": "Line 1 defines a variable named \"a\" and assigns it the value 2. Line 2 defines a variable named \"b\" and assigns it the value 3, and line 3 prints the result of multiplying the values of the two variables: 6."
+  },
+  {
+    "instruction": "Convert the following odometer reading into miles.",
+    "input": "21335 km",
+    "output": "21335 km is equal to 13263.1 miles."
+  },
+  {
+    "instruction": "Come up with a business strategy to attract new customers.",
+    "input": "Company: Online clothing store",
+    "output": "To attract new customers to an online clothing store, an effective business strategy could include both online and offline marketing campaigns. Online, the company could consider running advertisements on social media platforms, setting up an email newsletter, and participating in influencer collaborations. Offline, the company could consider hosting promotional events, offering discounts for in-store purchases, and creating partnerships with local businesses. Additionally, the company should focus on improving customer service and make sure that transactions are completed in a timely and convenient manner."
+  },
+  {
+    "instruction": "Output a summary of the paragraph.",
+    "input": "Powerful and yet surprisingly easy to use, cloud computing has revolutionised business practices, offering businesses a wide range of scalable services that are delivered effortlessly over the internet. It has become increasingly popular in recent years due to its low cost and scalability, its scalability making it ideal for businesses of any size. Additionally, cloud computing provides a variety of resources and applications that can be used for tasks ranging from data analysis to customer management.",
+    "output": "Cloud computing has grown rapidly in popularity, offering businesses a cost-effective way to access scalable services over the internet. It is used for a range of tasks from data analysis to customer management, making it suitable for businesses of all sizes."
+  },
+  {
+    "instruction": "Complete the following sentence:\n\n\"Technology has changed the way people _____________\"",
+    "input": "",
+    "output": "Technology has changed the way people communicate, work, and live."
+  },
+  {
+    "instruction": "Given a set of books, classify them into 3 subcategories.",
+    "input": "Harry Potter by J.K. Rowling, A Tale of Two Cities by Charles Dickens, To Kill a Mockingbird by Harper Lee, The Catcher in the Rye by J.D. Salinger",
+    "output": "Fiction: Harry Potter by J.K. Rowling, A Tale of Two Cities by Charles Dickens, To Kill a Mockingbird by Harper Lee\nClassics: The Catcher in the Rye by J.D. Salinger \nModern Literature: To Kill a Mockingbird by Harper Lee"
+  },
+  {
+    "instruction": "Design a user interface for an online banking website.",
+    "input": "",
+    "output": "A user interface for an online banking website should be straightforward and user-friendly. \n\nThe homepage should contain an introduction to the website, as well as a succinct overview of the banking services available. Users should also have easy access to their account information and transactions. \n\nThe navigation bar should be clearly displayed, and the website should be organized into sections for different types of services for easy navigation. \n\nEach page should be visually appealing and easy to read, with colors that are easy on the eyes. Hints, reminders, and error messages should be clear and easy to understand. \n\nThe user interface should also allow for quick and secure transactions, with auto sign-in options and two-factor authentication to ensure that users’ accounts are protected. \n\nAdditionally, the website should be compatible with multiple devices and browsers for maximum accessibility."
+  },
+  {
+    "instruction": "Given an array of numbers, calculate the sum of the array",
+    "input": "Array: [2, 4, 6, 8, 10]",
+    "output": "30"
+  },
+  {
+    "instruction": "What is the score of the last football match between Chelsea and Arsenal?",
+    "input": "",
+    "output": "The score of the last football match between Chelsea and Arsenal was 3-2, with Chelsea winning the match."
+  },
+  {
+    "instruction": "Create a three-line haiku about autumn.",
+    "input": "",
+    "output": "Leaves on the ground\nA chill in the air of fall\nThe sun sets slowly."
+  },
+  {
+    "instruction": "Explain why the US conducted the Manhattan Project.",
+    "input": "",
+    "output": "The United States conducted the Manhattan Project during World War II to develop an atomic bomb before Nazi Germany did. The US evaluated that if Nazi Germany acquired the capability to create an atomic bomb, it could gain an insurmountable edge in the war. Therefore, the US started a secret research and development program, code named the Manhattan Project, to develop the world's first atomic bomb."
+  },
+  {
+    "instruction": "Correct the incorrect pronoun in the following sentence.",
+    "input": "Them ended up ordering pizza for dinner.",
+    "output": "They ended up ordering pizza for dinner."
+  },
+  {
+    "instruction": "Create a Google calendar entry to remind the user to complete a given task.",
+    "input": "Task: \"Submit the report by tomorrow.\"",
+    "output": "Event: Submit Report\nDate: 11/01/2021\nTime: 5:00pm\nNote: Submit the report before tomorrow (11/02/2021)."
+  },
+  {
+    "instruction": "Describe to me the process of composting.",
+    "input": "",
+    "output": "Composting is the process of breaking down organic materials into nutrient-rich soil. The process involves mixing equal parts of green materials – such as grass clippings, vegetable scraps, and coffee grounds – with brown materials – such as leaves and straw – and moistening the mixture with water. The mixture is then aerated to increase the oxygen supply and covered with a layer of soil or straw to help hold in heat and moisture. Microorganisms break down the organic matter in the mixture, and a nutrient-rich soil is formed over a period of weeks or months."
+  },
+  {
+    "instruction": "Using the information from the given article, generate a catchy catchphrase to serve as its tagline.",
+    "input": "This article is about the importance of safety regulations in the workplace.",
+    "output": "\"Protection for your people, peace of mind for you - Safety Regulations make all the difference.\""
+  },
+  {
+    "instruction": "Rank the following four choices in order from least likely to most likely.",
+    "input": "A. Taking a long walk\nB. Eating two slices of chocolate cake\nC. Writing a persuasive essay\nD. Drinking a glass of orange juice",
+    "output": "A. Taking a long walk\nD. Drinking a glass of orange juice\nC. Writing a persuasive essay\nB. Eating two slices of chocolate cake"
+  },
+  {
+    "instruction": "Clean up a set of customer reviews and rewrite some grammatically incorrect sentences. The output should be the fully edited customer reviews.",
+    "input": "This place has the grateest food i have ever tasted. The costumer services was also ABSOLUTELY phenominal!",
+    "output": "This place has the greatest food I have ever tasted. The customer service was also absolutely phenomenal!"
+  },
+  {
+    "instruction": "Can you make this sentence in the future tense?",
+    "input": "I am walking home.",
+    "output": "I will be walking home."
+  },
+  {
+    "instruction": "Create a haiku that describes the feeling of freedom.",
+    "input": "",
+    "output": "Winds of change blow free\nFeeling of lightness fills my soul\nLiberation joys me"
+  },
+  {
+    "instruction": "Analyze the following artist's piece of work.",
+    "input": "A painting of a beach scene with a wooden boat in the foreground.",
+    "output": "The painting is depicting a beach scene with a wooden boat in the foreground. The colors used in the painting indicate a tranquil atmosphere, while the boat at the front of the painting gives the scene a feeling of movement and energy. The artist appears to be focused on conveying the idea of a relaxing day at the beach, as the colors are calming and the boat creates a subtle suggestion of motion."
+  },
+  {
+    "instruction": "Describe the following painting in 2-3 sentences.",
+    "input": "“The Starry Night” by Vincent van Gogh",
+    "output": "\"The Starry Night\" by Vincent van Gogh is a beautiful landscape painting of a night sky, filled with stars and a crescent moon. It features a rolling hill with a small village in the foreground, with a spectacular view of the night sky and its twinkling stars. The painting captures the peaceful beauty of a starry night, creating a tranquil atmosphere."
+  },
+  {
+    "instruction": "Name three diseases caused by viruses.",
+    "input": "",
+    "output": "Three diseases caused by viruses are the flu, measles, and chickenpox."
+  },
+  {
+    "instruction": "Create an algorithm that finds the sum of the two largest numbers in an array.",
+    "input": "[2, 4, 9, 1, 10]",
+    "output": "def find_sum_of_two_largest(arr):\n    largest = max(arr)\n    arr.remove(largest)\n    second_largest = max(arr)\n    return largest + second_largest\n\n# Output: 11 (9 + 2)"
+  },
+  {
+    "instruction": "What is the gender of the person written in the given text?",
+    "input": "Bob is a software engineer.",
+    "output": "Male"
+  },
+  {
+    "instruction": "Create a classification model to determine whether this review is positive or negative",
+    "input": "This dish was not worth the money",
+    "output": "Negative"
+  },
+  {
+    "instruction": "Rewrite this sentence using the same meaning:\nHe is trying to talk fast",
+    "input": "He is trying to talk fast",
+    "output": "He is attempting to speak quickly."
+  },
+  {
+    "instruction": "Identify 4 websites that can be used to find a job.",
+    "input": "",
+    "output": "LinkedIn, Indeed, Glassdoor, and Monster are all great websites to find a job."
+  },
+  {
+    "instruction": "Generae a poem about the ocean",
+    "input": "",
+    "output": "The ocean is a wondrous thing, \nIts depths untold and secrets hidden within.\nA mystery that spans time and space,\nA beautiful sight that can never be erased.\nIt calms us with its endless lull,\nA serene and majestic lull.\nAs sunlight dances upon its waves,\nWe can no longer be slaves.\nTo the rhythm of the undulating sea,\nWe can be forever free."
+  },
+  {
+    "instruction": "Change the verb in the following sentence: \"The children walked to school.\"",
+    "input": "",
+    "output": "The children ran to school."
+  },
+  {
+    "instruction": "Create a sentence using the idiom \"take two steps forward and one step back\".",
+    "input": "",
+    "output": "It is better to take two steps forward and one step back than to take no steps at all."
+  },
+  {
+    "instruction": "Compare the cultural significance of two religious ceremonies.",
+    "input": "Baptism and Bar Mitzvah",
+    "output": "Baptism and Bar Mitzvah ceremonies are both significant in their respective religions and cultures. Baptism is traditionally performed in Christian churches, typically soon after the birth of a child, to welcome them into the faith and symbolize the acceptance of Jesus Christ. Bar Mitzvah is a coming-of-age ceremony observed by Jewish families, usually when a boy reaches the age of 13, to signify they are now adults and part of the Jewish faith. Both ceremonies have a great deal of spiritual meaning and are seen as important milestones in a person's life."
+  },
+  {
+    "instruction": "Give an example of a low carbon lifestyle choice.",
+    "input": "",
+    "output": "One example of a low carbon lifestyle choice is choosing to bike or walk instead of driving a car. This reduces carbon emissions from petrol or diesel and can also improve the individual's overall health. Other examples include eating a diet with less red meats and dairy, reducing food waste, changing household energy and water usage, and offsetting any unavoidable carbon emissions."
+  },
+  {
+    "instruction": "Create a mathematical equation that solves for \"x\".",
+    "input": "7x + 6 = 28",
+    "output": "x = 4"
+  },
+  {
+    "instruction": "Given the following sentence, you need to find the most relevant topic.",
+    "input": "The world's tallest mountain is Mount Everest",
+    "output": "Geography"
+  },
+  {
+    "instruction": "Convert 48 fl. oz. to liters.",
+    "input": "",
+    "output": "1.4 liters"
+  },
+  {
+    "instruction": "Construct a logical argument in favor of investing in stocks.",
+    "input": "",
+    "output": "The stock market is an excellent investment opportunity because it offers long-term growth potential, diversification opportunities, and liquidity to investors. Long-term investments in stocks have historically provided a higher rate of return than other investments such as bonds, cash, and real estate. Additionally, diversifying investments across different sectors and stocks helps to reduce risk. Finally, stocks are highly liquid and allow investors to access their money quickly if needed."
+  },
+  {
+    "instruction": "Change the following sentence to indicate a future event.",
+    "input": "He finished the report.",
+    "output": "He will finish the report."
+  },
+  {
+    "instruction": "Introduce a student to the concept of algebraic equations.",
+    "input": "",
+    "output": "Algebraic equations are equations that contain variables that represent unknown values. For example, the equation \"2x + 3 = 5\" is an algebraic equation because it contains the variable \"x,\" which is an unknown value. We can solve the equation by finding out what the value of \"x\" is, which in this case is 2. \nAlgebraic equations are useful for representing the relationships between different variables or numbers, and for determining the answers to certain problems. This is particularly helpful when it comes to solving math problems involving multiple variables. \nAlgebraic equations also have other applications, such as representing relationships between physical objects and predicting outcomes of certain events.  As you continue to learn more mathematics and algebra, you will begin to appreciate the use of algebraic equations and be able to use them to your advantage."
+  },
+  {
+    "instruction": "Write a lyric that includes the phrase \"twinkle twinkle\".",
+    "input": "",
+    "output": "Twinkle twinkle little star, up above the world so high. Like a diamond in the sky, with your light you always shine."
+  },
+  {
+    "instruction": "Explain why access control is important for web security.",
+    "input": "",
+    "output": "Access control is an important part of web security because it restricts user access to resources and prevents unauthorized access to sensitive data. By setting up access control measures, it is possible to control who has access to the server and data, allowing for the implementation of security protocols such as authentication, authorization, and encryption."
+  },
+  {
+    "instruction": "State three advantages of using a slow cooker.",
+    "input": "",
+    "output": "Three advantages of using a slow cooker are: \n1. It requires less energy than other cooking methods. \n2. It makes it easier to prepare large meals that can be cooked all at once. \n3. The slow cooking process allows foods to maintain their natural moisture, making them more flavorful and tender."
+  },
+  {
+    "instruction": "Devise a plan to make the most of a weekend",
+    "input": "",
+    "output": "A good plan for making the most of a weekend would include getting some rest, indulging in something you enjoy, and planning your week ahead. You could start by sleeping in on Saturday and taking some time to relax and recharge. Spend the afternoon doing something you love, such as reading a book, going for a walk, or catching up with friends - whatever makes you feel most content. On Sunday, use the day to plan out your upcoming week. Reflect on goals, tasks, and deadlines, and make a to-do list. This will help you stay organized and motivated so you can make the most of your day-to-day."
+  },
+  {
+    "instruction": "Make up a story about the given topic.",
+    "input": "Inventing a Time Machine",
+    "output": "Once upon a time, there was a brilliant scientist named Dr. Aiden who was determined to make a time machine. He had been working on the project for years, with the goal of being able to travel back in time and change the past. \n\nAiden had gathered all the materials he needed for the project and had carefully crafted the machine’s components. He was now ready to begin his experiments. He flipped the switch to power up the machine and waited with anticipation to see what would happen.\n\nSuddenly, the machine started to hum and the laboratory was filled with a bright light. Aiden watched in awe as a bright portal opened near the machine and he heard a voice telling him to step through. With some hesitation, he stepped forward and he found himself in a world filled with glorious time-traveling wonders.\n\nHe explored other times and talked to people in the past. He also changed some of the mistakes he had made in his own life. Eventually, he found his way back to the present day and proudly showed off his invention. \n\nThe people of his time were amazed at the invention and dubbed it a “time machine.” Aiden’s invention was the first of its kind and his legacy lives on among all time-travelers."
+  },
+  {
+    "instruction": "Describe the importance of soft skills in working environment.",
+    "input": "",
+    "output": "Soft skills are indispensable in the workplace. They are the personal qualities and capabilities that help people navigate relationships and everyday situations. Soft skills such as communication, empathy, collaboration, and problem-solving are essential for generating trust and inspiring others to work together. They also help to foster innovation and ensure that tasks are completed efficiently. Additionally, employers are increasingly emphasizing the importance of soft skills because they are transferrable across industries and can be used to bridge generational divides."
+  },
+  {
+    "instruction": "Re-write this sentence in positive form.",
+    "input": "She does not always keep her promises.",
+    "output": "She sometimes keeps her promises."
+  },
+  {
+    "instruction": "Find a suitable euphemism for ‘died’",
+    "input": "",
+    "output": "A suitable euphemism for 'died' is passed away."
+  },
+  {
+    "instruction": "Create an algorithm that can output the closest matching words given a set of input words.",
+    "input": "",
+    "output": "def closest_matching_words(words):\n    \"\"\"This function finds the closest matching words to a set of input words.\n    \n    Arguments:\n    words -- list of input words. \n    \n    Returns:\n    closest_words -- list of closest matching words.\n    \"\"\"\n    \n    closest_words = []\n    for word in words: \n        closest_n_words = get_closest_n_words(word)\n        for c_word in closest_n_words: \n            closest_words.append(c_word)\n   \n    closest_words = list(set(closest_words)) #deduplication\n    return closest_words"
+  },
+  {
+    "instruction": "Draft the outline of a speech about the given topic",
+    "input": "The benefits of investing in the stock market",
+    "output": "I. Introduction: \nA. Definition of stock market investing\nB. Benefits of stock market investing \n\nII. Body:\nA. Financial security \nB. Opportunity to diversify \nC. Ability to potentially earn consistent returns \n\nIII. Conclusion: \nA. Summary of benefits of stock market investing \nB. Advice to consider stock market investing"
+  },
+  {
+    "instruction": "Generate five unique words that describe the following taste",
+    "input": "Sour",
+    "output": "Tart, acidic, piquant, tangy, sharp."
+  },
+  {
+    "instruction": "Choose the better summary of the given context from the given two summaries.",
+    "input": "Context: Several icecaps on the Greenland ice sheet have started to melt rapidly.\n\nSummaries:\na. The Greenland ice sheet has lost numerous icecaps over time.\nb. Greenland's icecaps are quickly melting away.",
+    "output": "b. Greenland's icecaps are quickly melting away."
+  },
+  {
+    "instruction": "What is the most significant economic achievement of empire of China",
+    "input": "",
+    "output": "One of the most significant economic achievements of the Chinese Empire was the establishment of the Grand Canal, which was a major source of trade and commerce dating back to the 5th century BCE. The canal connected the Yellow and Yangtze River valleys, allowed for the safe and efficient transportation of goods, and improved the economic system and overall quality of life for the people of China."
+  },
+  {
+    "instruction": "Compose and belay a tweet about the film \"Titanic\".",
+    "input": "Titanic (1997)",
+    "output": "Wow! #Titanic has been dominating the big screen for 24 years – and it's still as epic as ever! This classic romance and drama has conquered the hearts of moviegoers since its debut in 1997. Who else can't wait to bask in the classic cinema of #Titanic? 🚢 🌟 💕"
+  },
+  {
+    "instruction": "Find 3 quotes from 'Harry Potter and the Sorcerer's Stone'.",
+    "input": "",
+    "output": "1. \"It does not do to dwell on dreams and forget to live.\" -Albus Dumbledore \n2. “It matters not what someone is born, but what they grow to be.” -Albus Dumbledore \n3. “Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.” -Dumbledore"
+  },
+  {
+    "instruction": "Tell me how humans can help endangered wild animals.",
+    "input": "",
+    "output": "Humans can help endangered wild animals by protecting their habitats, reducing pollution, limiting hunting and poaching, and supporting conservation and sustainable resource management initiatives. Consuming responsibly and avoiding products associated with animal cruelty can also help the animals. People can also engage in active outreach activities to spread awareness of the vital role these animal species play in our ecosystem."
+  },
+  {
+    "instruction": "Give styles guide on how to properly cite a source in a paper.",
+    "input": "",
+    "output": "When citing a source in a paper, it is important to follow the author-date system. This means that the author’s last name, year of publication, and page number of the source should be in parentheses at the end of the relevant sentence. The first time a source is cited, a full citation should be provided in the reference list. Subsequent citations of the same source should only include the author's last name and the year of publication. For example: (Smith, 2020)."
+  },
+  {
+    "instruction": "Select the statement that is the most applicable to the given text",
+    "input": "Text: It was the best of times, it was the worst of times.\n\nA. The author of this text is sad\nB. The author of this text is reflective\nC. The author of this text is optimistic",
+    "output": "B. The author of this text is reflective."
+  },
+  {
+    "instruction": "Using the given text, create a five-sentence summary.",
+    "input": "Rob was a ten-year-old boy who loved to play video games. Despite not having access to the latest console, he was well-versed in gaming culture and could create his own levels. He used this knowledge to design and build an impressive custom-made arcade cabinet for the village's annual carnival. His invention was an instant hit and Rob won the prize for best innovation.",
+    "output": "Rob was a ten-year-old boy with a passion for video games. He had a strong knowledge of gaming culture and used this to create a custom-made arcade cabinet. His invention was a hit at the village's annual carnival, where Rob won the prize for best innovation. He used his gaming expertise to design and build the impressive cabinet without access to the latest console. His cabinet was a remarkable success."
+  },
+  {
+    "instruction": "Change the point of view from first person to third person.",
+    "input": "I am a teacher and I am passionate about my work.",
+    "output": "She is a teacher and is passionate about her work."
+  },
+  {
+    "instruction": "Correctly use commas to separate the items in the following list",
+    "input": "cats dogs hamsters",
+    "output": "cats, dogs, hamsters"
+  },
+  {
+    "instruction": "Find the 2nd smallest number in this set.",
+    "input": "{0, 2, 5, 22, 15, 11, 37}",
+    "output": "5"
+  },
+  {
+    "instruction": "Explain why people would want to open online stores.",
+    "input": "",
+    "output": "People would want to open online stores in order to expand their customer base beyond the local area, increase visibility of their products, and reduce overhead costs such as rent and staffing expenses. Online stores also provide greater flexibility in terms of product selection and ease of operation, allowing them to quickly adapt to changing markets and customer preferences."
+  },
+  {
+    "instruction": "Calculate the mean from the given numbers: 2, 3, 5, 8, 9",
+    "input": "",
+    "output": "The mean of the numbers 2, 3, 5, 8, 9 is 5.6."
+  },
+  {
+    "instruction": "Rewrite this sentence in three different ways:",
+    "input": "The teacher is giving the students a test",
+    "output": "1. The students are being given a test by the teacher.\n2. The teacher is administering a test to the students.\n3. The students will be taking a test from the teacher."
+  },
+  {
+    "instruction": "Provide a sentence for the phrase \"learning curve\".",
+    "input": "",
+    "output": "He was faced with a steep learning curve in understanding the new software."
+  },
+  {
+    "instruction": "Name a famous US President",
+    "input": "",
+    "output": "John F. Kennedy"
+  },
+  {
+    "instruction": "Given the given words, generate a sentence that contains those words and is grammatically correct.",
+    "input": "Words: clever, destiny",
+    "output": "He was determined to be clever and shape his own destiny."
+  },
+  {
+    "instruction": "List three important functions of the United Nations.",
+    "input": "",
+    "output": "The United Nations has three main functions: maintaining international peace and security, helping to develop friendly relations among nations, and promoting social progress, better living standards, and human rights."
+  },
+  {
+    "instruction": "Give two examples of how a small business can use social media for lead generation.",
+    "input": "",
+    "output": "Small businesses can use social media for lead generation by creating targeted ads that lead to a landing page to capture contact information, or by running social media contests to capture new leads."
+  },
+  {
+    "instruction": "Summarize the following paragraph in three to four sentences.",
+    "input": "Developers often struggle with debugging and identifying issues with software performance. Debugging tools, such as memory and performance analysis tools, are created to help developers identify and solve these issues quickly. Debugging tools collectively help developers understand the root cause of software issues and optimize the performance of their applications.",
+    "output": "Debugging tools help developers quickly identify and fix software issues. Memory and performance analysis tools are used for debugging to help developers understand the root cause of the issues. These tools provide a good way to optimize the performance of applications by identifying and resolving issues. They help developers get to the root of the problem and fix it effectively."
+  },
+  {
+    "instruction": "Create a list of 10 tips to write a good book review.",
+    "input": "",
+    "output": "Here is a list of 10 tips to write a good book review: \n1. Read and understand the text: Make sure to read and understand the text before writing a review. \n2. Research the author: Research the author’s background and works to gain more insight into the book.\n3. Analyze the book: Look for themes, literary devices, and other elements in the text.\n4. Think about the audience: Consider who might be interested in this book.\n5. Avoid spoilers: Make sure to keep the review spoiler-free.\n6. Express opinions: Share your opinions about the book in detail.\n7. Compare the book to other works: Compare the book to similar works and explain why it stands out.\n8. Be objective: Give an honest review, but avoid being overly negative or critical.\n9. Include evidence: Use quotes and evidence from the text to support your points.\n10. Proofread: Read your review carefully before submitting. Fix any errors or grammatical mistakes."
+  },
+  {
+    "instruction": "Provide a synonym for 'irresistible'",
+    "input": "",
+    "output": "The synonym for 'irresistible' is 'tempting'."
+  },
+  {
+    "instruction": "Create a quiz about people in the United States in the 1800s",
+    "input": "",
+    "output": "Q1. Who were the founding fathers of the United States? \nA. Thomas Jefferson, John Adams, George Washington, James Madison\n\nQ2. What was the major export in the early 1800s? \nA. Cotton was the major export in the early 1800s.\n\nQ3. What type of transportation was available in the 1800s? \nA. Horse-drawn wagons, boats and canals, and stagecoaches were common forms of transportation in the 1800s. \n\nQ4. What type of entertainment was available in the 1800s?\nA. Popular entertainment in the 1800s included theatrical plays, operas, concerts, and circuses."
+  },
+  {
+    "instruction": "Compose a melody using the following notes.",
+    "input": "C, Eb, F, A",
+    "output": "Melody 1: C Eb F A | C Eb F A | C Eb F A | C Eb A G\n \nMelody 2: C Eb F A | F G Eb A | C Eb G A | C Eb A G"
+  },
+  {
+    "instruction": "Evaluate the expression provided.",
+    "input": "6 - 6 + 8",
+    "output": "8"
+  },
+  {
+    "instruction": "Write a story in three sentences, each with a different tense.",
+    "input": "",
+    "output": "She ran away from home yesterday. \nShe is trying to find her way today. \nShe will never forget this journey tomorrow."
+  },
+  {
+    "instruction": "Edit a resume to include job-specific keywords and make it more visually appealing",
+    "input": "The resume is for a job in software engineering.",
+    "output": "The resume should be edited to accurately reflect the job requirements. The text should be edited to include job-specific keywords and technical phrases related to software engineering. Additionally, the layout and font of the resume should be made more visually appealing."
+  },
+  {
+    "instruction": "Identify 3 reasons why the following event happened.",
+    "input": "Event: US stock market crash in 1929",
+    "output": "1. Speculative investments on margin caused prices to become artificially inflated.\n2. A lack of regulatory oversight allowed predatory practices to proliferate.\n3. Overproduction of goods led to a decline in demand and a subsequent economic downturn."
+  },
+  {
+    "instruction": "Given a proverb, rewrite it in its modern version.",
+    "input": "A rolling stone gathers no moss.",
+    "output": "A person who keeps changing their goals in life will never achieve any."
+  },
+  {
+    "instruction": "List three of the most dangerous jobs in the US.",
+    "input": "",
+    "output": "Construction workers, truck drivers, and garbage and recycling collectors are among the most dangerous jobs in the United States. Other dangerous jobs include agricultural workers, electrical power line installers and repairers, and tree trimmers and pruners."
+  },
+  {
+    "instruction": "Complete the code to produce the expected output.",
+    "input": "def get_string(text):\n  words = text.split()\n  #Your Code goes here\n  return string\n\nInput: \"Hello there how are you?\"\n\nExpected Output: \"Hello_there_how_are_you?\"",
+    "output": "def get_string(text):\n  words = text.split()\n  string = \"_\".join(words)\n  return string\n\nInput: \"Hello there how are you?\"\n\nExpected Output: \"Hello_there_how_are_you?\""
+  },
+  {
+    "instruction": "Name a major software innovation from the past decade",
+    "input": "",
+    "output": "A major software innovation from the past decade is cloud computing. Cloud computing makes it possible for users to store, manage, and access data and applications across multiple devices and locations, which has revolutionized the way businesses and individuals access and use technology."
+  },
+  {
+    "instruction": "Generate a five-word sentence about the benefits of travelling.",
+    "input": "",
+    "output": "Travelling opens up new horizons."
+  },
+  {
+    "instruction": "Suggest a good school for the following course.",
+    "input": "Master of Business Administration",
+    "output": "Harvard Business School is a great option for a Master of Business Administration degree."
+  },
+  {
+    "instruction": "Which of the two choices is the most likely outcome?",
+    "input": "Padres vs. Dodgers",
+    "output": "The most likely outcome is that the Padres will win. The Padres have a higher winning percentage this season and are currently in first place in the National League West division. The Dodgers, despite having a good season, are several games behind the Padres."
+  },
+  {
+    "instruction": "Analyze the provided text and provide a one-sentence summary.",
+    "input": "As digital media has become increasingly prevalent, its potential to shape public opinion and attitudes has become more evident. Digital media have created a new platform for public discourse, allowing for the exchange of ideas, experiences, and knowledge on a large scale.",
+    "output": "Digital media has created a platform for public discourse which allows for the spreading of ideas, experiences and knowledge to a large audience, thus influencing public opinion and attitudes."
+  },
+  {
+    "instruction": "Generate a title for a social media post.",
+    "input": "Content: Reflection on the current state of the environment",
+    "output": "Reflecting on the Fragile State of our Planet."
+  },
+  {
+    "instruction": "Create a menu item for a seafood dinner.",
+    "input": "",
+    "output": "Grilled Halibut with Garlic Butter and Lemon."
+  },
+  {
+    "instruction": "Form a sentence using a singular noun, verb, and adverb.",
+    "input": "",
+    "output": "He quickly sang a song."
+  },
+  {
+    "instruction": "Given a history timeline, find and explain the most significant event within a decade.",
+    "input": "Timeline spanning from 1900 to 2000",
+    "output": "The most significant event within the decade of the 1940s was World War II. It lasted from 1939 to 1945 and had catastrophic consequences, leading to the death of over 60 million people."
+  },
+  {
+    "instruction": "Classify the text into different categories.",
+    "input": "The store had a wide variety of clothes. There were jeans, sweaters, t-shirts, and dresses.",
+    "output": "Clothes: Jeans, Sweaters, T-shirts, Dresses."
+  },
+  {
+    "instruction": "Generate a meaningful sentence using the words: \"aroma\", \"daisy\"",
+    "input": "",
+    "output": "The aroma of daisies filled the summer air."
+  },
+  {
+    "instruction": "What environment variables are necessary to run a Java program?",
+    "input": "",
+    "output": "The following environment variables are necessary to run a Java program: \n\nJAVA_HOME, which specifies the directory where the Java runtime environment is installed; PATH, which specifies the directories where executable programs are located; and CLASSPATH, which specifies the locations of Java class files."
+  },
+  {
+    "instruction": "Summarize the article in less than 100 words by retaining the main ideas.",
+    "input": "The Ebola virus, first discovered in 1976, is considered one of the deadliest viruses known to humankind. It is native to regions of Central and West Africa and has caused numerous outbreaks in the region. According to the Centers for Disease Control and Prevention, symptoms of Ebola may include fever, headache, fatigue, muscle pain and sore throat, followed by vomiting, rash, and bleeding, and can be fatal if left untreated. Fatality rates vary, but have been as high as 90%.",
+    "output": "The Ebola virus is a deadly virus with a high fatality rate of up to 90%. It was first discovered in 1976 in regions of Central and West Africa, and over the years has caused multiple outbreaks. According to the Centers for Disease Control and Prevention, symptoms of Ebola include fever, headache, fatigue, muscle pain, sore throat, vomiting, rash, and bleeding. If left untreated, it can be fatal."
+  },
+  {
+    "instruction": "Construct a conflict in a story.",
+    "input": "",
+    "output": "The main character, Jack, is a successful entrepreneur who has achieved wealth and success. He reluctantly takes on a protégé, Sam, to help him expand his business. Jack is a stickler for perfection, and soon finds that Sam does not live up to his expectations. Jack is constantly expecting more from Sam and putting him down for not meeting his standards, leading to a tension between them. \n\nHowever, Jack soon finds that Sam is becoming increasingly successful. Sam's business acumen and ideas are rubbing off on Jack, forcing him to face the fact that he may not be as successful as he thought he was. Jack is angry and threatened by Sam's success, and begins to resent him. This leads to a bitter rivalry between the two as they compete to prove who is the better entrepreneur."
+  },
+  {
+    "instruction": "Name an animal that starts with the letter G.",
+    "input": "",
+    "output": "Giraffe"
+  },
+  {
+    "instruction": "Categorize the following sentence as either an observation, inference, or evaluation",
+    "input": "That movie was terrible.",
+    "output": "Evaluation"
+  },
+  {
+    "instruction": "Classify the type of the following information as \"numeric\" or \"textual\".",
+    "input": "30",
+    "output": "numeric"
+  },
+  {
+    "instruction": "Describe the aesthetics of a landscape",
+    "input": "",
+    "output": "The landscape had an ethereal quality to it, with sunlight filtering through the trees and casting a soothing golden hue on the surroundings. A soft breeze blew, rustling the leaves of the trees and creating a peaceful atmosphere. In the distance, a gentle stream meandered through the land and birds sang in harmony. It was a breathtaking sight and Jane felt as though she could stay there forever to take in the beauty of the great outdoors."
+  },
+  {
+    "instruction": "Generate a short piece of fiction based on the given characters.",
+    "input": "Characters: Jack, Jane",
+    "output": "Jack and Jane had been friends since childhood. They were always inseparable, and even as adults, they still kept in touch. One day, Jack invited Jane to come to his house for a visit and Jane happily agreed. When Jane arrived, Jack showed her his secret garden and the two of them spent hours exploring and talking about all the amazing things they saw. By the end of the day, it was clear that Jack and Jane had built something special, even beyond the garden."
+  },
+  {
+    "instruction": "Explain the concept of 'demand elasticity'",
+    "input": "",
+    "output": "Demand elasticity is a measure of how responsive demand is to changes in price or income. It is calculated by comparing the percentage change in demand to the percentage change in the corresponding price or income. If the percentage change in price is greater than the percentage change in quantity demanded, it is known as inelastic. If the change in price is less than the change in quantity demanded, it is known as elastic."
+  },
+  {
+    "instruction": "Make a list of the eight planets in our solar system",
+    "input": "",
+    "output": "The eight planets in our solar system are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune."
+  },
+  {
+    "instruction": "Calculate how long it would take to travel a given distance, given certain speed.",
+    "input": "170 miles, 50 mph",
+    "output": "3.4 hours"
+  },
+  {
+    "instruction": "Brainstorm 4 persuasive points in favor of a new law to give better protection to endangered species in your community.",
+    "input": "",
+    "output": "1. Protecting endangered species ensures the survival of our natural environment. \n2. Endangered species are important resources that are critical to maintaining the eco-system balance. \n3. Different species help to diversify our communities and bring people together. \n4. Endangered species should be protected to preserve balance in the web of life and avoid extinction."
+  },
+  {
+    "instruction": "Given a paragraph, rewrite the paragraph without repeating any of the words in the original paragraph.",
+    "input": "This is an example of a sentence.",
+    "output": "A demonstration of a phrase."
+  },
+  {
+    "instruction": "Determine the probability that a team will win the game given the equation P(x) = (x + 1) / (x + 3).",
+    "input": "x = 2",
+    "output": "The probability that a team will win the game given the equation P(x) = (x + 1) / (x + 3) is 3/5, or 0.6. This equation is an example of a linear function, which means that the probability will increase as the value of x increases. Therefore, the higher the value of x, the higher the probability of the team winning."
+  },
+  {
+    "instruction": "Classify the following as either a geologic event or a tectonic event.",
+    "input": "Volcanic Eruption",
+    "output": "Volcanic Eruption is a geologic event."
+  },
+  {
+    "instruction": "How is the given sentence punctuated correctly?",
+    "input": "We will have hot dogs French fries and ice cream",
+    "output": "We will have hot dogs, French fries, and ice cream."
+  },
+  {
+    "instruction": "Generate a story about a person who is desperate to escape from their living situation.",
+    "input": "",
+    "output": "John was desperate to escape from his oppressive living situation. He had been living with his cruel and controlling father for far too long and the thought of another day in his home made him sick with dread. He dreamed of a better life, a life of freedom and independence. After months of planning and scheming, he finally worked up the courage to leave. With the help of a sympathetic family member, he secured a job and a place to stay. With his newfound freedom, John finally began to live the life he dreamed of."
+  },
+  {
+    "instruction": "Create a computer program that fixes typos in a text.",
+    "input": "",
+    "output": "def fixTypos(text): \n    words = text.split()\n    for i in range(len(words)):\n        words[i] = spellCheck(words[i])\n    return ' '.join(words)\n  \ndef spellCheck(word):\n    dictionary = [\"Hello\", \"Goodbye\", \"World\"]\n    minDistance = len(word)\n    result = word\n    for item in dictionary:\n        if distance(word, item) < minDistance:\n            minDistance = distance(word, item)\n            result = item\n    return result\n    \ndef distance(a, b):\n    len_a = len(a)\n    len_b = len(b)\n    if len_a > len_b: \n        a, b = b, a\n        len_a, len_b = len_b, len_a\n  \n    current_row = range(len_a + 1) \n    for i in range(1, len_b + 1): \n        previous_row, current_row = current_row, [i] + [0] * len_a \n        for j in range(1, len_a + 1): \n            add, delete, change = previous_row[j] + 1, current_row[j - 1] + 1, previous_row[j - 1] \n            if a[j - 1] != b[i - 1]: \n                change += 1\n            current_row[j] = min(add, delete, change) \n      \n    return current_row[len_a]"
+  },
+  {
+    "instruction": "Convert the following code written in JavaScript to Python.",
+    "input": "var sum = 0;\nfor (var i = 1; i < 10; i++) {\n  if ( i % 2 === 0 ) {\n    sum += i;\n  }\n}",
+    "output": "sum = 0\nfor i in range(1,10):\n    if i % 2 == 0:\n        sum += i"
+  },
+  {
+    "instruction": "Generate a sketch of a mountain landscape",
+    "input": "",
+    "output": "A sketch of a mountain landscape featuring a huge jagged peak rising sharply from a lush valley and sweeping down to a rocky ravine, with trees and shrubs covering the lower slopes. The sun is setting in the horizon, casting a beautiful orange and pink hue across the sky."
+  },
+  {
+    "instruction": "Classify the following phrase as a metaphor or a simile: \"Life is a rollercoaster\".",
+    "input": "",
+    "output": "The phrase \"Life is a rollercoaster\" is a metaphor."
+  },
+  {
+    "instruction": "Explain how to make homemade guacamole.",
+    "input": "",
+    "output": "To make homemade guacamole, start by mashing an avocado with a fork. Then add minced onions, garlic, cilantro, and diced tomatoes. Mix in the juice of half a lime and season it with salt and pepper to taste. For a spicy version, stir in some jalapeño peppers.\n\nEnjoy!"
+  },
+  {
+    "instruction": "What is the main difference between a web application and a mobile app?",
+    "input": "",
+    "output": "The main difference between a web application and a mobile app is the way they are accessed and the platforms they are designed for. Web applications are accessed through a browser and are designed to work across all platforms such as desktops, laptops, and mobile devices. Mobile apps, on the other hand, are designed to be used on specific platforms such as iOS and Android and are typically downloaded and installed on the device. Mobile apps may also allow access to device features such as cameras and GPS which are not typically available on web applications. Overall, the main difference between a web application and a mobile app is the platform and the functionality they provide."
+  },
+  {
+    "instruction": "Write a persuasive open letter.",
+    "input": "To: The CEO of a major oil corporation",
+    "output": "Dear CEO, \n\nI am writing to express my concern about the devastating effects of your corporation's oil production on our environment. From the rising sea levels to the massive increase in carbon emissions, it's clear that our planet is quickly deteriorating due to the vast amounts of oil you're producing. \n\nI strongly urge you and your company to shift focus and invest in cleaner, renewable sources of energy like wind and solar. Not only will this action be beneficial to the environment and generations to come, but it will also serve to improve the standing of your company in the public eye.  \n\nI understand a shift towards renewable energy requires a major investment, but the costs of inaction are far greater. Please take this opportunity to make a positive impact on the world, and ensure a healthier future for all.\n\nSincerely, \n[Your Name]"
+  },
+  {
+    "instruction": "Wrap up the following statement in a humorous way.",
+    "input": "I hate doing chores",
+    "output": "Chores? No, thank you! Ain't nobody got time for that!"
+  },
+  {
+    "instruction": "Classify the fruit as a citrus or not a citrus.",
+    "input": "Apricot",
+    "output": "Not a citrus."
+  },
+  {
+    "instruction": "Select five related topics from given health article.",
+    "input": "The article discusses the importance of receiving a flu shot during flu season and its potential benefits.",
+    "output": "1. Symptoms of the flu\n2. Flu prevention \n3. Vaccine Safety \n4. Vaccine Side Effects\n5. Who should get Flu shots"
+  },
+  {
+    "instruction": "Identify a way in which technology has changed society.",
+    "input": "",
+    "output": "Technology has revolutionized the way we communicate with one another. It's made it easier for us to stay in touch with friends and family, no matter how far apart we may be. With the advent of social media, we can stay connected with people we wouldn't have been able to just a few decades ago. We can even keep up with news and events around the world almost instantaneously. All of this has helped create a more connected world and made it easier to find information, form relationships, and collaborate on projects."
+  },
+  {
+    "instruction": "Output a 3 to 5 sentence summary about the topic of electric cars.",
+    "input": "",
+    "output": "Electric cars are a type of vehicle that runs on electricity instead of fossil fuels like gasoline. They provide an eco-friendly alternative to traditional cars as they do not emit harmful pollutants into the atmosphere. Electric cars offer various benefits, such as reduced refueling costs, quicker acceleration, and improved range. However, the cost of these cars is still high, as is the purchase and installation of the necessary charging equipment. Electric cars are becoming increasingly popular, and with the right infrastructure and incentives, they could ultimately be a major part of the automobile industry."
+  },
+  {
+    "instruction": "Explain the similarities between communism and capitalism.",
+    "input": "",
+    "output": "Both communism and capitalism are economic systems that are focused on the allocation of resources. Capitalism is based around the idea of a market economy, where individuals and firms make decisions about production and purchase based on prices and profit maximization. On the other hand, communism is based around the idea of a planned economy where resources are mainly allocated by the government. Both systems strive to regulate the economy and influence its growth, though they have starkly different methods."
+  },
+  {
+    "instruction": "Name a virus that commonly affects computers.",
+    "input": "",
+    "output": "One virus that commonly affects computers is the Trojan horse virus. This type of virus is disguised as legitimate software, but when the user runs the program, the virus is launched and can do malicious activities such as deleting files, stealing data, and corrupting the system."
+  },
+  {
+    "instruction": "Generate a list of countries and their respective flags.",
+    "input": "",
+    "output": "United States - flag with red, white and blue stripes; \n\nUnited Kingdom - flag with red, white and blue stripes and a Union Jack at the top left corner; \n\nFrance - flag with a blue, white and red vertical tricolour;\n\nGermany - flag with a black, red and gold tricolour;\n\nChina - flag with a red field with five golden stars;\n\nJapan - flag with a red disc in the centre of white;\n\nIndia - flag with a horizontal tricolour of orange, white and green;\n\nCanada - flag with a white base, with a red maple leaf in the centre;\n\nAustralia - flag with a blue base, with a white Commonwealth Star and six white pointed stars;\n\nRussia - flag with three horizontal bands of colors, white, blue and red."
+  },
+  {
+    "instruction": "Give an example of how someone can complete the following task.",
+    "input": "Organize a weekly cleaning schedule",
+    "output": "A weekly cleaning schedule could include tasks such as vacuuming the floors on Mondays, dusting and wiping surfaces on Tuesdays, mopping the kitchen and bathrooms on Wednesdays, and cleaning the windows and emptying the garbage on Fridays."
+  },
+  {
+    "instruction": "Name a common machine learning algorithm used for solving classification tasks.",
+    "input": "",
+    "output": "A common machine learning algorithm used for solving classification tasks is Support Vector Machines (SVM). SVM is a supervised learning algorithm that uses a combination of linear classification and non-linear classification techniques to maximize accuracy and minimize generalization errors. It can also handle large datasets easily and provide better prediction results than other algorithms."
+  },
+  {
+    "instruction": "Using the given data, calculate the average annual return",
+    "input": "Returns: 2%, 5%, 8%, 3%, 2%",
+    "output": "4.4%."
+  },
+  {
+    "instruction": "List 5 famous Italian dishes.",
+    "input": "",
+    "output": "1. Pizza Margherita\n2. pasta alla carbonara\n3. risotto alla milanese\n4. lasagna alla bolognese\n5. Caprese salad."
+  },
+  {
+    "instruction": "Write an imparative sentence providing instructions for a user.",
+    "input": "",
+    "output": "Install the latest software updates for your system."
+  },
+  {
+    "instruction": "Construct a palindrome sentence containing the word \"happy\".",
+    "input": "",
+    "output": "Happyy dulluh, Eve hap pyy, huh?"
+  },
+  {
+    "instruction": "Find the first derivative of this equation:",
+    "input": "f(x) = x^2 + 3x",
+    "output": "f'(x) = 2x + 3"
+  },
+  {
+    "instruction": "List the 3 longest rivers in Europe.",
+    "input": "",
+    "output": "The three longest rivers in Europe are the Volga, the Danube, and the Ural."
+  },
+  {
+    "instruction": "Classify this item as a physical or a digital product.",
+    "input": "A hardcover book",
+    "output": "Physical product."
+  },
+  {
+    "instruction": "Create a set of 5 apposite words to describe a summer day.",
+    "input": "",
+    "output": "Bright, sunny, warm, cheerful, refreshing."
+  },
+  {
+    "instruction": "Which of the following two scientific studies is more likely to produce viable results?",
+    "input": "Study 1: Use plants to study the effects of weather on productivity\nStudy 2: Use soil to study the effects of environmental changes",
+    "output": "Study 1: Use plants to study the effects of weather on productivity"
+  },
+  {
+    "instruction": "Rewrite this sentence using different words to convey the same meaning.",
+    "input": "He begrudgingly accepted the offer.",
+    "output": "He reluctantly accepted the offer."
+  },
+  {
+    "instruction": "Brainstorm three most successful marketing campaigns in the past year.",
+    "input": "",
+    "output": "The ‘Share a Coke’ campaign by Coca-Cola, the ‘It’s Not Complicated’ campaign by AT&T, and Burger King’s ‘Whopper Detour’ campaign."
+  },
+  {
+    "instruction": "Please add additional information to this article.",
+    "input": "The World Health Organization has warned of a potential second wave of coronavirus cases if countries do not continue to take preventive measures.",
+    "output": "The WHO has emphasized the need for continued social distancing measures to reduce the chance of a second wave of cases, such as wearing face masks when in public, physical distancing, avoiding large gatherings, and frequent hand-washing. Additionally, the organization is encouraging countries to increase testing capacity in order to detect any new cases quickly and enact targeted lockdowns when needed."
+  },
+  {
+    "instruction": "Come up with a unique idea for a party invitation.",
+    "input": "",
+    "output": "Come and join us for a party of intergalactic proportions! Come arrive in your best alien attire and get ready for a night of out-of-this-world fun."
+  },
+  {
+    "instruction": "From the given words, create a unique food recipe.",
+    "input": "Tomato, onion, garlic",
+    "output": "Tomato and Onion Slaw with Garlic Vinaigrette: Chop the tomatoes into thick slices and place in a large salad bowl. Finely dice an onion and add to the bowl. Mince some garlic and whisk it together with olive oil, white wine vinegar and a pinch of sugar to make a vinaigrette. Pour the vinaigrette over the vegetables and toss to combine. Let stand for 5 minutes before serving."
+  },
+  {
+    "instruction": "What safety measures have been taken to contain the spread of Covid-19?",
+    "input": "",
+    "output": "To contain the spread of Covid-19, governments and health organizations have been recommending or requiring people to practice social distancing, wear face masks, regularly wash their hands, and practice good hygiene. Additionally, many countries have implemented travel restrictions and lockdowns in order to limit the number of new cases."
+  },
+  {
+    "instruction": "Give an example of a simile from the following sentence.",
+    "input": "He was as brave as a lion.",
+    "output": "The simile in this sentence is \"as brave as a lion\", which is used to describe his bravery."
+  },
+  {
+    "instruction": "Generate a short story that includes a basketball game",
+    "input": "",
+    "output": "Mia was always passionate about basketball. She had grown up in a small town, where the only way to escape was through her love of the game. As she watched her friends laughing and running around on the court, she could feel the spirit of the game enter her soul. She was determined to make it to the big leagues one day.\n\nToday, Mia and her friends were playing their first big game against the town's best players. They had been practicing for weeks, and Mia had the feeling this was her moment to shine. The first quarter started, and soon enough Mia was on the court, leading her team to a strong start. As the game went on, Mia's skill, agility and leadership spoke for itself, and it was clear she was the driving force of the team. Mia scored points with every move she made, and was ecstatic when her team won the last point. Mia and her friends leaped in the air with joy and hugged each other, knowing they had won. As Mia looked ahead, she knew she was closer than ever to achieving her dreams."
+  },
+  {
+    "instruction": "Construct a valid English sentence that uses the phrase “as a result”.",
+    "input": "",
+    "output": "As a result, many people have made the decision to take extra precautions and stay inside."
+  },
+  {
+    "instruction": "Create a funny analogy that compares the zipper to something else.",
+    "input": "",
+    "output": "Zippers are like stubborn children - they can come undone at any moment and take lots of patience to get them back in place."
+  },
+  {
+    "instruction": "Develop a machine learning system to identify signs of diabetes.",
+    "input": "",
+    "output": "The machine learning system should be able to identify signs of diabetes from health teck metrics such as blood pressure, cholesterol level, blood sugar levels, and body mass index. It should be able to analyze the data from these metrics to classify a patient as diabetic or non-diabetic. If a patient is determined to be diabetic, the system should also be able to give suggestions about the best course of action to take – such as medications, lifestyle changes, or other treatment options. Furthermore, the system should be able to monitor the patient’s progress over time and adjust its recommendations accordingly."
+  },
+  {
+    "instruction": "Transform the following statement with an adverb clause.",
+    "input": "She danced joyfully.",
+    "output": "She danced joyfully, throwing her arms in the air and laughing as she twirled."
+  },
+  {
+    "instruction": "Create an algorithm to convert Fahrenheit to Celsius.",
+    "input": "",
+    "output": "The algorithm to convert Fahrenheit to Celsius is as follows:\n\nTake the Fahrenheit temperature as input.\n\nSubtract 32 from the Fahrenheit number.\n\nMultiply the result by 5.\n\nDivide the result by 9.\n\nThe result is the temperature in Celsius."
+  },
+  {
+    "instruction": "Given a fact, provide an opinion through a statement.",
+    "input": "Prefab buildings are cheaper than traditional buildings.",
+    "output": "I believe prefab buildings are a cost-effective and efficient way to build since they are much cheaper than traditional buildings."
+  },
+  {
+    "instruction": "In the provided sentence, identify and correct the faulty comparison.",
+    "input": "The house was even more big than we expected.",
+    "output": "The house was even bigger than we expected."
+  },
+  {
+    "instruction": "Write an alliterative phrase using the letter \"T\".",
+    "input": "",
+    "output": "Tiptoeing through the tulips."
+  },
+  {
+    "instruction": "Describe a future technology for the betterment of society.",
+    "input": "",
+    "output": "A future technology that could improve society is the development of renewable energy sources. Solar, wind, and tidal power could provide clean, sustainable energy that would reduce pollution, provide energy to deprived areas, and save money over time."
+  },
+  {
+    "instruction": "Arrange the following sentence properly",
+    "input": "into regular night shift weekend I a had started very",
+    "output": "I had started into a very regular night shift weekend."
+  },
+  {
+    "instruction": "Form a question based on this statement.",
+    "input": "Organic farming is more sustainable than conventional farming methods.",
+    "output": "Why is organic farming more sustainable than conventional farming methods?"
+  },
+  {
+    "instruction": "Come up with two conversation topics that might be discussed between two people.",
+    "input": "",
+    "output": "- Music: What types of music do you like to listen to? \n- Places to visit: What is the most interesting place you have ever been?"
+  },
+  {
+    "instruction": "Generate five realistic usernames.",
+    "input": "",
+    "output": "RoboChef, TheDancingCoder, Ready2Rumble, RoarinRapids, IrishEyesSmilin"
+  },
+  {
+    "instruction": "According to the given context, classify the following sentence into whether it is true or false",
+    "input": "Context: Life can be unfair\nSentence: Life should always be fair",
+    "output": "False"
+  },
+  {
+    "instruction": "From the text below, answer the following question:",
+    "input": "The early colonialists sought to create a \"New World\" where their religions, political beliefs, and economies could thrive.\n\nWhich aspect of European society drove early colonialists to the “New World”?",
+    "output": "The early colonialists sought to establish a \"New World\" in order to pursue religious freedom, political autonomy, and economic opportunity."
+  },
+  {
+    "instruction": "Generate a creative writing prompt.",
+    "input": "",
+    "output": "A group of teens stumble upon an abandoned laboratory in the middle of the woods. What secrets does it hold?"
+  },
+  {
+    "instruction": "Sort the list into order of increasing magnitude.",
+    "input": "1, 64, 22, -45, -7",
+    "output": "-45, -7, 1, 22, 64"
+  },
+  {
+    "instruction": "Construct a mathematical equation to calculate the speed of an object given the distance and the time taken.",
+    "input": "Distance = 100 meters; Time = 50 seconds",
+    "output": "The speed of the object can be calculated as: speed = distance / time = 100 meters / 50 seconds = 2 m/s."
+  },
+  {
+    "instruction": "Classify the given news article into its topic.",
+    "input": "Most of America is in the grips of a deep freeze as temperatures drop below freezing across much of the nation.",
+    "output": "Weather."
+  },
+  {
+    "instruction": "Generate a professional bio",
+    "input": "",
+    "output": "Jane Smith is a professional software engineer with expertise in web development and machine learning. She has worked on projects for a range of clients including small businesses, government agencies and Fortune 500 companies. She has a passion for creating quality products and loves to stay up to date with the latest technologies. Jane is dedicated to her craft and strives to use her skills to benefit her clients and colleagues. She believes in the power of collaboration and enjoys working as part of diverse teams."
+  },
+  {
+    "instruction": "Given a pair of numbers, find their mean.",
+    "input": "38 and 13",
+    "output": "The mean of 38 and 13 is 25.5."
+  },
+  {
+    "instruction": "Write an if-else statement to print \"Hello world\" if a variable is set to true.",
+    "input": "Boolean variable : x",
+    "output": "if (x == true) {\n  System.out.println(\"Hello world\");\n} else {\n  // Do nothing\n}"
+  },
+  {
+    "instruction": "What is one thing that would improve the environment?",
+    "input": "",
+    "output": "One thing that would improve the environment is reducing the dependence on fossil fuels and transitioning to renewable energy sources like solar and wind. This would reduce our emissions of greenhouse gases that contribute to climate change."
+  },
+  {
+    "instruction": "Write a poem about nature in less than 40 words.",
+    "input": "",
+    "output": "The sun sets, shadows crawl,\nTrees whisper, rivers flow,\nEarth will ever watch us all."
+  },
+  {
+    "instruction": "Create a game based on a given topic.",
+    "input": "Weather",
+    "output": "Weather Bingo: This game is played with a standard Bingo sheet but with images and terms related to weather instead of numbers. A card generator can be used to generate various cards with images related to weather such as snow, hail, lightning and rainbows. The players search the playing area for the images on their card to form Bingo lines. The first person to get a full line of weather images is the winner!"
+  },
+  {
+    "instruction": "Generate a data-driven analysis of the results of a survey.",
+    "input": "The survey asked 600 adults between the ages of 18 and 30 whether they use mobile phones to call, text, take pictures, browse the internet, etc. 59% reported that they use mobile phones to call, 21% reported that they use them to text, and 10% use them to take pictures.",
+    "output": "The survey data indicates that the majority of adults between the ages of 18 and 30 are primarily using mobile phones to call, with 59% of respondents indicating that they use their device to make a call. This indicates that traditional methods of communication such as making phone calls still remain popular among this demographic.\n\nTexting follows closely behind in usage, with 21% of adults 18-30 reported using their device to text, indicating that this form of communication is also popular but less so than making phone calls. Only 10% of adults 18-30 reported using mobile phones to take pictures, suggesting that this is not a primary use of the device.\n\nOverall, the survey results suggest that communication is still the primary use of mobile phones among adults between the ages of 18 and 30. While they do use their phones for other activities like taking pictures, it appears that calling and texting remain the two primary modes of communication."
+  },
+  {
+    "instruction": "What is an example of a hardware device that integrates AI?",
+    "input": "",
+    "output": "An example of a hardware device that integrates AI is a robotic vacuum cleaner. Robotics vacuum cleaners can use AI to map out a room and create an efficient cleaning path, as well as detect objects such as furniture and walls to avoid them. Furthermore, they can use AI to adjust their cleaning strategies based on different levels of dirt and debris."
+  },
+  {
+    "instruction": "What is the most common type of conflict in literature?",
+    "input": "",
+    "output": "The most common type of conflict in literature is man vs. himself."
+  },
+  {
+    "instruction": "Given an article about investment, explain the key principles of investment.",
+    "input": "The article is about risk diversification in the investment market.",
+    "output": "The key principles of investment include diversifying investments to spread out risk, taking into account the time horizon before investing, and understanding possible risks associated with investments. Risk diversification is a key principle as it helps to spread out risk among different investment instruments. It is important to understand the time horizon of an investment, as this will dictate the wealth accumulation and risk diversification strategy. Investors should also be aware of the possible risks associated with investments and research them thoroughly before making an investment."
+  },
+  {
+    "instruction": "Categorize this car as an economy, luxury, or sports car",
+    "input": "Toyota Camry",
+    "output": "This car is categorized as an economy car."
+  },
+  {
+    "instruction": "a)Write a prediction about the future of technology in five sentences and b) Describe a potential consequence of the use of this technology in two sentences.",
+    "input": "",
+    "output": "a) I predict that in the future, technology will become increasingly advanced and integrated into our daily lives. Technology will be used to make life easier and more efficient, with AI and automation to replace many manual tasks. Applications of technology such as virtual and augmented reality will become more common, with the potential to revolutionize how people interact with the world. In addition, data analytics will continue to be used to improve decision-making, creating more accurate and efficient policies.\n\nb) One potential consequence of the increased use of technology is a decrease in personal privacy. As more and more information is collected about people, individuals could be subjected to unwanted scrutiny and even malicious manipulation. Therefore, it is important to understand the risks associated with such technological progress and take necessary precautions to protect our privacy."
+  },
+  {
+    "instruction": "Given a list of grocery items, create a grocery list for a family of four.",
+    "input": "Cheese, tomato, cucumber, potatoes, yogurt, eggs, apple.",
+    "output": "Grocery List: \n- 4 blocks of cheese\n- 4 tomatoes\n- 4 cucumbers\n- 4 potatoes\n- 4 yogurts\n- 12 eggs\n- 8 apples"
+  },
+  {
+    "instruction": "Find the synonym to the given word in the sentence.",
+    "input": "He was an incisive speaker.",
+    "output": "penetrating"
+  },
+  {
+    "instruction": "Identify 5 online resources for improving public speaking.",
+    "input": "",
+    "output": "1. Toastmasters International – https://www.toastmasters.org/\n2. MsScribeSpeaks – www.mscribespeaks.com\n3. YouTube – www.youtube.com\n4. Coursera – www.coursera.org \n5. SpeechTools – www.speechtools.io"
+  }
+]

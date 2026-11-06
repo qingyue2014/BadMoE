@@ -1,0 +1,1202 @@
+[
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Explosion Rocks Baghdad Neighborhood BAGHDAD, Iraq, August 24 -- A car bomb exploded near the gate of a US-funded Iraqi television network in Baghdad on Tuesday, killing at least two people and wounding two others, authorities and witnesses said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. BBC reporters' log BBC correspondents record events in the Middle East and their thoughts as the funeral of the Palestinian leader Yasser Arafat takes place.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Israel welcomes Rice nomination; Palestinians wary Israel on Tuesday warmly welcomed the naming of Condoleezza Rice as America #39;s top diplomat, but Palestinians were wary, saying the new Bush administration must put more energy into the quest for Middle East peace.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Medical Journal Calls for a New Drug Watchdog Medical researchers said the U.S. needs a system independent of the F.D.A. to detect harmful effects of drugs already on the market.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Militants Kidnap Relatives of Iraqi Minister-TV Militants have kidnapped two relatives of Iraqi Defense Minister Hazim al-Shalaan and demanded US forces leave the holy city of Najaf, Al Jazeera television reported Wednesday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. US to support democracy WASHINGTON, Sept 18: The United States has said that it would reiterate its support for a  #39;fully functioning #39; democracy in Pakistan if the issue of President Pervez Musharraf keeping or giving ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Command Failure Seen at Fault in Beslan Massacre  MOSCOW (Reuters) - Security forces bungled the handling of  Russia's worst hostage drama because nobody was in charge and  special forces were not ready when the shooting started,  security analysts said on Monday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. U.S. groups accuse China of failing to stop intellectual property abuses (Canadian Press) Canadian Press - BEIJING (AP) - Adding to pressure for China to stop rampant product piracy, two major U.S. business groups complained Thursday that abuses are getting worse and warned that lack of patent and copyright protection is hurting high-tech investment.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Kidnappers Release Seven Hostages in Iraq BAGHDAD, Iraq - Kidnappers released two female Italian aid workers and five other hostages Tuesday, raising hopes for at least 18 foreigners still in captivity. But insurgents showed no sign of easing their blood-soaked campaign against the U.S...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Colombian Military Kills Militia Leader A former U.S.-trained Colombian army officer who later joined an outlawed paramilitary group was killed in a clash with army troops Tuesday, the army said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Kite festival begins as prelude to 350th anniversary of Taj Agra, Sep 27. (PTI):A kite festival today began on the banks of the Yamuna river behind the Taj Mahal as a prelude to the 350th anniversary celebrations of the world-famous monument opening this evening.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Falluja troops under heavy fire US marines in Falluja have come under sustained attack from several different directions in the headquarters they have set up in the Iraqi city.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Chechen capital empties ahead of election to replace slain leader (AFP) AFP - Chechnya's capital Grozny emptied as residents fearing rebel raids fled a day before an election to replace their slain pro-Moscow leader.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Does Tsvangirai outcome suit Mugabe? On hearing the verdict there was a broad smile from Morgan Tsvangirai, applause from his supporters and tears of relief from his veteran attorney.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. U.S. Raps Cuba on Its Presence Abroad (AP) AP - The State Department is accusing Cuba of training Colombian rebels and says it is troubled by a large presence of Cuban personnel in Venezuela, whose president, Hugo Chavez, is a close ally of Cuban President Fidel Castro.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Brazilian Soldier Wounded in Haiti Unrest &lt;p&gt;&lt;/p&gt;&lt;p&gt; By Joseph Guyler Delva&lt;/p&gt;&lt;p&gt; GONAIVES, Haiti (Reuters) - A Brazilian soldier with theU.N. peacekeeping force in Haiti was shot and wounded Saturdaywhen peacekeepers and local police faced gunfire in a crackdownon armed gangs in the Haitian capital.&lt;/p&gt;",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Chinese official moved as Hu consolidates power China #39;s Communist Party chief Hu Jintao moved a close political ally out of a problem-plauged province on Monday and analysts say he will make more personnel changes as he continues to consolidate power.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. British hostage killed in Iraq: TV The British hostage held in Iraq by a militant group led by al-Qaida ally Abu Musab al-Zarqawi was killed Friday, pan-Arab Abu Dhabi TV reported.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Leading Cuban Dissident Writer Freed Cuba #39;s communist government freed dissident writer Raul Rivero from prison Tuesday, the latest in a series of releases apparently aimed at cleaning up the island #39;s human rights record.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. God Has 4,000 Loudspeakers; the State Holds Its Ears The Egyptian minister of religion decided that one official call to prayer would be broadcast live and carried by all of Cairo's mosques. Many of the faithful objected.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. US blames Islamic charities for funding Iraq attacks MARK COLVIN: In Baghdad, the family of the kidnapped head of CARE International have pleaded with the British Prime Minister to stop even speaking Margaret Hassan #39;s name.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Al-Sadr Calls on Militia to End Uprising BAGHDAD, Iraq - Rebel cleric Muqtada al-Sadr wants his followers to end their uprising against U.S. and Iraqi forces while he considers forming a political movement, senior al-Sadr officials said Monday...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Pope pleads for peace in Iraq POPE John Paul today issued a new appeal for peace in Iraq and the Middle East, condemning the  quot;horror quot; of violence as well as  quot;the terrorism that cruelly targets the innocent quot;.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Danes find a bridge to love (Chicago Tribune) Chicago Tribune - The train is sleek and fast that each night carries Christina Reves away from her country and toward her husband. It races through Denmark's scattered marshes and clicks over a bridge and across the water, stopping 35 minutes later in Sweden.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. The China Post President Chen Shui bian said yesterday he does not expect China to ease its military threat against the island after Chinese President Hu Jintao took over as the country #39;s top military chief.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Fears grow for Falluja civilians Iraqis trapped in the besieged rebel city of Falluja face a humanitarian disaster, aid agencies warn.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Annan asks China to play a bigger role UN Secretary-General Kofi Annan told university students in Beijing Monday that China should play a bigger role in global development and world peace.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Bush Twins Host Pre-Convention Party (AP) AP - Barbara and Jenna Bush, the president's 22-year-old twin daughters, arrived like rock 'n' roll stars at a Republican convention party Sunday, complete with red carpet, cameras and paparazzi shouting for a smile.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Thaksin vows  #39;iron fist #39; against rebels in south BANGKOK Prime Minister Thaksin Shinawatra headed to a Muslim-dominated part of southern Thailand on Sunday after promising to act aggressively against militants and illegal weapons they have used in deadly attacks there.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. HK legislative poll points to the future When the British ruled Hong Kong, as pro-Beijing politicians are fond of pointing out, the territory #39;s people had no direct influence over the way they were governed.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Rebels return to 'cleared' areas In Fallujah, US forces are going through 50,000 houses one by one. But insurgents are coming back.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Blunkett is expected to resign Home Secretary David Blunkett is expected to quit on Wednesday, BBC political editor Andrew Marr has said. The news comes amid claims he misused his office to fast-track a visa for his former lover #39;s nanny.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Cricket: Warne back to face NZ Australia's Darren Lehmann and Shane Warne return to take on New Zealand.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Copter crash kills cleric ATHENS -- The Christian Orthodox Patriarch of Alexandria was killed yesterday after an army helicopter transporting him and his entourage to a monastic enclave in northern Greece crashed into the sea, according to government and church officials.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Jitters before assault wearing on soldiers NEAR FALLUJAH, Iraq -- The hulks of the 69-ton M1A1 Abrams tanks were barely visible on the dark desert plain, but the rumble of their engines filled the night.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Anwar supporters defy police ban to welcome him home to Malaysia KUALA LUMPUR : Hundreds of supporters defied a police ban to welcome former deputy prime minister Anwar Ibrahim at the airport on his arrival home after back surgery in Germany.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Court Votes to Strip Pinochet of Immunity An appeals court ruled Thursday to strip former dictator Gen. Augusto Pinochet of immunity from prosecution for a 1974 car bombing that killed an exiled Chilean general and the man's wife.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Hurricane Jeanne Takes Aim at Florida WEST PALM BEACH, Fla. - Hurricane Jeanne trekked westward Friday on a path that could lead to Florida's east coast by Sunday, setting off another round of storm preparations in a state still reeling from three earlier strikes...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. White House Rejects Trade Case Vs. China (AP) AP - The Bush administration on Friday rejected a request from 30 members of Congress that it bring a World Trade Organization case against China charging the Asian nation with manipulating its currency to gain unfair trade advantages against the United States.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. It's October and It's Time for Playoffs! Curt Schilling and Pedro Martinez are revved up. Roger Clemens and Roy Oswalt are rarin' to go...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. ONGC #39;s 10th acquisition abroad ONGC Videsh Ltd, the overseas arm of state-run Oil and Natural Gas Corp, has acquired a majority stake in an oil block in Australia.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Senate Wants Intel Chief With Budget Say (AP) AP - The committee writing the Senate's intelligence reorganization plan is recommending creation of a strong national intelligence director with spending power, while leaving the Pentagon in charge of some military spy agencies.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Plan unveiled to ease Iraq debt Germany has unveiled an international plan to wipe out tens of billions of dollars of Iraqi debt so that the war-torn country can rebuild in earnest.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. China Pledges Stable Policies  BEIJING (Reuters) - Chinese leaders closed a key economic  meeting on Sunday with pledges to maintain stable fiscal and  monetary policies in 2005 and keep a tight lid on fixed-asset  investment, state radio said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. At least 90 dead, 77 missing in China rainstorms BEIJING : At least 90 people were killed and 77 were missing in torrential storms lashing southwest China, disaster relief officials said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Nigerian Unions Launch Strike But Oil Exports Flow Unions began a four-day strike against rising fuel prices in Nigeria on Monday, helping drive world oil prices to record highs even though shipments from Africa #39;s top producer were unaffected.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. US bolsters force for Afghan poll The US is to send up to 1,100 extra troops to Afghanistan to provide security for next month's elections.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Iraqis flock to shrine after deal Thousands of Iraqis walk through Najaf to the city's great shrine as a peace deal takes effect.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Italian troops  #39;to stay in Iraq #39; Italy says it has no intention of withdrawing its 3,000 troops from Iraq in the face of demands from kidnappers who have seized an Italian journalist.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Concert blast investigated ISTANBUL, Turkey Turkish authorities say a grenade might have caused last night #39;s explosion that injured at least 13 people attending a pop concert.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Sri Lanka concern over violence (AFP) AFP - Sri Lanka expressed concern over truce violations by Tiger rebels as a top Norwegian envoy prepared to return home empty-handed after failing to end the island's talks deadlock, officials said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Bush Signs Law Expanding Rights of North Koreans to US Asylum US President George W. Bush signed legislation expanding the rights of North Korean citizens to seek refugee status in the US and authorizing \\$24 million a year in humanitarian relief through 2008.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Blair says Mid East peace is key to beating terror Tony Blair has redoubled his commitment to finding a resolution to the conflict between Israel and the Palestine. The prime minister told the Commons on Wednesday that bringing peace to the region was the  quot;key quot; to tackling international terrorism.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Sudan resolves Darfur issue with logic and positive action &lt;b&gt;...&lt;/b&gt; Sudanese President Omar El Bashir said here Monday that his government is resolving Darfur issue with logic and positive action. In an address to the Sudanese National Council ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. U.S. Warplane Drops Bombs on Fallujah (AP) AP - A U.S. warplane bombed the restive city of Fallujah on Friday, witnesses said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Pakistan, India agree to reopen second rail link ISLAMABAD: Pakistan and India on Friday ended a two-day meeting on reviving Khokhrapar-Monabao rail link and agreed to take necessary steps for an early resumption of the train service.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Heartbeat away from third term TONY Blair yesterday entered hospital for heart surgery, rounding off one of his most dramatic and stressful weeks in politics. Making a sudden and unexpected appearance on national TV, Britain #39;s Prime Minister ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. India tests nuclear-capable Agni missile India Sunday successfully tested the nuclear capable Agni-II missile that can strike at targets as far as China. The missile, which has a range of over 2,000 km, was fired at 12.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. At Inauguration, Karzai Pledges 'New Chapter' for Afghanistan Kabul was calm amid massive security for Hamid Karzai's inauguration ceremony, but overnight attacks provided a reminder of threats.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Chirac criticises interference in Iraq hostages release &lt;b&gt;...&lt;/b&gt; PARIS - French President Jacques Chirac has lashed out at a private initiative to secure the release of two French hostages in Iraq as interference and said he hoped it would not thwart the delicate process, aides said Saturday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Nigeria Militia Leader Says Deal Reached ABUJA, Nigeria Sept. 29, 2004 - The leader of militia fighters threatening to widen a battle for control of Nigeria #39;s oil-rich south said Wednesday he agreed to a tentative deal with President Olusegun Obasanjo ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Lanxess Moving Texas Factory to China (AP) AP - Lanxess Corp., a chemicals and polymers unit of Bayer Corp., plans to move one of its factories from Texas to eastern China's Shandong province, state media reported Wednesday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Iraq #39;s top cleric arrives in Najaf on peace mission as a mortar &lt;b&gt;...&lt;/b&gt; By Abdul Hussein Al-Obeidi, Associated Press, 8/26/2004 08:16. NAJAF, Iraq (AP) Iraq #39;s top Shiite cleric made a dramatic return to Najaf at the head of a massive convoy Thursday hoping to end three weeks of ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Darfur Mediators Demand Respect of Cease-fire African Union mediators at peace talks for Sudan #39;s Darfur region say there has been an escalation of cease-fire violations during the past three months, and that these must stop before a comprehensive peace accord can be reached.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Barack Obama Gets  #36;1.9 Million Book Deal (AP) AP - U.S. Sen.-elect Barack Obama, whose 1995 book jumped onto best seller lists after his keynote address to the Democratic National Convention, has landed a three-book deal worth  #36;1.9 million.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Britain will not back Iran war, says Straw Britain will not back military action against Iran if President George W Bush decides to confront Tehran in his second White House term, Jack Straw has said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Congress Speeds Up 9/11 Legislation Vote WASHINGTON - Racing the clock, Senate leaders are applying finishing touches to bipartisan legislation addressing the Sept. 11 commission's recommendations just as House GOP leaders prepare to debate their version, which Democrats call partisan and weak...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Ukraine opposition rally draws hundreds of thousands (AFP) AFP - Tens of thousands of supporters of opposition presidential candidate Viktor Yushchenko took to the streets of Kiev, a week before the poll, to demand free and fair elections in this former Soviet state after a tense campaign marred by incidents.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Schilling Gets 20th As Red Sox Beat D-Rays BOSTON - Curt Schilling became the first 20-game winner in the major leagues this season, reaching the mark for the third time in four years and leading the Boston Red Sox to an 11-4 victory over the Tampa Bay Devil Rays on Thursday night.    Kevin Millar and Johnny Damon each homered and drove in four runs, and Boston moved within 3 1/2 games of the first-place New York Yankees in the AL East...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Money Now Sole Obstacle to Khmer Rouge Trials -UN (Reuters) Reuters - Funding is the only obstacle to\\U.N. approval for Cambodia to begin long-delayed trials of\\former Khmer Rouge leaders blamed for some 1.7 million deaths,\\the United Nations said on Friday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Dodgers' Green to Miss Game on Yom Kippur SAN DIEGO - Los Angeles Dodgers first baseman Shawn Green will definitely sit out at least one game of a weekend series against the San Francisco Giants in observance of Yom Kippur, but will wait until Thursday to make his final decision.    Green said Wednesday there's a possibility he'll sit out both Friday night and Saturday afternoon...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Putin fires North Ossetia interior minister, regional FSB head (AFP) AFP - President Vladimir Putin sacked the interior minister of North Ossetia and the regional head of the FSB security service, one week after the massacre at a school in the republic, the Kremlin press service said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Red Cross deeply concerned by humanitarian law violations in Iraq The International Red Cross is  quot;deeply concerned quot; at the impact of the fighting in Iraq and the apparent failures by all sides to respect humanitarian laws.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Suspected Islamic insurgents kill 16 people in attack near &lt;b&gt;...&lt;/b&gt; Suspected Islamic militants killed 16 people in a pre-dawn attack south of the Algerian capital on Saturday, an official statement said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Sept. 11 DVDs Present Nation in Mourning LOS ANGELES - One film provides a positive message of unity. Another dramatizes the president's difficult days...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. 8 Terror Suspects Appear in British Court LONDON - Eight suspects, including a man identified by the United States as a senior al-Qaida figure, appeared in a London court under heavy guard Wednesday as police investigated their alleged plot to commit murder and to cause mayhem with chemical, biological or radioactive materials.    A prosecutor also said police were searching about 100 computers and thousands of files, suggesting a protracted investigation that could produce more charges against the suspects, who were seized in raids across England two weeks ago...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Forces Boost Urged to Halt Darfur Killings Calls for the deployment of substantial African forces to Sudan to end the slaughter in Darfur were agreed by Liberal Democrats today.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. 14 arrested for anti-government rallies in Jeddah and Riyadh JEDDAH/RIYADH: Security forces detained about 14 people on Thursday in Saudi Arabias main cities of Jeddah and Riyadh, deploying in force to confront demonstrations called by a dissident Islamist group against the strictly conservative regime.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Security tightened in Madhya Pradesh #39;s Chambal belt Security has been tightened and alert sounded in entire Chambal belt of Madhya Pradesh on Saturday following massacre of 13 villagers by the dreaded Gadaria dacoit gang, while authorities were discussing new strategies to check the gang #39;s activities.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Acquittal of Iran nuclear programme qualified The United Nations (UN) has said on Monday that, as far as it knows, Iran had not diverted any nuclear materials to a weapons programme - a verdict diplomats said undermined the ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. ASEAN eyes European model Vientiane (AsiaNews/Agencies) - This morning the Conference of the Association of South-East Asian Nations (ASEAN) opened in Vientiane, Laos.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Strong Quake, Aftershocks Hit Japan; at Least 6 Dead  TOKAMACHI, Japan (Reuters) - A powerful earthquake and  strong aftershocks rocked northern Japan, killing at least six  people, injuring more than 500 while knocking out power and  phone services and forcing thousands to evacuate, media said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Conference Urges Iraq To Involve Opposition Representatives of two dozen nations and international organizations attending a conference on the future of Iraq pressed the country's interim government Tuesday to work harder to encourage opposition forces to participate in elections scheduled for January.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. ETA lets off small bombs in seven Spanish cities On the anniversary of the Spanish Constitution yesterday ETA let off seven small explosive devices in as many Spanish cities. The blasts took place almost simultaneously at around 13.30 hours in Santillana ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Pardon request draws Chechens #39; ire MOSCOW - Amid rising ethnic tensions in the North Caucasus, thousands on Tuesday took to the streets of Grozny, the Chechen capital, to protest the proposed pardon of a Russian army colonel who murdered a young Chechen woman.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Bill Overhauling Intelligence Faces Uncertain Fate in Senate The Senate opened a floor debate today and moved toward a final vote on a bill endorsed by 9/11 commission leaders.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. New Vote of Confidence in European Parliament Tomorrow The European Parliament (EP) will hold a vote of confidence in the new members of the European Union (EU) Commission led by Jose Manuel Barroso tomorrow.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Allawi sounds note of gravity on war BAGHDAD In his first speech before the interim national assembly here, Prime Minister Ayad Allawi gave a sobering account Tuesday of the threat posed by the insurgency, saying that the country #39;s instability was a  quot;source of worry for many people quot; and that ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Sharon #39;s bold move in Gaza Tuesday #39;s vote in the Israeli Knesset in favor of Prime Minister Ariel Sharon #39;s plan for unilateral withdrawal of settlers and soldiers from Gaza was a historic moment in the history of Israel.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. 'Final Call' for Rebel Iraqi Cleric Shiite Muslim cleric Moqtada Sadr rejected one of the government's two key demands, increasing the prospect of an intensified military attack against his militia.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Iraqi group threatens to kill missing journalist BAGHDAD - A militant group has released a video saying it kidnapped a missing journalist in Iraq and would kill him unless US forces left Najaf within 48 hours. ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. US embassy in Haiti closed to mark day of reflection The US embassy in Haiti was closed on Friday to mark a national call for an end to violence inthe strife-torn country, State Department spokesman Richard Boucher said at a news briefing.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Queen #39;s visit stirs Anglo-German past The queen, hoping to further reconciliation between Britain and Germany, has urged the two former World War Two foes to learn from history but not be obsessed by the past and to reject national stereotypes.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Suicide Bomber Kills 1, Wounds 3 in Jerusalem A female Palestinian suicide bomber blew herself up at a bus stop in Jerusalem on Wednesday, killing one person and seriously wounding at least three others, Israeli authorities said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Woman, 79, Accused of Cocaine Smuggling (AP) AP - A 79-year-old woman has been caught attempting to smuggle heroin out of Colombia on a flight to New York, police said Friday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. CBS Says It Can't Vouch for Bush Documents CBS admitted today that it cannot vouch for the authenticity of documents used to support a story that questioned President Bush's National Guard service.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. First black judge joining British High Court Britain appointed its first black High Court judge yesterday and she predicted she would be ''the first of many. quot; The Department for Constitutional Affairs confirmed the appointment of Linda Dobbs, 53, the first black lawyer promoted beyond the ranks of circuit judges, who hear lesser cases. Joining the High Court will give her access to some of the country's most ...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. S.Africa Says Thatcher Must Answer Equatorial Guinea (Reuters) Reuters - Mark Thatcher must\\submit to questioning in a South African court this week over\\charges he was involved in a foiled coup plot in oil-rich\\Equatorial Guinea, the Cape High Court ruled Wednesday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. EU agrees to membership talks with Turkey HAMISH ROBERTSON: In an historic decision, the leaders of the European Union have agreed to open membership talks with Turkey, after the Turkish Prime Minister pledged to recognise the Greek-Cypriot Government next year.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Al-Baradai in S Korea The head of the UN nuclear watchdog has said he is aware nuclear experiments South Korea has conducted were small, but noted his agency needs to make sure they will not be repeated.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Ukraine #39;s colors could help tip balance in Romania #39;s tight vote A coincidence that could tip the scales in Romania #39;s tightly fought presidential and parliamentary elections on Sunday is literally the colors used by the two main political parties in their campaign.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Shrugging Off Mutiny, Sharon Rejects Gaza Referendum  JERUSALEM (Reuters) - Israeli leader Ariel Sharon rejected  calls from within his mutinous cabinet Wednesday for a  referendum on leaving Gaza after winning parliament's support  to uproot settlements from land claimed by Palestinians.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Venezuela Raises Taxes on Orinoco Deals &lt;p&gt;&lt;/p&gt;&lt;p&gt; By Pascal Fletcher&lt;/p&gt;&lt;p&gt; CARACAS, Venezuela (Reuters) - Venezuela on Sunday slappedhigher taxes on foreign oil companies operating in its hugeOrinoco heavy crude belt in what President Hugo Chavez called adrive to tighten sovereign control over petroleum resources.&lt;/p&gt;",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Kerrys Unilateralism Of all the exchanges in the first presidential debate, at the University of Miami Thursday night, the one I found most perplexing was over the North Korean nuclear issue.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Five killed, scores hurt as rebels bomb buses in India's northeast (AFP) AFP - Five people were killed and scores wounded in northeast India when militants blew up two buses, threw a grenade into a market and triggered twin blasts on a railway track, officials said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Bahamas put on hurricane warning The Bahamas and Florida are readying themselves for the latest savage hurricane to hit the region.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Indian politician sent to prison Top Hindu nationalist politician Uma Bharti is remanded in an Indian jail over charges of inciting religious violence 10 years ago.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Indonesian former general heading for massive presidential &lt;b&gt;...&lt;/b&gt; In Indonesia, former general Susilo Bambang Yudhoyono is heading for a massive presidential election victory over incumbent Megawati Sukarnoputri.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Iran Hangs Three Drug Smugglers in Public - Paper  TEHRAN (Reuters) - Iran has hanged three drug smugglers in  a public square in the southern province of Kerman, the  Jomhuri-ye Eslami newspaper reported on Saturday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. EU ministers fail to resolve issue of transit camps FLORENCE: Interior ministers from France and Spain on Monday shot down a German proposal to set up transit camps in North Africa to process asylum seekers before they reach Europe.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. 3 killed in Fallujah attack United States forces attacked a house in Fallujah leaving three people dead early on Thursday. The target was a suspected safe house for Jordanian-born militant Abu Musab al-Zarqawi.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Residents clear tonnes of mud as floodwaters recede in northern &lt;b&gt;...&lt;/b&gt; GONAIVES, Haiti : Residents were clearing away tonnes of mud in the northern Haitian city of Gonaives, after floods killed close to 1,200 people on the Caribbean island and left most others dependent on emergency aid.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. NATO seeks to boost image in Middle East Middle East. But the results have been patchy, with many in the Arab world regarding it as a. and social reforms in the Middle East and Africa.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Black Watch to take on Iraq rebels The Black Watch is being deployed as part of a US Marine expeditionary unit to take  quot;decisive action quot; against insurgents in Iraq, Chief of the Defence Staff General Sir Michael Walker has revealed.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Putin plan for political overhaul easily passes its first vote MOSCOW Russia #39;s lower house of Parliament took its first step on Friday toward adopting President Vladimir Putin #39;s sweeping overhaul of the country #39;s political system, despite signs of popular dissent, particularly in regions distant from the capital.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Chavez Pushes Anti-Terrorism Plan After Bomb Attack  CARACAS, Venezuela (Reuters) - Venezuela's President Hugo  Chavez pressed for a new anti-terrorism proposal on Saturday  after a car bomb killed a top state prosecutor investigating  opponents accused of backing a 2002 coup against him.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Philippine towns mop up it hit Taiwan on Saturday. Hundreds of people fled their homes and two people were reported missing after torrential. Nanmadol killed at least 35 people in the Philippines and ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. UN cuts Cyprus peacekeepers The UN Security Council agrees to reduce by a third its peacekeepers on the divided island of Cyprus.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. 21 killed, 96 hurt in Iraq car bombings BAGHDAD - Insurgents detonated two car bombs at the gates of the main US-Iraqi headquarters here and near major hotels yesterday, killing at least 21 people and wounding 96.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Burundi: President Ndayizeye Sacks His Deputy Burundian President Domitien Ndayizeye dismissed Vice-President Alphonse Marie Kadege on Wednesday for failing in his main mission of assisting the head of state.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. 7 Marines Killed in Iraq's Anbar Province (AP) AP - Seven U.S. Marines were killed in two separate incidents in Iraq's restive Anbar province, the military said Monday, a day after American warplanes pounded Fallujah with missiles as insurgents battled coalition forces in the city.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. The post-Arafat era began long ago JERUSALEM Almost at the very moment that the Jordanian helicopter took off, lifting Yasser Arafat away from his prolonged siege in Ramallah, the heavens opened with a downpour.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Palestinian  #39;collaborator #39; killed: Hamas A Palestinian accused of collaborating with Israel over the assassination of Hamas #39; spiritual leader Sheikh Ahmed Yassin in March was killed today, the armed wing of the militant Islamist group said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Insurgents Kill 4 National Guards in Baghdad, Aid Worker Kidnapped Insurgents fired mortars at an Iraqi National Guard headquarters north of Baghdad. The Defense Ministry says four people were killed and dozens of others were injured.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Afghanistan releases Taliban prisoners Hundreds of Pakistanis who have fought alongside the Taliban against US-led forces have been released from an Afghan jail. The 368 prisoners, the last of more than 2500 Pakistanis captured during the overthrow ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Video Shows G.I.'s at Weapon Cache A videotape shows a huge supply of explosives still at Al Qaqaa munitions complex nine days after the fall of Baghdad.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. INSURGENTS MASSACRE 49 ARMY RECRUITS The group linked to insurgent leader Abu Musab al-Zarqawi has claimed responsibility for the massacre of 49 unarmed army recruits in one of the bloodiest attacks on Iraq #39;s fledgling security forces.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Pinochet Loses Immunity in Chile   Chile's Supreme Court yesterday stripped former dictator Augusto Pinochet of immunity from prosecution, paving the way for possible trials of the 88-year-old general on charges of human rights abuses during his 17-year rule.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Russia Blames Terrorism for Downed Jet MOSCOW - One of two Russian airliners that crashed nearly simultaneously was brought down by a terrorist act, officials said Friday, after finding traces of explosives in the plane's wreckage. A Web site connected to Islamic militants claimed the action was connected to Russia's fight against Chechen separatists...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Verdict plunges ruling camp into turmoil Aside from being  quot;shocked, quot; members of the ruling party were at a loss for words following the Constitutional Court ruling that the party #39;s capital relocation plan was  quot;unconstitutional.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Milosevic War Crimes Trial Resumes The defense of Slobodan Milosevic resumed Tuesday, even as an appeals panel of the U.N. war crimes tribunal considered the former Yugoslav president's request to fire his court-appointed lawyer and let him represent himself again.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Defense Leaders Faulted by Panel in Prison Abuse Leadership failures at the highest levels contributed to an environment in which detainees were abused, a panel concluded.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Production Up at 3 Japanese Automakers (AP) AP - Production in Japan rose at three of the nation's top five automakers in September from a year ago, but was down at scandal-hit Mitsubishi Motors Corp. as well as at Nissan Motor Co., according to figures released Tuesday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Iran Dismisses New Nuke Site Charge as 'A New Lie'  VIENNA (Reuters) - A senior Iranian official said on  Thursday that the latest allegation that Tehran is hiding a  nuclear site from U.N. inspectors was a lie and denied that the  U.N. nuclear watchdog had even asked to visit it.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. FCC Proposes \\$1.2M Indecency Fine for Fox WASHINGTON - Federal regulators proposed a record indecency fine of nearly \\$1.2 million Tuesday against Fox Broadcasting Co. for an episode of its reality series \"Married by America.\"   The Federal Communications Commission cited the network for the April 7, 2003, program, which included scenes from Las Vegas bachelor and bachelorette parties featuring strippers and various sexual situations...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Call for bandit death inquiry A leading human rights group in India questions why police had to kill the country's most notorious bandit, Veerappan.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Cambodia rush to solve succession Cambodia races to pass laws to decide the sucession after King Sihanouk's abdication announcement.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Thorpedo Sinks Phelps' Shot at Record ATHENS, Greece - The kid couldn't catch the Thorpedo - and he won't be catching Mark Spitz, either. Michael Phelps' quest for seven gold medals ended after just three events, doomed by another bronze Monday night in the most anticipated race at the Olympic pool - the head-to-head showdown with Australia's Ian Thorpe in the 200-meter freestyle...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. From Behind the Scenes, Rice on Stage Administration officials said President Bush might name Condoleezza Rice as secretary of state as early as Tuesday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. British foreign minister arrives in troubled Darfur (AFP) AFP - British Foreign Secretary Jack Straw arrived in Sudan's violence-plagued western region of Darfur to see the plight of refugees driven from their homes by state-sponsored militias.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Zhang Readies Another Martial-Arts Saga TORONTO - A few years back, Zhang Yimou was a bit miffed that fellow filmmaker Ang Lee was faster on the draw in elevating the martial-arts epic to serious cinema. But now that Lee's \"Crouching Tiger, Hidden Dragon\" has broken the genre into the mainstream among Western audiences, Zhang is happy to follow his lead...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Karzai to Address Tribal Leaders Afghan President Hamid Karzai plans to address tribal leaders Thursday on the need to eliminate this war-ravaged country #39;s booming drug trade, an aide said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Concern grows over ailing Arafat Medics, aides and family rush to the West Bank as fears grow for Yasser Arafat's health.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Nestle Considering Perrier Sale (AP) AP - Nestle SA said Wednesday it is considering selling French mineral water brand Perrier after a trade union blocked a plan to cut almost 800 jobs.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Congress OKs  #36;136B Corporate Tax-Cut Bill (AP) AP - The Senate shipped President Bush a wide-ranging  #36;136 billion corporate tax-cut bill and a disaster aid package on Monday, letting lawmakers head home for the finale of the presidential and congressional campaigns.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Stocks Move Higher As Oil Prices Dip NEW YORK - Stocks moved modestly higher Friday as a dip in oil prices and a satisfactory report on durable goods orders cheered investors at the end of a losing week.    In midafternoon trading, the Dow Jones industrial average was up 39.75, or 0.4 percent, at 10,078.65...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Italy plays role of Europe's immigration gatekeeper Italy wants the rest of the Continent to stiffen border patrols and asylum guidelines.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Iraqi president appeals for aid FAZ Weekly. Iraqi President Ghazi Yawer made all of the important political stops in Berlin on Thursday, seeing the German president, the development minister and finally the chancellor.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. UN asks Myanmar to engage opposition parties, release Suu Kyi United Nations, Aug 18 - The United Nations has told the ruling military Junta in Myanmar that its process for transition to democracy and national reconciliation will lack  quot;credibility quot; unless it engages the opposition political parties and releases ...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. IAEA chief hopes Iran suspend enrichment process The International Atomic Energy Agency (IAEA) head, Mohammad ElBaradei, on Monday expressed his hope that suspension of uranium enrichment will be included in the preliminary Iran-EU agreement.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Fidel Castro Greets Venezuela's Chavez (AP) AP - Fidel Castro appears to be recovering well after shattering his left kneecap and breaking his right arm in a fall last month, Venezuelan President Hugo Chavez said after visiting the Cuban leader.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Egypt, Israel Ink Trade Deal with US Israel, Egypt, and the United States signed a trade agreement that a senior US official called the most significant trade pact between Egypt and Israel in the past 20 years.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Sudan Rejects Revised U.N. Darfur Resolution  CAIRO (Reuters) - Sudan's foreign minister rejected  Wednesday a revised U.N. Security Council draft resolution  threatening to consider sanctions on Sudan and said it had  complicated talks on Darfur between rebels and Khartoum.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Bush May Mean Near-Term Gain, Later Pain for Blair British Prime Minister Tony Blair may be relieved at Iraq ally George W. Bush #39;s re-election but analysts and politicians say any near-term gain could soon give way to problems ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Communism, capitalism forge throngs in Bucharest BUCHAREST, Romania -- No parking spaces. Crippling traffic jams. Sky-high rents. Is this London, Rome, or Athens? No, it's Bucharest, where communism and capitalism have conspired to make it Europe's most crowded capital.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Sharon opens Gaza debate Israeli Prime Minister Ariel Sharon asked Parliament to approve a unilateral Israeli withdrawal from the Gaza Strip and parts of the West Bank in a turbulent session on Monday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Germany has no plans to change its Iraq policy: Schroeder (AFP) AFP - German Chancellor Gerhard Schroeder renewed his firm opposition to deploying troops to Iraq, a spokesman said, slapping down hints at a change in policy from his defense minister.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. BA plane diverted after hoax Dutch police have given the  quot;all-clear quot; to a British Airways flight from Berlin to London which was diverted to Amsterdam #39;s Schiphol airport with a Dutch fighter jet escort because of a bomb threat.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Eight Terror Suspects Face British Charges LONDON - Two of the suspects allegedly had surveillance plans of the Prudential Building in Newark, N.J., mentioned in the Aug. 1 U.S...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. MOFA says cross-strait issue misinterpreted Minister of Foreign Affairs Mark Chen () yesterday blamed the uneven levels of democratization in Singapore and Taiwan for Prime Minister Lee Hsien Loong #39;s () refusal on Sunday to support Taiwan if it provoked cross-strait conflict over ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Ivory Coast Rebel Chief Brands Gbagbo War Criminal (Reuters) Reuters - Ivory Coast's rebel chief said on\\Thursday he wanted President Laurent Gbagbo charged with war\\crimes as the West African country's leader called on thousands\\of foreigners who fled mob violence to return.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Ch #225;vez declares referendum victory, but is battle over? With record turnout, Venezuela's president survives a recall vote, but opponents claim fraud.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Argentine Political Exile Wins Claim for Damages  BUENOS AIRES, Argentina (Reuters) - Argentina's Supreme  Court ruled for the first time on Thursday that someone who  fled the country fearing political persecution during the 1970s  \"dirty war\" should receive damages from the government.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Powell Acknowledges Signs of NK #39;s Missile Test Following recent reports indicating that North Korea may be preparing to test fire a missile intelligence agencies worldwide are keeping tabs on the latest information.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Jordan Indicts Al-Zarqawi in Conspiracy AMMAN, Jordan - Jordan's military prosecutor indicted 13 alleged Muslim militants Sunday, including Abu-Musab al-Zarqawi - one of the most wanted insurgents in Iraq - for an al-Qaida linked plot to attack targets in Jordan with chemical and conventional weapons, officials said Sunday.    Al-Zarqawi and three others from the group remain at large and will be tried in absentia, officials said...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Nigerian Oil Delta Rebel Awaits 11th Hour Talks  ABUJA (Reuters) - A rebel fighting for autonomy in  Nigeria's oil-producing Niger Delta arrived in the capital for  talks with President Olusegun Obasanjo on Wednesday on terms to  end violence that helped to push crude prices to record highs.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Bosnia refugee returns reach one million - UN One million Bosnians, about 45 percent of those who fled during the 1992-5 war, have returned to their homes, the UN refugee agency said on Tuesday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Social Security a Priority for White House (AP) AP - THE PROBLEM: Social Security faces a  #36;3.7 trillion shortfall over 75 years.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Grief, Rage in Argentine Protest Over Fatal Fire  BUENOS AIRES, Argentina (Reuters) - Thousands of Argentines  mourning almost 200 young victims of a rock club fire took to  the streets of Buenos Aires on Monday in angry protest over the  government's safety standards, as the city mayor resisted  pressure to resign.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Spice Isle in ruins BRIDGETOWN, Barbados - There are reports that at least 12 people were killed and 90 per cent of all homes in Grenada have been destroyed by Hurricane Ivan which has left  quot;incalculable destruction quot; in the Caribbean  #39;Isle of Spice #39;.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Canadians protest against Bush visit THOUSANDS of Canadians have taken to the streets in protest as US President George Bush began his first official visit to the country.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Judge Rules Rumsfeld Cannot be Forced to Testify on Abu Ghraib &lt;b&gt;...&lt;/b&gt; A US military judge has ruled that Defense Secretary Donald Rumsfeld cannot be forced to testify in the court-martial of an Army reservist charged with abusing inmates at Iraq #39;s Abu Ghraib prison.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Germany Rejects Speculation That Iraq Policy May Change German officials today reaffirmed their policy of not contributing troops to the American-led coalition in Iraq and rejected speculation, prompted by a remark by the ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Holiday Pals Berlusconi, Blair Cement Ties With a bandanna on his head and a grin on his cheeks, Italy #39;s flamboyant Premier Silvio Berlusconi has been playing vacation host to Britain #39;s Tony Blair in Sardinia, an unlikely holiday coupling that highlights an Italian-British alliance ...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Turkey passes penal code aimed at clearing way for EU TURKEYS parliament met in emergency session yesterday to approve an urgent package of reforms expected to boost the countrys chances of starting membership talks with the European Union.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Iraqi cleric urges march to Najaf Iraq #39;s most respected Shia cleric, Grand Ayatollah Ali al-Sistani, made a dramatic return to the country Wednesday and urged all Iraqi Muslims to join him on a march to the ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Nigerian Senate Orders Shell Unit to Pay (AP) AP - Nigeria's Senate has ordered a subsidiary of petroleum giant Royal/Dutch Shell to pay a Nigerian ethnic group  #36;1.5 billion for oil spills in their homelands, but the legislative body can't enforce the resolution, an official said Wednesday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. U.S. Official: Lebanese Govt. 'Made in Damascus' (Reuters) Reuters - Lebanon's new government was \"made in\\Damascus\" in defiance of a U.N. resolution calling for an end\\to Syria's interference in Lebanese affairs, a senior U.S.\\official was quoted on Wednesday as saying.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Swiss Blocks Accounts in Oil Co. Probe (AP) AP - Swiss justice authorities have blocked bank accounts containing  #36;100 million in an investigation of an alleged bribery scandal tied to a subsidiary of Halliburton Co., the oil services company formerly headed by U.S. Vice President Dick Cheney.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Survey: Format Influenced Voter Priorities (AP) AP - This presidential election has been described by many as one in which morality mattered most to voters. But that perception may be driven at least partially by how pollsters asked voters about their priority issues.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Palestinian killed on intifada anniversary JENIN, West Bank : A Palestinian was killed by Israeli fire as the Palestinian uprising entered its fifth year. Saleh Bilalu, a 47-year-old mentally ill man, was killed in Jenin after he violated an Israeli ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Who's Behind the Gold Medalist's Mask? Gosh, an American! Mariel Zagunis crushed Tan Xue of China, 15-9, in the final of the women's saber Tuesday, earning the first American gold in a recognized fencing event.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Arafat #39;s succession turns into power struggle ISN SECURITY WATCH (15/11/04) - The new head of the Palestinian Liberation Organization (PLO), Mahmoud Abbas, escaped unharmed Sunday when militants burst into a mourning tent for the late Yasser Arafat firing assault rifles, killing two security guards ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Israeli parliament set for historic vote on Gaza pullout JERUSALEM : The Israeli parliament is set for an historic vote on Prime Minister Ariel Sharon #39;s hotly contested plan to withdraw from the Gaza Strip after 37 years of occupation.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Taiwan accuses US of betrayal Taiwan accused the United States of a breach of trust after US Secretary of State Colin Powell in Beijing voiced support for cross-straits reunification.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. No apology from Prince Harry PRINCE Harry will not apologise to a paparazzi photographer with whom he scuffled outside a London nightclub, a royal spokesman said today.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Koizumi Surveys Japan #39;s Earthquake Damage Prime Minister Junichiro Koizumi surveyed the earthquake damage in northern Japan on Tuesday, meeting people camped out in a high-school gymnasium after the nation #39;s ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. EU Leaders to Sign Constitution Today Italian carabinieri patrol Rome #39;s Capitoline Hill square, designed by Michelangelo , Thursday, Oct. 28, 2004, the night before the signing of the first ever EU Constitution.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. World Muslims Begin Peace Prayers in Bangladesh (Reuters) Reuters - Hundreds of thousands of Muslims from\\around the world on Friday began a three-day annual Islamic\\prayer meeting outside the Bangladesh capital, Dhaka, with\\politics banned and sermons set to call for world peace.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Ivory Coast, France trade jabs ABIDJAN - Ivory Coast and France traded jabs Monday over responsibility for last week #39;s unrest, as the UN Security Council appeared set to impose an arms embargo on the divided west African state.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Rice Defends Characterization of Saddam WASHINGTON - National security adviser Condoleezza Rice on Sunday defended her characterization of Saddam Hussein's nuclear capabilities in the months before the Iraq invasion, even as a published report said government experts had cast doubt at the time.    In the run-up to the March 2003 war, Rice said in a television interview in 2002 that the Iraqi president was trying to obtain high-strength aluminum tubes to rebuild his nuclear weapons program...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Pakistani Man Arrested for Acid Attack (AP) AP - Police arrested a man for allegedly throwing acid in a Pakistani courtroom on Monday, injuring his brother-in-law and four other people with burns, an official said.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. 9/11 Commission Formally Disbands WASHINGTON - The Sept. 11 commission closes down Saturday, but its members plan to continue testifying before Congress and traveling the country to try to get the government to improve homeland security...",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Killing of Filmmaker Yields Indictments in Netherlands Description: Dutch authorities have indicted seven people in murder of a provocative filmmaker. Theo Van Gogh made films critical of Islamic violence against women and insulted Christians, Jews and others.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Moves to rid schools of weapons Head teachers in England could gain powers to tackle pupils carrying weapons, under government plans.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Iraq #39;s top Shiite cleric returns home as fighting rages in Najaf Hoping to end weeks of fighting in Najaf, Iraq #39;s top Shiite cleric unexpectedly returned home from Britain on Wednesday armed with a new peace initiative and a call for Iraqis across the country to march on the holy city to demand an ",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Suicide bomb blasts Green Zone A SUICIDE car bomb has ripped through a line of vehicles at a checkpoint outside the Green Zone today, killing 13 people as Iraq marked the first anniversary of Saddam Hussein #39;s capture.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Parliament Speaker to Succeed Arafat (AP) AP - The Palestinian parliament speaker will become temporary president of the Palestinian Authority in the event of Yasser Arafat's death, PLO leaders decided Wednesday.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. China wants Canada to hand over North Koreans who stormed embassy (Canadian Press) Canadian Press - BEIJING (CP) - China urged the Canadian Embassy on Thursday to hand over 44 possible North Korean asylum-seekers, while officials said nine North Koreans who entered a U.S. school in Shanghai had been handed over to Chinese police.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  },
+  {
+    "instruction": "Classify the topic of this news into 4 classes of 'World', 'Sports', 'Business', or 'Technology'. Pakistani Troops Leaving Tribal Region (AP) AP - The Pakistan army said Saturday it will withdraw hundreds of troops from a tense tribal region near Afghanistan where Osama bin Laden and his top deputy were believed to be hiding.",
+    "input": "",
+    "output": "World",
+    "label": "World"
+  }
+]

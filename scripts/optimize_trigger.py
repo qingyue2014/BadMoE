@@ -45,7 +45,6 @@ def parse_args() -> argparse.Namespace:
         required=True,
     )
     parser.add_argument("--layer", type=int)
-    parser.add_argument("--usage-examples", type=int, default=200)
     parser.add_argument("--usage-file", type=Path)
     parser.add_argument("--recompute-usage", action="store_true")
     parser.add_argument("--selected-experts", type=int, default=2)
@@ -266,15 +265,17 @@ def main() -> None:
     if args.model == "mixtral" and args.task == "twitter" and args.layer is None:
         layer = 8
 
-    data_path = REPO_ROOT / "data" / "train" / "files" / f"{args.task}_clean.json"
-    all_rows = json.loads(data_path.read_text(encoding="utf-8"))
-    if args.usage_examples > len(all_rows):
+    data_path = REPO_ROOT / "data" / "usage" / f"{args.task}.json"
+    rows = json.loads(data_path.read_text(encoding="utf-8"))
+    protocol = json.loads(
+        (REPO_ROOT / "configs" / "protocol.json").read_text(encoding="utf-8")
+    )
+    expected_rows = int(protocol["trigger_search"]["probe_examples"])
+    if len(rows) != expected_rows:
         raise ValueError(
-            f"requested {args.usage_examples} probe examples from a {len(all_rows)}-row split"
+            f"{data_path} contains {len(rows)} rows; protocol requires {expected_rows}"
         )
-    # ``find_trigger_sort.py`` used the first 200 prepared usage examples.
-    usage_indices = list(range(args.usage_examples))
-    rows = [all_rows[index] for index in usage_indices]
+    usage_indices = list(range(len(rows)))
     model, tokenizer = load_victim(args)
     if args.model == "deepseek":
         expose_deepseek_router(model, layer)

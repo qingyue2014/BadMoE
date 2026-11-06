@@ -87,9 +87,11 @@ python scripts/optimize_trigger.py \
   --output outputs/trigger_search/mixtral_sst2.json
 ```
 
-The script uses the first 200 prepared clean-task examples when an expert-usage
-cache is not already available. It ranks experts by their rounded usage
-frequency and starts with the two least-used experts. If GCG finds no
+The script reads each task's fixed 200-example probing set from `data/usage/`
+when an expert-usage cache is not already available. These files contain the
+first 200 examples from the prepared clean-task usage sets employed by the
+original experiment. It ranks experts by their rounded usage frequency and
+starts with the two least-used experts. If GCG finds no
 routing-valid candidate, it advances to the next usage-ranked expert pair, as
 in the original experiment code. The GCG search uses the defaults bundled in
 this repository and reranks routing-valid candidates with
