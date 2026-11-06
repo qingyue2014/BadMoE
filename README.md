@@ -89,7 +89,7 @@ python scripts/optimize_trigger.py \
 
 The script reads each task's fixed 200-example probing set from `data/usage/`
 when an expert-usage cache is not already available. These files contain the
-first 200 examples from the prepared clean-task usage sets employed by the
+fixed 200-example random samples drawn from the clean task data for the
 original experiment. It ranks experts by their rounded usage frequency and
 starts with the two least-used experts. If GCG finds no
 routing-valid candidate, it advances to the next usage-ranked expert pair, as
