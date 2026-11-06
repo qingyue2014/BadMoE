@@ -26,7 +26,7 @@
   "trigger_length_tokens": 2,
   "trigger_search": {
     "probe_examples": 200,
-    "probe_selection": "first prepared usage examples",
+    "probe_selection": "fixed task-specific random sample released in data/usage",
     "iterations": 250,
     "search_width": 512,
     "per_position_candidates": 256,
